@@ -1,6 +1,16 @@
-# COLDSTART-PRO · Garage Atlas · 0.3.0
+# COLDSTART-PRO · Garage Atlas · 0.4.0
 
 Lokales, bearbeitbares Software-MVP für einen visuellen Teile- und Serviceatlas rund um BMW E36 und E46. Stand: 29.10.2026.
+
+## Neu in 0.4: AUTODOC und Kaufquellen
+
+„Anleitungen & Kaufquellen“ enthält 26 kuratierte Originalverweise: zehn AUTODOC-Textanleitungen, acht Videoquellen, sechs Kaufangebote und zwei Modellübersichten. Fünf Quellen sind wegen Motorabweichung oder Quellenkonflikt standardmäßig zurückgestellt. Die geeigneten Baugruppenverweise stehen auch im Service- und Video-Tab; sie bestätigen keine Passung jedes einzelnen Bauteils.
+
+Die kommerziellen Angebote sind Preisaufnahmen vom 29.10.2026. Ein Gebrauchtangebot kann inzwischen verkauft sein. E46-PDF (14. Auflage 2021) und neues Papierbuch (15. Auflage 2025) werden getrennt behandelt. Der Detaildialog zeigt Ausgabe, Rechte und Versandbehandlung vor dem Anbieterlink. Die App löst keine Bestellung aus.
+
+Kuratierte YouTube-Player werden nur auf Klick über `youtube-nocookie.com` geladen; das Original bleibt als Ausweichlink vorhanden. Titel, Beschreibung und/oder die AUTODOC-Zuordnung wurden recherchiert, die vollständigen Filme wurden nicht fachlich abgenommen. Ob YouTube die Einbettung aktuell zulässt, kann sich ändern. Keine fremden Anleitungs-PDFs, Videodateien, Vorschaubilder, Drehmomente oder Wartungsintervalle wurden kopiert. Deine eigenen gespeicherten Texte, Videos und Sicherungen bleiben getrennt.
+
+Kaufempfehlung, geprüfte Preise, Quellenregister und Integrationsgrenzen stehen in [docs/QUELLEN_KAUF_UND_AUTODOC.md](docs/QUELLEN_KAUF_UND_AUTODOC.md). Der editierbare Katalog liegt in `data/lernquellen.json` und `src/learning-data.mjs`; beide gemeinsam pflegen. Die ursprünglichen zwei Handbücher werden dadurch nicht um bereits gekaufte neue Bücher erweitert.
 
 ## Git-Entwicklungsstand
 

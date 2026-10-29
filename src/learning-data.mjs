@@ -1,0 +1,638 @@
+// Kuratierte Originalverweise; Preisaufnahme 29.10.2026.
+export const LEARNING_META={"version": "0.4.0", "accessed": "2026-10-29", "source": "Manuell geprüfte Originalseiten, keine automatisierte Datenanbieter-Anbindung", "profileNote": "Baureihen-/Baugruppenbezug ist keine individuelle Teile- oder Reparaturfreigabe.", "priceNote": "Statische Preisaufnahme vom 29.10.2026. Auflage, Verfügbarkeit, Versand und aktuelle Preise vor Kauf prüfen.", "rightsNote": "Ein Buchkauf ist keine nachgewiesene Lizenz zur Weiterveröffentlichung. Originale bleiben beim Anbieter oder lokal beim Käufer.", "videoNote": "Kein externer Player und kein Vorschaubild wird automatisch geladen. Wiedergabe und Einbettbarkeit können sich ändern."};
+export const LEARNING_RESOURCES=[
+  {
+    "id": "buy-dk-e36-pdf",
+    "kind": "book",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "front",
+      "rear",
+      "oil",
+      "cool"
+    ],
+    "title": "Etzold Band 74 · E36 als PDF",
+    "url": "https://shop.delius-klasing.de/bmw-3er-reihe-limousine-von-11-89-bis-3-99-coupe-von-10-90-bis-4-99-touring-von-5-95-bis-5-99-compact-von-4-94-bis-9-00-p-1021842/",
+    "provider": "Delius Klasing",
+    "scope": "328i / 2,8 l / 142 kW in der Verlagsliste.",
+    "note": "Neue PDF-Ausgabe noch nicht importierbar. Nach einem Kauf sind Analyse, Nutzungsprüfung und ein eigener geprüfter Dateieintrag nötig, bevor lokale Zuordnung und feste Seitenverweise ergänzt werden können.",
+    "profileStatus": "listed",
+    "accessed": "2026-10-29",
+    "edition": "17. Auflage 2022",
+    "isbn": "9783667110091",
+    "format": "PDF-Download",
+    "price": {
+      "amount": 27.99,
+      "currency": "EUR",
+      "shipping": 0,
+      "tax": "incl-vat",
+      "term": "Einzelkauf, keine laufende Gebühr",
+      "promotion": false
+    },
+    "rights": "Kauf zum Lesen; keine nachgewiesene Lizenz zur Weitergabe von Texten, Bildern oder Reparaturdaten im Tool."
+  },
+  {
+    "id": "buy-dk-e36-print",
+    "kind": "book",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "front",
+      "rear",
+      "oil",
+      "cool"
+    ],
+    "title": "Etzold Band 74 · E36 als Buch",
+    "url": "https://shop.delius-klasing.de/bmw-3er-reihe-limousine-von-11-89-bis-3-99-coupe-von-10-90-bis-4-99-touring-von-5-95-bis-5-99-compact-von-4-94-bis-9-00-p-1000328/",
+    "provider": "Delius Klasing",
+    "scope": "328i / 2,8 l / 142 kW in der Verlagsliste.",
+    "note": "Lesen und Arbeitsplanung; das Papierbuch ist kein automatisch importierbarer Atlas-Datensatz.",
+    "profileStatus": "listed",
+    "accessed": "2026-10-29",
+    "edition": "17. Auflage 2022",
+    "isbn": "9783768807333",
+    "format": "Papierbuch",
+    "price": {
+      "amount": 34.9,
+      "currency": "EUR",
+      "shipping": null,
+      "tax": "incl-vat",
+      "term": "Einzelkauf, keine laufende Gebühr",
+      "promotion": false
+    },
+    "rights": "Kauf zum Lesen; keine nachgewiesene Lizenz zur Weitergabe von Texten, Bildern oder Reparaturdaten im Tool."
+  },
+  {
+    "id": "buy-dk-e46-pdf",
+    "kind": "book",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "front",
+      "rear",
+      "oil",
+      "cool"
+    ],
+    "title": "Etzold Band 116 · E46 als PDF",
+    "url": "https://shop.delius-klasing.de/bmw-3er-reihe-4-98-bis-2-05-p-2001741/",
+    "provider": "Delius Klasing",
+    "scope": "325i / 2,5 l / 141 kW in der Verlagsliste; Bauzeit und Ausgabe prüfen.",
+    "note": "Neue PDF-Ausgabe noch nicht importierbar. Nach einem Kauf sind Analyse, Nutzungsprüfung und ein eigener geprüfter Dateieintrag nötig, bevor lokale Zuordnung und feste Seitenverweise ergänzt werden können. PDF und Papierbuch werden mit unterschiedlichen Auflagen angeboten.",
+    "profileStatus": "listed",
+    "accessed": "2026-10-29",
+    "edition": "14. Auflage 2021",
+    "isbn": "9783667124678",
+    "format": "PDF-Download",
+    "price": {
+      "amount": 27.99,
+      "currency": "EUR",
+      "shipping": 0,
+      "tax": "incl-vat",
+      "term": "Einzelkauf, keine laufende Gebühr",
+      "promotion": false
+    },
+    "rights": "Kauf zum Lesen; keine nachgewiesene Lizenz zur Weitergabe von Texten, Bildern oder Reparaturdaten im Tool."
+  },
+  {
+    "id": "buy-dk-e46-print",
+    "kind": "book",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "front",
+      "rear",
+      "oil",
+      "cool"
+    ],
+    "title": "Etzold Band 116 · E46 als Buch",
+    "url": "https://shop.delius-klasing.de/bmw-3er-reihe-4-98-bis-2-05-p-1000717/",
+    "provider": "Delius Klasing",
+    "scope": "325i / 2,5 l / 141 kW in der Verlagsliste; Bauzeit und Ausgabe prüfen.",
+    "note": "Lesen und Arbeitsplanung; das Papierbuch ist kein automatisch importierbarer Atlas-Datensatz. PDF und Papierbuch werden mit unterschiedlichen Auflagen angeboten.",
+    "profileStatus": "listed",
+    "accessed": "2026-10-29",
+    "edition": "15. Auflage 2025",
+    "isbn": "9783768811552",
+    "format": "Papierbuch",
+    "price": {
+      "amount": 34.9,
+      "currency": "EUR",
+      "shipping": null,
+      "tax": "incl-vat",
+      "term": "Einzelkauf, keine laufende Gebühr",
+      "promotion": false
+    },
+    "rights": "Kauf zum Lesen; keine nachgewiesene Lizenz zur Weitergabe von Texten, Bildern oder Reparaturdaten im Tool."
+  },
+  {
+    "id": "buy-used-e36",
+    "kind": "book",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "front",
+      "rear",
+      "oil",
+      "cool"
+    ],
+    "title": "Etzold E36 · gebrauchtes Papierbuch",
+    "url": "https://www.booklooker.de/B%C3%BCcher/Angebote/infotext=bmw%2B3er%2Bwartung",
+    "provider": "Booklooker · Privatangebot",
+    "scope": "Gebrauchtangebot für Band 74; kein PDF und keine Datenlizenz.",
+    "note": "Einzelangebot, Zustand laut Anbieter wie neu. Jahresfeld lautet unplausibel „996“; genaue Auflage und 328i-Abdeckung vor Kauf klären.",
+    "profileStatus": "open",
+    "accessed": "2026-10-29",
+    "edition": "Genaue Auflage vor Kauf prüfen",
+    "isbn": "9783768807333",
+    "format": "Gebrauchtbuch",
+    "price": {
+      "amount": 7,
+      "currency": "EUR",
+      "shipping": 2.9,
+      "tax": "private",
+      "term": "Einzelangebot; kann zwischenzeitlich verkauft sein",
+      "promotion": false
+    },
+    "rights": "Privatverkauf ohne MwSt.-Berechnung; kein Recht zur digitalen Weiterveröffentlichung.",
+    "offerId": "A02T0rmI01ZZ3",
+    "linkNote": "Öffnet die geprüfte Booklooker-Suche; nach Angebots-ID oder ISBN suchen. Keine Sitzungs-URL wird gespeichert."
+  },
+  {
+    "id": "buy-used-e46",
+    "kind": "book",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "front",
+      "rear",
+      "oil",
+      "cool"
+    ],
+    "title": "Etzold E46 · gebrauchtes Papierbuch",
+    "url": "https://www.booklooker.de/B%C3%BCcher/Angebote/infotext=bmw%2B3er%2Bwartung",
+    "provider": "Booklooker · Privatangebot",
+    "scope": "Gebrauchtangebot für Band 116; kein PDF und keine Datenlizenz.",
+    "note": "Einzelangebot, als Ausgabe 2011 geführt. Älter als die aktuellen Verlagsofferten; Auflage und Vollständigkeit prüfen.",
+    "profileStatus": "open",
+    "accessed": "2026-10-29",
+    "edition": "Genaue Auflage vor Kauf prüfen",
+    "isbn": "9783768811552",
+    "format": "Gebrauchtbuch",
+    "price": {
+      "amount": 22,
+      "currency": "EUR",
+      "shipping": 1.8,
+      "tax": "private",
+      "term": "Einzelangebot; kann zwischenzeitlich verkauft sein",
+      "promotion": false
+    },
+    "rights": "Privatverkauf ohne MwSt.-Berechnung; kein Recht zur digitalen Weiterveröffentlichung.",
+    "offerId": "A02PahYj01ZZW",
+    "linkNote": "Öffnet die geprüfte Booklooker-Suche; nach Angebots-ID oder ISBN suchen. Keine Sitzungs-URL wird gespeichert."
+  },
+  {
+    "id": "guide-e36-front",
+    "kind": "guide",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "front"
+    ],
+    "title": "Vordere Bremsscheiben · E36 Coupé",
+    "url": "https://club.autodoc.de/manuals/anleitung-bmw-3-coupe-e36-bremsscheiben-vorne-wechseln-23171",
+    "provider": "AUTODOC CLUB",
+    "scope": "E36 Coupé, 328i in der Anbieterliste.",
+    "note": "Die Seite bezeichnet ihr Begleitvideo als Beispiel an einem anderen Fahrzeug. Textzuordnung und Videozuordnung bleiben getrennt.",
+    "profileStatus": "listed",
+    "accessed": "2026-10-29",
+    "steps": 38,
+    "format": "Originalseite mit PDF-Angebot",
+    "rights": "Nur Originalverknüpfung und kurze eigene Einordnung; keine Anleitungstexte, PDFs oder Bilder kopiert.",
+    "similarVideo": true
+  },
+  {
+    "id": "guide-e36-rear",
+    "kind": "guide",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "rear"
+    ],
+    "title": "Hintere Bremsscheiben · E36 Coupé",
+    "url": "https://club.autodoc.de/manuals/anleitung-bmw-3-coupe-e36-bremsscheiben-hinten-wechseln-36169",
+    "provider": "AUTODOC CLUB",
+    "scope": "E36 Coupé, 328i in der Anbieterliste.",
+    "note": "Begleitvideo laut Seite an einem anderen Fahrzeug. Hintere Scheibenausführung am realen Fahrzeug gesondert abgleichen.",
+    "profileStatus": "listed",
+    "accessed": "2026-10-29",
+    "steps": 40,
+    "format": "Originalseite mit PDF-Angebot",
+    "rights": "Nur Originalverknüpfung und kurze eigene Einordnung; keine Anleitungstexte, PDFs oder Bilder kopiert.",
+    "similarVideo": true
+  },
+  {
+    "id": "guide-e36-pad",
+    "kind": "guide",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "rear"
+    ],
+    "title": "Hintere Bremsbeläge · E36 Coupé",
+    "url": "https://club.autodoc.de/manuals/anleitung-bmw-3-coupe-e36-bremsbelaege-hinten-wechseln-23198",
+    "provider": "AUTODOC CLUB",
+    "scope": "E36 Coupé, 328i in der Anbieterliste.",
+    "note": "Begleitvideo laut Anbieter nur ähnlich. Shop-Produktkarten sind kein fahrzeugspezifischer Teilematch.",
+    "profileStatus": "listed",
+    "accessed": "2026-10-29",
+    "steps": 28,
+    "format": "Originalseite mit PDF-Angebot",
+    "rights": "Nur Originalverknüpfung und kurze eigene Einordnung; keine Anleitungstexte, PDFs oder Bilder kopiert.",
+    "similarVideo": true
+  },
+  {
+    "id": "guide-e36-oil",
+    "kind": "guide",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "oil"
+    ],
+    "title": "Motoröl und Ölfilter · E36 Coupé",
+    "url": "https://club.autodoc.de/manuals/anleitung-bmw-3-coupe-e36-motoroel-und-oelfilter-wechseln-17053",
+    "provider": "AUTODOC CLUB",
+    "scope": "E36 Coupé, 328i in der Anbieterliste.",
+    "note": "Begleitvideo laut Seite an einem anderen Fahrzeug. Keine Ölmenge, Sorte oder Drehmomente aus dieser Verknüpfung ableiten.",
+    "profileStatus": "listed",
+    "accessed": "2026-10-29",
+    "steps": 33,
+    "format": "Originalseite mit PDF-Angebot",
+    "rights": "Nur Originalverknüpfung und kurze eigene Einordnung; keine Anleitungstexte, PDFs oder Bilder kopiert.",
+    "similarVideo": true
+  },
+  {
+    "id": "guide-e36-pump",
+    "kind": "guide",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "cool"
+    ],
+    "title": "Wasserpumpe · E36 Coupé",
+    "url": "https://club.autodoc.de/manuals/anleitung-bmw-3-coupe-e36-wasserpumpe-wechseln-34526",
+    "provider": "AUTODOC CLUB",
+    "scope": "E36 Coupé, 328i in der Anbieterliste.",
+    "note": "Begleitvideo nur ähnlich. Die pauschale Shop-Kategorie Wasserpumpe/Zahnriemensatz wird nicht als M52-Wartungsintervall übernommen.",
+    "profileStatus": "listed",
+    "accessed": "2026-10-29",
+    "steps": 57,
+    "format": "Originalseite mit PDF-Angebot",
+    "rights": "Nur Originalverknüpfung und kurze eigene Einordnung; keine Anleitungstexte, PDFs oder Bilder kopiert.",
+    "similarVideo": true
+  },
+  {
+    "id": "guide-e36-thermo",
+    "kind": "guide",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "cool"
+    ],
+    "title": "Thermostat · E36 Coupé",
+    "url": "https://club.autodoc.de/manuals/anleitung-bmw-3-coupe-e36-thermostat-wechseln-27751",
+    "provider": "AUTODOC CLUB",
+    "scope": "E36 Coupé, 328i in der Anbieterliste.",
+    "note": "Begleitvideo nur ähnlich. Gehäuse, Bauzeit und eingebauten Motor vor Verwendung prüfen.",
+    "profileStatus": "listed",
+    "accessed": "2026-10-29",
+    "steps": 43,
+    "format": "Originalseite mit PDF-Angebot",
+    "rights": "Nur Originalverknüpfung und kurze eigene Einordnung; keine Anleitungstexte, PDFs oder Bilder kopiert.",
+    "similarVideo": true
+  },
+  {
+    "id": "guide-e46-front",
+    "kind": "guide",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "front"
+    ],
+    "title": "Vordere Bremsscheiben · E46 Limousine",
+    "url": "https://club.autodoc.de/manuals/anleitung-bmw-3-limousine-e46-bremsscheiben-vorne-wechseln-23168",
+    "provider": "AUTODOC CLUB",
+    "scope": "E46 Limousine; die sichtbare Variantenliste belegt den 325i nicht eindeutig.",
+    "note": "Als Baugruppenreferenz verfügbar. Bremsausführung und vollständige Fahrzeugliste beim Anbieter prüfen; Begleitvideo ist nur ähnlich.",
+    "profileStatus": "open",
+    "accessed": "2026-10-29",
+    "steps": 38,
+    "format": "Originalseite mit PDF-Angebot",
+    "rights": "Nur Originalverknüpfung und kurze eigene Einordnung; keine Anleitungstexte, PDFs oder Bilder kopiert.",
+    "similarVideo": true
+  },
+  {
+    "id": "guide-e46-pad",
+    "kind": "guide",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "rear"
+    ],
+    "title": "Hintere Bremsbeläge · E46 Limousine",
+    "url": "https://club.autodoc.de/manuals/anleitung-bmw-3-limousine-e46-bremsbelaege-hinten-wechseln-17575",
+    "provider": "AUTODOC CLUB",
+    "scope": "E46 Limousine, 325i in der Anbieterliste.",
+    "note": "Begleitvideo laut Seite nur ähnlich. Keine Gleichsetzung mit den beworbenen Teilen neben dem Artikel.",
+    "profileStatus": "listed",
+    "accessed": "2026-10-29",
+    "steps": 33,
+    "format": "Originalseite mit PDF-Angebot",
+    "rights": "Nur Originalverknüpfung und kurze eigene Einordnung; keine Anleitungstexte, PDFs oder Bilder kopiert.",
+    "similarVideo": true
+  },
+  {
+    "id": "guide-e46-oil-excluded",
+    "kind": "guide",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "oil"
+    ],
+    "title": "Ölwechsel E46 · für 325i zurückgestellt",
+    "url": "https://club.autodoc.de/manuals/anleitung-bmw-e46-motoroel-und-oelfilter-wechseln-10860",
+    "provider": "AUTODOC CLUB",
+    "scope": "Anbieter nennt 316i-Varianten; das zugehörige Video beschreibt eine 1,9-l-Limousine.",
+    "note": "Nicht dem 325i/M54 als Reparaturanleitung zuordnen. Die gleiche Baureihe bestätigt keine gleiche Ölversorgung.",
+    "profileStatus": "excluded",
+    "accessed": "2026-10-29",
+    "steps": 34,
+    "format": "Originalseite mit PDF-Angebot",
+    "rights": "Nur Originalverknüpfung und kurze eigene Einordnung; keine Anleitungstexte, PDFs oder Bilder kopiert.",
+    "similarVideo": false
+  },
+  {
+    "id": "guide-e46-thermo-excluded",
+    "kind": "guide",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "cool"
+    ],
+    "title": "Thermostat E46 Diesel · kein M54",
+    "url": "https://club.autodoc.de/manuals/anleitung-bmw-3-limousine-e46-thermostat-wechseln-15704",
+    "provider": "AUTODOC CLUB",
+    "scope": "Anbieter nennt 318d/320d.",
+    "note": "Für das Referenzprofil 325i/M54 ausgeschlossen. Die Diesel-Arbeitsschritte werden nicht an der M54-Kühlung angezeigt.",
+    "profileStatus": "excluded",
+    "accessed": "2026-10-29",
+    "steps": 76,
+    "format": "Originalseite mit PDF-Angebot",
+    "rights": "Nur Originalverknüpfung und kurze eigene Einordnung; keine Anleitungstexte, PDFs oder Bilder kopiert.",
+    "similarVideo": true
+  },
+  {
+    "id": "video-e36-rear",
+    "kind": "video",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "rear"
+    ],
+    "title": "Bremsscheiben und Beläge hinten · E36",
+    "url": "https://www.youtube.com/watch?v=YeB9KC4BcDk",
+    "provider": "autodoc.de · YouTube",
+    "scope": "Titel und Beschreibung nennen E36 und Hinterachse.",
+    "note": "Motorisierung, Karosserie und Bremsvariante nicht unabhängig bestätigt; keine Reparaturfreigabe.",
+    "profileStatus": "open",
+    "accessed": "2026-10-29",
+    "published": "2016-10-05",
+    "format": "YouTube-Original",
+    "rights": "Wiedergabe nur über den offiziellen YouTube-Player auf Klick oder Originalseite. Keine Videodatei heruntergeladen. Einbettungs-/Regionalsperren bleiben möglich.",
+    "videoId": "YeB9KC4BcDk",
+    "embedVerified": false,
+    "originURL": "https://www.youtube.com/watch?v=YeB9KC4BcDk"
+  },
+  {
+    "id": "video-e36-oil",
+    "kind": "video",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "oil"
+    ],
+    "title": "Öl und Ölfilter · E36",
+    "url": "https://www.youtube.com/watch?v=ZmRAGy71r0M",
+    "provider": "autodoc.de · YouTube",
+    "scope": "Originalvideo des AUTODOC-Kanals für E36.",
+    "note": "Motorvariante in der ausgelesenen Beschreibung nicht eindeutig; M52-Ausführung separat abgleichen.",
+    "profileStatus": "open",
+    "accessed": "2026-10-29",
+    "published": "2016-10-05",
+    "format": "YouTube-Original",
+    "rights": "Wiedergabe nur über den offiziellen YouTube-Player auf Klick oder Originalseite. Keine Videodatei heruntergeladen. Einbettungs-/Regionalsperren bleiben möglich.",
+    "videoId": "ZmRAGy71r0M",
+    "embedVerified": false,
+    "originURL": "https://www.youtube.com/watch?v=ZmRAGy71r0M"
+  },
+  {
+    "id": "video-e36-pump",
+    "kind": "video",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "cool"
+    ],
+    "title": "Wasserpumpe · E36",
+    "url": "https://www.youtube.com/watch?v=PQf4O4XlTsk",
+    "provider": "autodoc.de · YouTube",
+    "scope": "Video-ID und Datum aus der offiziellen E36-Wasserpumpenseite.",
+    "note": "Die zugehörige Limousinen-Seite nennt 328i. Karosserie, eingebauten Motor und Pumpenvariante dennoch prüfen.",
+    "profileStatus": "open",
+    "accessed": "2026-10-29",
+    "published": "2021-03-30",
+    "format": "YouTube-Original",
+    "rights": "Wiedergabe nur über den offiziellen YouTube-Player auf Klick oder Originalseite. Keine Videodatei heruntergeladen. Einbettungs-/Regionalsperren bleiben möglich.",
+    "videoId": "PQf4O4XlTsk",
+    "embedVerified": false,
+    "originURL": "https://club.autodoc.de/manuals/anleitung-bmw-e36-wasserpumpe-wechseln-13009"
+  },
+  {
+    "id": "video-e46-front",
+    "kind": "video",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "front"
+    ],
+    "title": "Bremsscheiben und Beläge vorne · E46",
+    "url": "https://www.youtube.com/watch?v=udow01fDa_o",
+    "provider": "autodoc.de · YouTube",
+    "scope": "Titel und Beschreibung nennen E46 und Vorderachse.",
+    "note": "Motor-/Bremsausführung nicht eindeutig nachgewiesen; Quelle zur Baugruppe, keine Bestätigung für ein Einzelteil.",
+    "profileStatus": "open",
+    "accessed": "2026-10-29",
+    "published": "2016-03-15",
+    "format": "YouTube-Original",
+    "rights": "Wiedergabe nur über den offiziellen YouTube-Player auf Klick oder Originalseite. Keine Videodatei heruntergeladen. Einbettungs-/Regionalsperren bleiben möglich.",
+    "videoId": "udow01fDa_o",
+    "embedVerified": false,
+    "originURL": "https://www.youtube.com/watch?v=udow01fDa_o"
+  },
+  {
+    "id": "video-e46-rear",
+    "kind": "video",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "rear"
+    ],
+    "title": "Bremsbeläge hinten · E46",
+    "url": "https://www.youtube.com/watch?v=0cqSTa7SjZU",
+    "provider": "autodoc.de · YouTube",
+    "scope": "Beschreibung nennt E46-Limousine und hintere Bremsbeläge.",
+    "note": "Motor- und Sattelausführung vor Verwendung abgleichen. Video ersetzt keine Abschlussprüfung.",
+    "profileStatus": "open",
+    "accessed": "2026-10-29",
+    "published": "2016-05-31",
+    "format": "YouTube-Original",
+    "rights": "Wiedergabe nur über den offiziellen YouTube-Player auf Klick oder Originalseite. Keine Videodatei heruntergeladen. Einbettungs-/Regionalsperren bleiben möglich.",
+    "videoId": "0cqSTa7SjZU",
+    "embedVerified": false,
+    "originURL": "https://www.youtube.com/watch?v=0cqSTa7SjZU"
+  },
+  {
+    "id": "video-e36-front-conflict",
+    "kind": "video",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "front"
+    ],
+    "title": "E36-Bremsscheiben · Achsangabe widersprüchlich",
+    "url": "https://www.youtube.com/watch?v=zf6YneTU4FU",
+    "provider": "autodoc.de · YouTube",
+    "scope": "Titel und Kapitel nennen vorne; die erste Beschreibungszeile nennt hinten.",
+    "note": "Quellenkonflikt: kein Direktplayer und keine automatische Empfehlung am Bauteil. Im Original klären.",
+    "profileStatus": "conflict",
+    "accessed": "2026-10-29",
+    "published": "2021-03-16",
+    "format": "YouTube-Original",
+    "rights": "Wiedergabe nur über den offiziellen YouTube-Player auf Klick oder Originalseite. Keine Videodatei heruntergeladen. Einbettungs-/Regionalsperren bleiben möglich.",
+    "videoId": "zf6YneTU4FU",
+    "embedVerified": false,
+    "originURL": "https://www.youtube.com/watch?v=zf6YneTU4FU"
+  },
+  {
+    "id": "video-e46-oil-excluded",
+    "kind": "video",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "oil"
+    ],
+    "title": "Ölwechsel E46 1,9 l · kein 325i-Beleg",
+    "url": "https://www.youtube.com/watch?v=HsbT9HxUYbk",
+    "provider": "autodoc.de · YouTube",
+    "scope": "Videobeschreibung nennt ausdrücklich eine 1,9-l-Limousine.",
+    "note": "Nicht als M54-Ölwechselvideo verwenden; für das 325i-Referenzprofil zurückgestellt.",
+    "profileStatus": "excluded",
+    "accessed": "2026-10-29",
+    "published": "2016-09-09",
+    "format": "YouTube-Original",
+    "rights": "Wiedergabe nur über den offiziellen YouTube-Player auf Klick oder Originalseite. Keine Videodatei heruntergeladen. Einbettungs-/Regionalsperren bleiben möglich.",
+    "videoId": "HsbT9HxUYbk",
+    "embedVerified": false,
+    "originURL": "https://www.youtube.com/watch?v=HsbT9HxUYbk"
+  },
+  {
+    "id": "video-e46-thermo-excluded",
+    "kind": "video",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "cool"
+    ],
+    "title": "Thermostat E46 Touring Diesel · kein M54",
+    "url": "https://www.youtube.com/watch?v=kyrXIrv_E1c",
+    "provider": "autodoc.de · YouTube",
+    "scope": "Beschreibung nennt 2,0 l; Kapitel behandeln den AGR-Kühler, passend zur Diesel-Anleitung.",
+    "note": "Dieselkontext; nicht an der 325i/M54-Kühlung empfehlen.",
+    "profileStatus": "excluded",
+    "accessed": "2026-10-29",
+    "published": "2021-12-09",
+    "format": "YouTube-Original",
+    "rights": "Wiedergabe nur über den offiziellen YouTube-Player auf Klick oder Originalseite. Keine Videodatei heruntergeladen. Einbettungs-/Regionalsperren bleiben möglich.",
+    "videoId": "kyrXIrv_E1c",
+    "embedVerified": false,
+    "originURL": "https://www.youtube.com/watch?v=kyrXIrv_E1c"
+  },
+  {
+    "id": "hub-e36",
+    "kind": "hub",
+    "models": [
+      "E36"
+    ],
+    "groups": [
+      "front",
+      "rear",
+      "oil",
+      "cool"
+    ],
+    "title": "AUTODOC CLUB · E36-Übersicht",
+    "url": "https://club.autodoc.de/manuals/bmw/3-series/3-coupe-e36",
+    "provider": "AUTODOC CLUB",
+    "scope": "Übersicht für E36 Coupé; enthält auch ausdrücklich ähnliche Videos anderer Fahrzeuge.",
+    "note": "Zum Finden weiterer Originalquellen; kein vollständiges freigegebenes Werkstatthandbuch.",
+    "profileStatus": "open",
+    "accessed": "2026-10-29",
+    "format": "Anbieterübersicht",
+    "rights": "Externer Originalverweis."
+  },
+  {
+    "id": "hub-e46",
+    "kind": "hub",
+    "models": [
+      "E46"
+    ],
+    "groups": [
+      "front",
+      "rear",
+      "oil",
+      "cool"
+    ],
+    "title": "AUTODOC CLUB · E46-Übersicht",
+    "url": "https://club.autodoc.de/manuals/bmw/3-series/3-e46",
+    "provider": "AUTODOC CLUB",
+    "scope": "Übersicht für E46 Limousine; Motorisierung pro Einzelquelle prüfen.",
+    "note": "Zum Finden weiterer Originalquellen; kein vollständiges freigegebenes Werkstatthandbuch.",
+    "profileStatus": "open",
+    "accessed": "2026-10-29",
+    "format": "Anbieterübersicht",
+    "rights": "Externer Originalverweis."
+  }
+];

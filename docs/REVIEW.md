@@ -1,5 +1,47 @@
 # Prüfbericht und Nutzenbewertung
 
+COLDSTART Garage Atlas 0.4.0 · 29.10.2026.
+
+## Aktueller Prüfstand: Kaufquellen und AUTODOC
+
+Eigene Daten-, Browser- und Layoutprüfungen. Kein vollständiger fachlicher Videoaudit, keine KFZ-Fachfreigabe und keine gemessene Ersparnis an realen Fahrzeugen. Alle historischen Prüfstände unten gelten jeweils für ihre damalige Fassung. Recherche, Angebotspreise und Quellenregister: [QUELLEN_KAUF_UND_AUTODOC.md](QUELLEN_KAUF_UND_AUTODOC.md).
+
+| Prüfung 0.4 | Messbares Ergebnis | Praktische Aussage und Grenze |
+|---|---|---|
+| Finale automatisierte Prüfungen | **61 bestanden, 0 fehlgeschlagen** | 51 bestehende plus 10 neue Prüfungen; einschließlich finaler Bündelung, 26 Quelleinträge, Filter, Profilgrenzen, URL-Sicherheit, Preissumme, Player-Sperre und JSON-/Modulgleichheit |
+| Neuer Quellenbestand | 26 Einträge: 10 Textanleitungen, 8 Videoquellen, 6 Kaufangebote, 2 Übersichten | 5 zurückgestellt; normal 21 sichtbar. Nicht 26 freigegebene Reparaturabläufe |
+| Bibliothek im Desktopbrowser | Titel korrekt, 21 Karten; 0 externe Iframes vor Klick | Kein automatischer Video-/Vorschaubildabruf; keine Aussage über zukünftige externe Verfügbarkeit |
+| E46-PDF / Papierbuch | Tatsächliche Detailklicks zeigen 27,99 € / 14. Auflage 2021 und 34,90 € / 15. Auflage 2025 | Verhindert falsche Gleichsetzung der aktuellen Angebote |
+| E36-Gebrauchtbuch | Detail zeigt 9,90 € inklusive erfasstem Versand, Privatverkauf und Angebots-ID | Berechnung 7,00 + 2,90; Auflage offen, keine garantiert fortbestehende Verfügbarkeit |
+| E46-Videofilter | 2 empfohlene Baugruppen-Videoverweise | Anders motorisierte Quellen bleiben standardmäßig verborgen; Motor-/Bremsausführung der übrigen Videos weiterhin prüfen |
+| Falsches E46-Ölvideo bewusst öffnen | 1,9-l-/M54-Warnung sichtbar, **0 Playerbuttons** | Zurückgestellt bedeutet nicht nur eine andersfarbige Empfehlung |
+| E46-M54-Öl / Kühlung am Bauteil | Öl-Video- und Kühl-Service-Tab zeigen jeweils keine passende kuratierte Quelle und 1 zurückgestellten Treffer | Diesel-/1,9-l-Anleitungen werden nicht auf M54 übertragen |
+| E46-Hinterbremsen-Service | Originalverweis auf hintere Bremsbeläge sichtbar; Hinweis auf nur ähnliches Begleitvideo | Baugruppenbezug statt individueller Freigabe jedes Einzelteils |
+| Video aktiv laden | Vorher 0, danach 1 Iframe: `youtube-nocookie.com/embed/udow01fDa_o?autoplay=0` | Klickschwelle funktioniert, Original-Link und Ausweichhinweis vorhanden. Tatsächliches vollständiges Abspielen nicht bestätigt |
+| Neue Kauf-PDF | Detail nennt ausdrücklich noch fehlende Importfähigkeit und nötigen geprüften Dateieintrag | Keine neue Datei gekauft oder analysiert; bisherige Handbuchplätze nicht für beliebige PDFs geöffnet |
+| Telefon: Quellenbibliothek | Iframe 375 px; nutzbare Seite 360/360 px, Dialog 347/347 px, Dialogkörper 332/332 px; 21 Karten | Scrollbar belegt 15 px; kein horizontaler Überlauf |
+| Tablet: Quellenbibliothek | Iframe 753 px; nutzbare Seite 738/738 px, Dialog 725/725 px, Dialogkörper 710/710 px; 21 Karten | Kein horizontaler Überlauf |
+| Sichtprüfung | Desktop sowie Telefon-/Tabletansicht geprüft | Telefon-/Tabletbreite per Browser-Iframe, keine Hardware-/Browsermatrix |
+| Browserprotokoll | 0 Anwendungsfehler im ausgewerteten lokalen Protokoll | Browser-Erweiterungsfehler sind getrennt; kein Beweis für sämtliche Laufzeitpfade |
+
+Die 26 Karten wurden durch Datenprüfungen abgedeckt. Im Browser wurden die oben benannten repräsentativen Kauf-, Video- und Bauteilpfade geprüft; **kein vollständiger 26-von-26-Klicktest wird behauptet**. Die bisherigen 83 Bauteilplätze und Nummernreferenzen wurden durch diese Quellenrecherche nicht um neue OEM-Nummern oder Reparaturwerte erweitert.
+
+## Review-Schleifen 0.4
+
+1. **Günstiger Preis gegen tatsächliche Ausgabe prüfen.** PDF und Print haben beim E46 verschiedene Auflagen. Preise/ISBN/Medium werden pro Angebot gespeichert; gebrauchte Versandkosten werden addiert. Unbestätigte Haynes-Preise erscheinen nicht als feste Kaufangebote.
+2. **Baureihenfund gegen Motor prüfen.** Zwei E46-Texte und zwei E46-Videos betreffen andere Motoren. Sie bleiben zurückgestellt. Ein weiterer E36-Videokonflikt betrifft vorne/hinten; auch dort kein Player oder automatischer Bauteilverweis.
+3. **Rechte und tatsächliche Importfähigkeit prüfen.** Ein Buchkauf wurde nicht als App-Lizenz behandelt. Eine zunächst zu allgemeine Formulierung zur späteren lokalen Zuordnung wurde präzisiert: neue PDF-Dateien benötigen erst eine Analyse und einen eigenen geprüften Eintrag. Keine fremden neuen Medien kopiert.
+4. **Praktische Navigation prüfen.** Nutzer finden Quellen über Modell/Baugruppe/Art/Suche und direkt am Service-/Video-Tab. Eigene Videos bleiben separat. Vor einem Klick existiert kein externer Player; zurückgestellte Videos erhalten auch nach bewusstem Öffnen keinen Direktplayer.
+5. **Finalen Build und Layout prüfen.** Alle 61 Tests bestanden. Beide responsiven Ansichten ohne horizontalen Überlauf; Screenshots visuell geprüft. Eine Wiedergabegarantie oder vollständige technische Prüfung der Videos wird nicht aus diesen UI-Tests abgeleitet.
+
+**Heute sinnvoll:** passende Ausgangsquellen wiederfinden, Ausgaben und Preise vergleichen, abweichende Motoren erkennen und das Original gezielt öffnen. **Weiter offen:** genaue Ausführung am Fahrzeug, fachliche Prüfung der Reparatur, dauerhafte Medienverfügbarkeit und kommerzielle Nutzungsrechte. Nächste externe Nutzungsprüfung: fünf Zielnutzer müssen Quelle, Gültigkeitsgrenze und Originalzugang ohne Hilfe finden; Ziel mindestens 4/5 je Aufgabe und 5/5 unterscheiden Referenz von Reparaturfreigabe. Noch nicht durchgeführt.
+
+---
+
+# Historischer Prüfstand 0.3.0
+
+# Prüfbericht und Nutzenbewertung
+
 COLDSTART Garage Atlas 0.3.0 · 29.10.2026.
 
 ## Aktueller Prüfstand: Drive-Dokumente

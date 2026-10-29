@@ -9,3 +9,9 @@ Die vollständigen Handbücher und die 18 Originaldateien aus „Gutachten etc�
 Vor einem Wechsel auf öffentlich oder einer kommerziellen Nutzung sind Daten-, Bild-, Text- und Markenrechte gesondert zu klären. Das betrifft auch frühere Commits: Das Entfernen einer Datei aus dem neuesten Stand entfernt sie nicht aus der Git-Historie.
 
 Für fremde Kataloge, Reparaturdaten oder Videoanbieter wird durch dieses Projekt keine Lizenz erteilt. Die technischen und fachlichen Grenzen in `README.md` und `docs/REVIEW.md` gelten weiter.
+
+## Kuratierte Lernquellen ab 0.4
+
+AUTODOC wird über die öffentlich angebotenen Originalseiten und YouTube-Originalvideos erschlossen. Nur kurze eigene Einordnungen, bibliografische Metadaten und URLs sind im Repository. Neue fremde PDF-Texte, Bilder, Vorschaubilder oder Videodateien werden nicht weiterverteilt. Die Videos bleiben im offiziellen YouTube-Player; er wird erst auf Klick geladen und umgeht keine Anbieterbeschränkungen. Eine Rückverknüpfung zum Original bleibt sichtbar.
+
+Ein verfügbarer Player bestätigt keine Reparaturfreigabe und keine allgemeine kommerzielle Datenlizenz. Ein Buchkauf bestätigt ebenfalls keine Lizenz, Buchtexte oder Abbildungen an Nutzer des Tools weiterzugeben. Vor einer öffentlichen oder kommerziellen Einbindung sind die konkrete Verwendung und erforderliche Rechte getrennt zu klären. Die Quellen- und Preisrecherche ist in `docs/QUELLEN_KAUF_UND_AUTODOC.md` dokumentiert.

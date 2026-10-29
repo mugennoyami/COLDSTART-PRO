@@ -1,5 +1,13 @@
 # Änderungsverlauf
 
+## 0.4.0 · 29.10.2026
+
+- Kuratierte AUTODOC-Originalquellen und aktuelle Kaufangebote mit Ausgabe, Preisstand und Nutzungsgrenzen.
+- Quellenbibliothek mit Modell-, Baugruppen-, Medien- und Textfilter sowie sichtbar schaltbaren Ausschlüssen.
+- Kontextverweise im Service-/Video-Tab; YouTube-Player erst nach ausdrücklichem Klick.
+- E46-Ölvideo für 1,9 l und Diesel-Thermostatquellen nicht am 325i/M54 empfehlen; widersprüchliche E36-Achsangabe zurückstellen.
+- Persönliche Videoverknüpfungen und Datenformat 1 bleiben erhalten.
+
 ## 0.3.0 · 29.10.2026
 
 - Quellenregal mit 18 Dokumenten, Such-/Modellfiltern und genauen Fundstellen.
