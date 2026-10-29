@@ -1,0 +1,87 @@
+{
+  "front": {
+    "pdfPage": 294,
+    "crop": [
+      40,
+      77,
+      545,
+      369
+    ],
+    "width": 1263,
+    "height": 731,
+    "manualId": "bentley-e36",
+    "sourceSha256": "cad7e6229b65e43ffb04b94c5a14f2d60413b0c2b29c9489a652dde71f0b56f5",
+    "cropUnits": "PDF points, origin top left",
+    "renderScale": 2.5,
+    "sha256": "7d4489ab3fa251b4e1096f699353a907511135f60c2e409d34aba40ac82d7de9",
+    "use": "Lokale private Reviewfassung; keine kommerzielle Rechtefreigabe"
+  },
+  "rear": {
+    "pdfPage": 296,
+    "crop": [
+      40,
+      77,
+      545,
+      386
+    ],
+    "width": 1263,
+    "height": 773,
+    "manualId": "bentley-e36",
+    "sourceSha256": "cad7e6229b65e43ffb04b94c5a14f2d60413b0c2b29c9489a652dde71f0b56f5",
+    "cropUnits": "PDF points, origin top left",
+    "renderScale": 2.5,
+    "sha256": "35a6dccda7fe9b20fd7f6597d4730b2ed92b94710ab414b4b1a7ded9c9436d9c",
+    "use": "Lokale private Reviewfassung; keine kommerzielle Rechtefreigabe"
+  },
+  "oil": {
+    "pdfPage": 32,
+    "crop": [
+      303,
+      210,
+      547,
+      450
+    ],
+    "width": 611,
+    "height": 600,
+    "manualId": "bentley-e36",
+    "sourceSha256": "cad7e6229b65e43ffb04b94c5a14f2d60413b0c2b29c9489a652dde71f0b56f5",
+    "cropUnits": "PDF points, origin top left",
+    "renderScale": 2.5,
+    "sha256": "85ceb9e8a6742014bed91082758789c285a26a44a6c94c7c245a4d0394a142d1",
+    "use": "Lokale private Reviewfassung; keine kommerzielle Rechtefreigabe"
+  },
+  "thermostat": {
+    "pdfPage": 203,
+    "crop": [
+      54,
+      416,
+      300,
+      607
+    ],
+    "width": 615,
+    "height": 478,
+    "manualId": "bentley-e36",
+    "sourceSha256": "cad7e6229b65e43ffb04b94c5a14f2d60413b0c2b29c9489a652dde71f0b56f5",
+    "cropUnits": "PDF points, origin top left",
+    "renderScale": 2.5,
+    "sha256": "bc4fe81d42c98f67d6baaddf9ce30059cb91d45f2bd1ff27673181adffb7b386",
+    "use": "Lokale private Reviewfassung; keine kommerzielle Rechtefreigabe"
+  },
+  "pump": {
+    "pdfPage": 204,
+    "crop": [
+      35,
+      133,
+      280,
+      368
+    ],
+    "width": 613,
+    "height": 588,
+    "manualId": "bentley-e36",
+    "sourceSha256": "cad7e6229b65e43ffb04b94c5a14f2d60413b0c2b29c9489a652dde71f0b56f5",
+    "cropUnits": "PDF points, origin top left",
+    "renderScale": 2.5,
+    "sha256": "62d62320cea02d988ac6114cce099a0fd011cb893aa9507ca59f28dbce2e7ff5",
+    "use": "Lokale private Reviewfassung; keine kommerzielle Rechtefreigabe"
+  }
+}

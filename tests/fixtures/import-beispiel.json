@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "parts": [
+    {
+      "id": "front-bolt",
+      "model": "E36",
+      "group": "front",
+      "kind": "bolt",
+      "name": "Bremsscheiben-Halteschraube",
+      "number": "34211161806",
+      "sourceId": "fixture-source",
+      "note": "Importbeispiel: Nummernreferenz im Händlerangebot; individueller Teilematch nicht bestätigt."
+    }
+  ],
+  "sources": [
+    {
+      "id": "fixture-source",
+      "title": "HUBAUER · recherchierte Einzelreferenz",
+      "url": "https://www.hubauer-shop.de/de/innensechskantschraube-34211161806.html",
+      "accessed": "29.10.2026"
+    }
+  ]
+}

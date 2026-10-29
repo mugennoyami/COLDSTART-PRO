@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "parts": [
+    {
+      "id": "front-extra-bolt",
+      "model": "E46",
+      "group": "front",
+      "kind": "bolt",
+      "name": "Zusätzliche Schraubenreferenz (Importbeispiel)",
+      "number": "34211161806",
+      "sourceId": "fixture-source",
+      "note": "Zusätzlicher Datenplatz zum Prüfen der Seitenumschaltung. Keine Freigabe für eine konkrete Einbauposition."
+    }
+  ],
+  "sources": [
+    {
+      "id": "fixture-source",
+      "title": "HUBAUER · recherchierte Einzelreferenz",
+      "url": "https://www.hubauer-shop.de/de/innensechskantschraube-34211161806.html",
+      "accessed": "29.10.2026"
+    }
+  ]
+}

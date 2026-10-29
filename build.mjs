@@ -1,0 +1,8 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+const root=new URL('./',import.meta.url);
+const get=p=>readFile(new URL(p,root),'utf8');
+const [html,css,core,documentsData,documentsCore,manualCore,manualData,manualAssets,data,draw,documentsUI,manualUI,app]=await Promise.all(['src/index.html','src/style.css','src/core.mjs','src/documents-data.mjs','src/documents-core.mjs','src/manual-core.mjs','src/manual-data.mjs','src/manual-assets.mjs','src/data.mjs','src/draw.mjs','src/documents-ui.mjs','src/manual-ui.mjs','src/app.mjs'].map(get));
+const strip=s=>s.replace(/^import .*;\n/gm,'').replace(/^export /gm,'');
+const result=html.replace('/* INLINE_STYLE */',()=>css).replace('/* INLINE_SCRIPT */',()=>'(()=>{\n"use strict";\n'+[core,documentsData,documentsCore,manualCore,manualData,manualAssets,data,draw,documentsUI,manualUI,app].map(strip).join('\n')+'\n})();');
+await mkdir(new URL('dist/',root),{recursive:true});await writeFile(new URL('dist/index.html',root),result);
+console.log(JSON.stringify({file:'dist/index.html',bytes:Buffer.byteLength(result)}));

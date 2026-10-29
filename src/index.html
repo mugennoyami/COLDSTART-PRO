@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark light"><meta name="description" content="Lokaler COLDSTART Teileatlas für BMW E36 und E46. Schematische Bauteilansichten, belegte Referenzen und eigene Service-Unterlagen."><title>COLDSTART · Garage Atlas</title><style>/* INLINE_STYLE */</style></head>
+<body>
+<a class="skip" href="#workspace">Zum Teileatlas</a>
+<header class="topbar"><a class="brand" href="#" aria-label="COLDSTART Garage Atlas Startseite"><span class="brandmark" aria-hidden="true">C<span>↗</span></span><span>COLDSTART<small>GARAGE ATLAS</small></span></a><span class="header-label">DEIN PROJEKT. BIS INS DETAIL.</span><div class="top-actions"><span class="local-indicator"><i></i> Lokal & privat</span><button class="icon-btn" id="help" aria-label="Hilfe öffnen">?</button></div></header>
+<div class="app-shell">
+<aside class="sidebar" aria-label="Fahrzeug und Baugruppen">
+ <div class="side-heading">DEINE GARAGE <span>02 MODELLE</span></div>
+ <div class="model-switch" aria-label="Baureihe"><button data-model="E36" class="active" aria-pressed="true">E36</button><button data-model="E46" aria-pressed="false">E46</button></div>
+ <section class="vehicle-card"><div class="vehicle-visual" id="vehicle-thumb"></div><div class="vehicle-name" id="vehicle-name"></div><p id="vehicle-profile"></p><button id="profile-open" class="text-button">Bauzustand ergänzen <span>↗</span></button></section>
+ <button class="overview-nav" id="overview"><span>▱</span> Fahrzeugübersicht <span>↗</span></button>
+ <div class="side-heading section-label">BAUGRUPPEN <span id="group-count"></span></div>
+ <nav id="group-nav" aria-label="Baugruppen"></nav>
+ <div class="sidebar-bottom"><button id="project-open" class="side-action"><span>▤</span> Meine Projektliste <b id="list-count">0</b></button><button class="side-action" id="documents-library-open" data-document-library><span>▥</span> Dokumente &amp; Gutachten <b>18</b></button><button id="manual-library-open" class="side-action" data-manual-library><span>▧</span> Meine Handbücher <b>2</b></button><button id="data-open" class="side-action"><span>⤓</span> Daten & eigene Inhalte</button><div class="side-foot">PRAXISVERSION 0.3 <span>29.10.2026</span></div></div>
+</aside>
+<main id="workspace" tabindex="-1">
+ <div class="page-head"><div><div class="eyebrow">COLDSTART / TEILEATLAS <span class="pill">BETA</span></div><h1>Verstehen, was zusammengehört.</h1><p>Bauteil finden. Referenz prüfen. Nächsten Schritt planen.</p></div><button id="export-project" class="secondary small">Projekt exportieren <span>↗</span></button></div>
+ <div class="context-bar"><span id="context-model"></span><span class="context-divider"></span><span id="context-extra">Bauzustand nicht erfasst</span><span class="status-tag">Passung offen</span></div>
+ <div class="explorer-grid">
+ <section class="explorer" aria-label="Zeichnung und Teileliste">
+ <div class="explorer-top"><div class="breadcrumb" id="breadcrumb"></div><div class="search-wrap"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Bauteil oder OE-Nummer …" aria-label="Bauteil oder Teilenummer suchen" autocomplete="off"><kbd>/</kbd><button id="clear-search" aria-label="Suche leeren" hidden>×</button></div></div>
+ <div id="search-results" class="search-results" hidden></div>
+ <div class="drawing-header"><div><div class="eyebrow" id="group-code"></div><h2 id="drawing-title"></h2></div><div class="view-switch" aria-label="Ansicht"><button id="view-exploded" aria-pressed="true">Bauteile</button><button id="view-manual" aria-pressed="false" hidden>Handbuchbild</button><button id="view-car" aria-pressed="false">Fahrzeug</button></div></div>
+ <div class="drawing-stage" id="drawing-stage"><div class="stage-label"><span class="live-dot"></span> INTERAKTIVE ANSICHT <span id="diagram-count"></span></div><div id="drawing" class="drawing"></div><div class="drawing-note">EIGENE SCHEMATISCHE ZEICHNUNG · KEINE MONTAGEVORLAGE</div><div class="zoom-tools"><button id="zoom-out" aria-label="Verkleinern">−</button><span id="zoom-label">100%</span><button id="zoom-in" aria-label="Vergrößern">+</button><button id="zoom-reset" aria-label="Ansicht zurücksetzen">↺</button></div></div>
+ <div class="drawing-footer"><span><i></i> Bauteil anklicken oder unten auswählen</span><span id="manual-drawing-tools" hidden></span><span class="diagram-pages" id="diagram-pages" hidden></span><label id="explode-label">Abstand <input id="explode" type="range" min="35" max="100" value="100" aria-label="Explosionsabstand"></label></div>
+ <section class="parts-section"><div class="parts-heading"><h3>Bauteile dieser Ansicht <span id="parts-count"></span></h3><label class="filter-check"><input id="numbers-only" type="checkbox"> Mit Referenznummer</label></div><div class="table-scroll"><table class="parts-table"><thead><tr><th>POS.</th><th>BAUTEIL</th><th>BMW-REFERENZ</th><th>STATUS</th><th></th></tr></thead><tbody id="parts-body"></tbody></table></div><p class="table-note">Positionen gehören zu dieser Schemazeichnung. Referenzen sind keine fahrzeuggenaue Teilefreigabe.</p></section>
+ </section>
+ <aside class="detail" id="detail" aria-label="Bauteildetails"></aside>
+ </div>
+ <footer class="app-footer"><span>COLDSTART GARAGE ATLAS <b>0.3</b></span><button id="coverage-open">Datenumfang & Quellen</button><span id="coverage-foot">48 Bauteilplätze · 8 Schemaansichten · kein vollständiger ETK</span></footer>
+</main>
+</div>
+<dialog id="modal" aria-labelledby="modal-title"><div class="modal-head"><div><div class="eyebrow">COLDSTART / ARBEITSBEREICH</div><h2 id="modal-title"></h2></div><button class="icon-btn" id="modal-close" aria-label="Dialog schließen">×</button></div><div id="modal-body"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<input type="file" id="documents-file-input" accept="application/pdf,image/jpeg,.pdf,.jpg,.jpeg" multiple hidden><input type="file" id="manual-pdf-input" accept="application/pdf,image/jpeg,.pdf,.jpg,.jpeg" hidden><input type="file" id="import-file" accept="application/json,.json" hidden>
+<input type="file" id="diagram-file" accept="image/png,image/jpeg,image/webp" hidden>
+<script>/* INLINE_SCRIPT */</script>
+</body></html>

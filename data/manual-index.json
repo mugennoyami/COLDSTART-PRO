@@ -1,0 +1,1652 @@
+{
+  "manuals": [
+    {
+      "id": "bentley-e36",
+      "title": "Bentley · BMW 3 Series Service Manual",
+      "filename": "BMW - E36 - 3 Series Service Manual (1992 - 1998) EN.pdf",
+      "pages": 759,
+      "publisher": "Robert Bentley, Inc.",
+      "edition": "Copyright 1999 · Redaktionsschluss 01/1999",
+      "isbn": "0-8376-0326-9",
+      "coverage": "E36 · US-Modelle 1992–1998 · M3, 318i, 323i, 325i, 328i · Limousine, Coupé, Cabrio",
+      "models": [
+        "E36"
+      ],
+      "engines": [
+        "M42",
+        "M44",
+        "M50",
+        "M52",
+        "S50US",
+        "S52US"
+      ],
+      "scopeNote": "US-Handbuch. Europäische Ausführung, Compact, Touring, Umbauten und spätere Teileänderungen nicht pauschal abgedeckt. Kein E46-Handbuch.",
+      "reading": "Überwiegend Scan. 759 Seitenkopfzeilen per OCR indexiert; 92 relevante Vollseiten per OCR ausgewertet, ausgewählte Fundstellen am Bild geprüft.",
+      "rights": "Vom Nutzer bereitgestellte Quelle für diese lokale Reviewfassung. Kommerzielle Veröffentlichungsrechte nicht nachgewiesen.",
+      "sha256": "cad7e6229b65e43ffb04b94c5a14f2d60413b0c2b29c9489a652dde71f0b56f5",
+      "bytes": 100257998
+    },
+    {
+      "id": "haynes-legacy",
+      "title": "Haynes · BMW 3- & 5-Series Service and Repair Manual",
+      "filename": "BMW_Service_And_Repair_Manual_83-91-3er5er.pdf",
+      "pages": 228,
+      "publisher": "Haynes Publishing",
+      "edition": "Copyright 1997",
+      "isbn": "1 85960 236 3",
+      "coverage": "E30 sowie E28/E34 · überwiegend Modelle 1981–1991, je nach Modell",
+      "models": [],
+      "engines": [],
+      "scopeNote": "E36 wird auf PDF-Seite 4 ausdrücklich ausgeschlossen. Keine E46-Abdeckung; keine Übertragung fahrzeugspezifischer Reparaturdaten.",
+      "reading": "228 PDF-Seiten. 217 Seiten mit verwertbarer Textschicht; Gültigkeit, Einleitung und allgemeine Referenzabschnitte geprüft.",
+      "rights": "Vom Nutzer bereitgestellte historische Vergleichsquelle; keine kommerzielle Nutzungslizenz belegt.",
+      "sha256": "b0f8c056288a89d16e8ba47e3142514d498a54930281c3b1e4a2776a82984839",
+      "bytes": 7445125
+    }
+  ],
+  "topics": [
+    {
+      "id": "scope",
+      "title": "Gültigkeit, Warnungen und M52-Zuordnung",
+      "group": "general",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 1,
+          "bookPage": "Titel",
+          "label": "Genannte Modelle"
+        },
+        {
+          "pdfPage": 2,
+          "bookPage": "Impressum",
+          "label": "Redaktionsstand und Grenzen"
+        },
+        {
+          "pdfPage": 5,
+          "bookPage": "v",
+          "label": "US-Gültigkeitsbereich"
+        },
+        {
+          "pdfPage": 43,
+          "bookPage": "100-1",
+          "label": "Motor-/Modelltabelle"
+        }
+      ],
+      "summary": "Das Buch nennt den 328i und ordnet die US-Modelle 1996–1998 dem M52 zu. Das ist eine Modellabdeckung, keine Verifikation des eingebauten Motors.",
+      "sections": [],
+      "parts": [],
+      "risk": "Quelle vor Verwendung mit tatsächlich verbauter Ausführung abgleichen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "safety",
+      "title": "Sicher vorbereiten und Fahrzeug abstützen",
+      "group": "general",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 7,
+          "bookPage": "vii",
+          "label": "Warnhinweise"
+        },
+        {
+          "pdfPage": 8,
+          "bookPage": "viii",
+          "label": "Vorsichtshinweise"
+        },
+        {
+          "pdfPage": 11,
+          "bookPage": "010-3",
+          "label": "Anheben / Abstützen"
+        },
+        {
+          "pdfPage": 12,
+          "bookPage": "010-4",
+          "label": "Arbeiten unter dem Fahrzeug"
+        }
+      ],
+      "summary": "Grundlage für Werkstattvorbereitung, geeignete Hilfsmittel und die Entscheidung, Arbeiten fachlich abzugeben.",
+      "sections": [],
+      "parts": [],
+      "risk": "Quelle vor Verwendung mit tatsächlich verbauter Ausführung abgleichen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "maintenance",
+      "title": "Wartungsprogramm und Dokumentation",
+      "group": "general",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 23,
+          "bookPage": "020-1",
+          "label": "Kapitelübersicht"
+        },
+        {
+          "pdfPage": 24,
+          "bookPage": "020-2",
+          "label": "Serviceanzeige"
+        },
+        {
+          "pdfPage": 25,
+          "bookPage": "020-3",
+          "label": "Wartungstabellen"
+        }
+      ],
+      "summary": "Wartungsaufgaben lassen sich als Projekt-Checkliste erfassen. Historische US-Intervalle werden nicht automatisch als aktueller Wartungsplan übernommen.",
+      "sections": [],
+      "parts": [],
+      "risk": "Quelle vor Verwendung mit tatsächlich verbauter Ausführung abgleichen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "brake-pads",
+      "title": "Bremsbeläge: Ausbau / Einbau im Handbuch",
+      "group": "brake",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 293,
+          "bookPage": "340-3",
+          "label": "Vorbereitung und Beginn Belagwechsel"
+        },
+        {
+          "pdfPage": 294,
+          "bookPage": "340-4",
+          "label": "Vorderbremse / Sattel abnehmen"
+        },
+        {
+          "pdfPage": 295,
+          "bookPage": "340-5",
+          "label": "Prüfung und Einbau"
+        }
+      ],
+      "summary": "Das Handbuch trennt den Belagwechsel vom vollständigen Sattelausbau. Es beschreibt den Belagwechsel grundsätzlich ohne Trennen des Bremsschlauchs.",
+      "sections": [
+        [
+          "Vorbereitung",
+          "Bremsausführung und vollständige Originalanweisung prüfen. Fahrzeug standsicher abstützen; Bremsstaub nicht mit Druckluft aufwirbeln. Fachkenntnis und geeignete Ausrüstung vorausgesetzt."
+        ],
+        [
+          "Ausbau – Orientierung",
+          "Im Handbuch werden Führungsbolzen, gegebenenfalls Verschleißsensor und Haltefeder gelöst, bevor der Sattel abgenommen wird. Den Sattel abstützen und nicht am Bremsschlauch hängen lassen. Details und Warnhinweise auf 340-3 bis 340-5 lesen."
+        ],
+        [
+          "Einbau – Orientierung",
+          "Zustand von Sattel, Scheibe, Kontaktstellen und Sensor prüfen; innere und äußere Beläge sowie Sensorleitung korrekt zuordnen. Das Buch weist darauf hin, Führungsbolzen nicht zu schmieren. Produkt- und fahrzeuggültige Angaben vor Ausführung bestätigen."
+        ],
+        [
+          "Abschluss",
+          "Die Originalanweisung fordert das Anlegen von Kolben/Belägen über das Pedal und die Kontrolle von Pedalgefühl und Flüssigkeitsstand. Eine fachgerechte Abschlussprüfung bleibt erforderlich. Diese Kurzfassung ist keine vollständige Arbeitsanweisung."
+        ]
+      ],
+      "parts": [],
+      "risk": "Sicherheitskritisch. Keine automatisch freigegebenen Drehmomente oder EU-Verschleißgrenzen; vollständigen passenden Originalablauf lesen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "brake-caliper",
+      "title": "Bremssattel: vollständiger Aus- und Einbau",
+      "group": "brake",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 296,
+          "bookPage": "340-6",
+          "label": "Sattel ausbauen und einbauen"
+        },
+        {
+          "pdfPage": 292,
+          "bookPage": "340-2",
+          "label": "Hydraulik / Entlüftungskontext"
+        },
+        {
+          "pdfPage": 293,
+          "bookPage": "340-3",
+          "label": "Entlüftung mit Variantenhinweisen"
+        }
+      ],
+      "summary": "Vollständiger Sattelausbau und Belagwechsel sind unterschiedliche Arbeitsumfänge. Das Lösen der Hydraulik führt zu zusätzlichen Prüf- und Entlüftungsaufgaben.",
+      "sections": [
+        [
+          "Vorbereitung",
+          "Arbeitsumfang eindeutig bestimmen: Beläge wechseln oder Sattel vollständig ausbauen. Die im Buch dargestellten Sattelinnenbauteile sind keine separate Überholungsfreigabe."
+        ],
+        [
+          "Ausbau – Orientierung",
+          "Der vollständige Sattelausbau auf 340-6 umfasst auch den Anschluss der Bremsleitung. Diese Arbeiten nur mit geeigneter Fachkenntnis und vollständiger fahrzeugpassender Anleitung ausführen."
+        ],
+        [
+          "Einbau – Orientierung",
+          "Befestigung, Leitungsanschluss und Leitungsführung nach passender Originalvorgabe prüfen. Keine Drehmomentwerte aus einer unklaren Fahrzeugvariante übernehmen."
+        ],
+        [
+          "Abschluss",
+          "Nach Öffnen der Hydraulik sind der passende Entlüftungsablauf sowie Dichtheits- und Funktionsprüfung erforderlich. ABS-/AST-Varianten des Handbuchs unterscheiden; keine pauschale Entlüftungsanweisung ableiten."
+        ]
+      ],
+      "parts": [],
+      "risk": "Quelle vor Verwendung mit tatsächlich verbauter Ausführung abgleichen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "brake-disc",
+      "title": "Bremsscheibe: Handbuchablauf und Prüfgrenzen",
+      "group": "brake",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 297,
+          "bookPage": "340-7",
+          "label": "Scheibe aus- / einbauen und Tabelle b"
+        },
+        {
+          "pdfPage": 296,
+          "bookPage": "340-6",
+          "label": "Sattel-/Trägerbefestigung"
+        }
+      ],
+      "summary": "Der Handbuchablauf beschreibt das Abnehmen des abgestützten Sattels, die Halteschraube, die Scheibenprüfung und den Wiedereinbau.",
+      "sections": [
+        [
+          "Vorbereitung",
+          "Scheibenausführung und konkrete Mindestdicke über passende Teile-/Herstellerdaten abgleichen. Die pauschale hintere Massivscheibenbeschreibung im US-Buch ist nicht als EU-328i-Freigabe verwendbar."
+        ],
+        [
+          "Ausbau – Orientierung",
+          "Das Buch beschreibt das Abstützen der Bremsbaugruppe und das Lösen der Scheiben-Halteschraube. Es weist für diesen Arbeitsumfang darauf hin, den Bremsschlauch nicht zu lösen."
+        ],
+        [
+          "Einbau – Orientierung",
+          "Reibflächen und Scheibenzustand nach passender Produktvorgabe prüfen. Keine universellen Anzugswerte aus dieser Kurzfassung übernehmen; Originalstelle und Bauteilhersteller vergleichen."
+        ],
+        [
+          "Abschluss",
+          "Bei hinteren Scheiben ist die integrierte Feststellbremse als eigener Arbeitsbereich zu beachten. Die vollständige Originalanweisung und fachliche Abschlussprüfung bleiben erforderlich."
+        ]
+      ],
+      "parts": [],
+      "risk": "Quellenkonflikt: US-Handbuch beschreibt Nicht-M3 hinten überwiegend als massiv. Der recherchierte 328i-Katalog nennt belüftete Scheiben. Keine hinteren Grenzwerte aus Tabelle b automatisch übernehmen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "parking",
+      "title": "Feststellbremse: eigene Bauteile und Arbeitsfolge",
+      "group": "rear",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 296,
+          "bookPage": "340-6",
+          "label": "Abb. 7: Hinterbremse / Feststellbremse"
+        },
+        {
+          "pdfPage": 300,
+          "bookPage": "340-10",
+          "label": "Feststellbremse einstellen"
+        },
+        {
+          "pdfPage": 301,
+          "bookPage": "340-11",
+          "label": "Bremsbacken / Seil"
+        }
+      ],
+      "summary": "Die Feststellbremse sitzt als Trommelmechanik in der hinteren Scheibe. Backen, Nachsteller, Spreizmechanismus und Federn sind getrennte Bauteile; die Handbuchgrafik dient der Orientierung.",
+      "sections": [],
+      "parts": [],
+      "risk": "Quelle vor Verwendung mit tatsächlich verbauter Ausführung abgleichen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "oil-service",
+      "title": "Motoröl und Filter: quellengebundene Übersicht",
+      "group": "oil",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 31,
+          "bookPage": "020-9",
+          "label": "Ölstand und Vorbereitung"
+        },
+        {
+          "pdfPage": 32,
+          "bookPage": "020-10",
+          "label": "Filtereinsatz / Gehäuse, Abb. 7"
+        }
+      ],
+      "summary": "Filtereinsatz, Deckeldichtungen und Ablassabdichtung gehören zu einer abgestimmten Wartungsaufgabe. Die Abbildung zeigt den Aufbau am Sechszylinder.",
+      "sections": [
+        [
+          "Vorbereitung",
+          "Tatsächliche Motor- und Gehäuseausführung bestimmen. Geeigneten Filtereinsatz, benötigte Dichtungen und passende aktuelle Öl-Freigabe prüfen. Die im Buch gezeigten Varianten sind keine austauschbaren Teilezusagen."
+        ],
+        [
+          "Ausbau – Orientierung",
+          "Der Originalablauf behandelt Ölablassen und das Entnehmen von Deckel, Filter und Dichtungen. Verbrennungsgefahr durch heißes Öl sowie standsichere Arbeitsbedingungen beachten."
+        ],
+        [
+          "Einbau – Orientierung",
+          "Neue erforderliche Dichtungen und den zugeordneten Filter nach passender Anweisung einsetzen. Das Handbuch unterscheidet Ablassschraubenvarianten; daraus wird kein einzelner pauschaler Anzugsmomentwert erzeugt."
+        ],
+        [
+          "Abschluss",
+          "Ölstand nach korrektem Verfahren und mögliche Undichtigkeiten an Ablass- und Filterstelle prüfen. Bei auffälliger Öldruckwarnung nicht weiterlaufen lassen und fachlich klären."
+        ]
+      ],
+      "parts": [],
+      "risk": "Quelle vor Verwendung mit tatsächlich verbauter Ausführung abgleichen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "oil-pressure",
+      "title": "Öldruckschalter und Öldruckprüfung",
+      "group": "oil",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 115,
+          "bookPage": "119-1",
+          "label": "Schmierung: Kapitelübersicht"
+        },
+        {
+          "pdfPage": 116,
+          "bookPage": "119-2",
+          "label": "Schalter und Messprüfung"
+        }
+      ],
+      "summary": "Das Handbuch unterscheidet die elektrische Warnfunktion von einer tatsächlichen Druckmessung. Ohne korrekte Messbedingungen und passende Sollwerte entsteht kein belastbarer Druckbefund.",
+      "sections": [],
+      "parts": [],
+      "risk": "Quelle vor Verwendung mit tatsächlich verbauter Ausführung abgleichen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "cool-basics",
+      "title": "Kühlung: Ausführung und sichere Vorbereitung",
+      "group": "cool",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 195,
+          "bookPage": "170-1",
+          "label": "Aufbau und Varianten"
+        },
+        {
+          "pdfPage": 196,
+          "bookPage": "170-2",
+          "label": "Warnungen / Fehlergruppen"
+        },
+        {
+          "pdfPage": 199,
+          "bookPage": "170-5",
+          "label": "Ablassen und Befüllen"
+        },
+        {
+          "pdfPage": 200,
+          "bookPage": "170-6",
+          "label": "Entlüftung: ausführungsspezifischer Kontext"
+        }
+      ],
+      "summary": "Vor dem Öffnen abkühlen lassen. Ausgleichsbehälter, Lüfter und Entlüftungsausführung zuerst identifizieren; keinen pauschalen Ablauf aus einer anderen Ausführung übernehmen.",
+      "sections": [],
+      "parts": [],
+      "risk": "Quelle vor Verwendung mit tatsächlich verbauter Ausführung abgleichen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "thermostat",
+      "title": "Thermostat und Gehäuse",
+      "group": "cool",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 203,
+          "bookPage": "170-9",
+          "label": "Abb. 14 und Ausbau / Einbau"
+        }
+      ],
+      "summary": "Das Buch zeigt Thermostat, Dichtungen und Gehäuse sowie besondere Zugangsschritte für M52/S52US. M44 wird mit einer abweichenden Gehäuse-/Thermostatausführung beschrieben.",
+      "sections": [
+        [
+          "Vorbereitung",
+          "Kühlsystem vollständig abkühlen lassen und Motor-/Gehäuseausführung identifizieren. Auffang- und Entsorgungsmöglichkeit für Kühlmittel vorbereiten."
+        ],
+        [
+          "Ausbau – Orientierung",
+          "Der Originalablauf umfasst das Ablassen und die ausführungsspezifischen Zugangsschritte. Beim M52/S52US nennt das Buch zusätzliche Arbeiten oberhalb des Gehäuses. Nicht auf andere Motoren übertragen."
+        ],
+        [
+          "Einbau – Orientierung",
+          "Einbaurichtung des Thermostats und erforderliche Dichtungen gemäß passender Anleitung beachten. Wo vorhanden, sind Masseleitungen an der Befestigung wieder korrekt anzuschließen."
+        ],
+        [
+          "Abschluss",
+          "Mit passend zugeordnetem Kühlmittel und Entlüftungsverfahren abschließen; Dichtheit und Funktion fachlich prüfen. Keine universelle Entlüftungs- oder Füllmengenangabe aus dieser Kurzfassung ableiten."
+        ]
+      ],
+      "parts": [],
+      "risk": "Quelle vor Verwendung mit tatsächlich verbauter Ausführung abgleichen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "waterpump",
+      "title": "Wasserpumpe und Dichtung",
+      "group": "cool",
+      "manualId": "bentley-e36",
+      "models": [
+        "E36"
+      ],
+      "refs": [
+        {
+          "pdfPage": 204,
+          "bookPage": "170-10",
+          "label": "Abb. 16: Pumpe und Ausbau"
+        },
+        {
+          "pdfPage": 205,
+          "bookPage": "170-11",
+          "label": "Einbau / Dichtungen"
+        }
+      ],
+      "summary": "Pumpenbefestigung und Riemenspanner werden im Buch nach Motorvariante unterschieden. Der alte pauschale Werkstoffhinweis zum Pumpenrad wird nicht als heutige Kaufregel übernommen.",
+      "sections": [
+        [
+          "Vorbereitung",
+          "Motor, Riemenantrieb, Pumpenvariante und erforderliche Dichtungen abgleichen; nur am abgekühlten Kühlsystem arbeiten."
+        ],
+        [
+          "Ausbau – Orientierung",
+          "Der Handbuchablauf verweist auf Lüfter-/Riemenzugang und unterscheidet M44 und M52 beim Riemenspanner. Die Pumpe wird nach Lösen der passenden Befestigung ausgebaut. Vollständige Originalfolge lesen."
+        ],
+        [
+          "Einbau – Orientierung",
+          "Das Buch nennt neue O-Ringe/Dichtungen und getrennte Befestigungsangaben für Vier- und Sechszylinder. Aktuelle Pumpen-/Dichtungsherstellervorgaben mit der Quelle abgleichen."
+        ],
+        [
+          "Abschluss",
+          "Riemenführung, Kühlmittelbefüllung, das passende Entlüftungsverfahren sowie Dichtheits- und Funktionsprüfung gehören zum Abschluss."
+        ]
+      ],
+      "parts": [],
+      "risk": "Quelle vor Verwendung mit tatsächlich verbauter Ausführung abgleichen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    },
+    {
+      "id": "legacy-safety",
+      "title": "Historisch: allgemeine Werkstattvorbereitung",
+      "group": "general",
+      "manualId": "haynes-legacy",
+      "models": [],
+      "refs": [
+        {
+          "pdfPage": 6,
+          "bookPage": "0•6",
+          "label": "Safety First!"
+        },
+        {
+          "pdfPage": 206,
+          "bookPage": "REF•5",
+          "label": "Werkzeuge"
+        },
+        {
+          "pdfPage": 207,
+          "bookPage": "REF•6",
+          "label": "Werkzeuge / Messmittel"
+        },
+        {
+          "pdfPage": 208,
+          "bookPage": "REF•7",
+          "label": "Arbeitsumgebung"
+        },
+        {
+          "pdfPage": 209,
+          "bookPage": "REF•8",
+          "label": "Allgemeine Arbeitsmethoden"
+        },
+        {
+          "pdfPage": 219,
+          "bookPage": "REF•19",
+          "label": "Teilekauf / Identifikation"
+        }
+      ],
+      "summary": "Als allgemeine Lektüre nützlich: Werkzeuge gezielt planen, sauber dokumentieren, Dichtflächen schützen und die konkrete Fahrzeugidentität prüfen. Technische Reparaturdaten gehören zu E30/E28/E34, nicht in den E36-/E46-Datensatz.",
+      "sections": [],
+      "parts": [],
+      "risk": "Quelle vor Verwendung mit tatsächlich verbauter Ausführung abgleichen.",
+      "status": "redaktionell erschlossen · Fachprüfung offen"
+    }
+  ],
+  "parts": [
+    {
+      "id": "front-carrier",
+      "model": "E36",
+      "group": "front",
+      "kind": "housing",
+      "name": "Bremsträger",
+      "aliases": "Bremsträger",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 294 / Buchseite 340-4. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "front-guidebolts",
+      "model": "E36",
+      "group": "front",
+      "kind": "bolt",
+      "name": "Sattelführungsbolzen",
+      "aliases": "Sattelführungsbolzen",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 294 / Buchseite 340-4. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "front-guidecaps",
+      "model": "E36",
+      "group": "front",
+      "kind": "cap",
+      "name": "Verschlusskappen der Führung",
+      "aliases": "Verschlusskappen der Führung",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 294 / Buchseite 340-4. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "front-guidebushings",
+      "model": "E36",
+      "group": "front",
+      "kind": "ring",
+      "name": "Führungshülsen",
+      "aliases": "Führungshülsen",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 294 / Buchseite 340-4. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "front-piston",
+      "model": "E36",
+      "group": "front",
+      "kind": "housing",
+      "name": "Bremssattelkolben",
+      "aliases": "Bremssattelkolben",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 294 / Buchseite 340-4. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "front-piston-seal",
+      "model": "E36",
+      "group": "front",
+      "kind": "ring",
+      "name": "Kolbendichtring",
+      "aliases": "Kolbendichtring",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 294 / Buchseite 340-4. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "front-dust-seal",
+      "model": "E36",
+      "group": "front",
+      "kind": "ring",
+      "name": "Staubmanschette am Kolben",
+      "aliases": "Staubmanschette am Kolben",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 294 / Buchseite 340-4. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "front-circlip",
+      "model": "E36",
+      "group": "front",
+      "kind": "ring",
+      "name": "Sicherungsring am Kolben",
+      "aliases": "Sicherungsring am Kolben",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 294 / Buchseite 340-4. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "front-retaining-spring",
+      "model": "E36",
+      "group": "front",
+      "kind": "housing",
+      "name": "Haltefeder am Bremssattel",
+      "aliases": "Haltefeder am Bremssattel",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 294 / Buchseite 340-4. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "front-carrier-bolt",
+      "model": "E36",
+      "group": "front",
+      "kind": "bolt",
+      "name": "Bremsträger-Befestigungsschraube",
+      "aliases": "Bremsträger-Befestigungsschraube",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 294 / Buchseite 340-4. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "front-bleeder",
+      "model": "E36",
+      "group": "front",
+      "kind": "switch",
+      "name": "Entlüfterventil mit Staubkappe",
+      "aliases": "Entlüfterventil mit Staubkappe",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 294 / Buchseite 340-4. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-carrier",
+      "model": "E36",
+      "group": "rear",
+      "kind": "housing",
+      "name": "Bremsträger",
+      "aliases": "Bremsträger",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-guidebolts",
+      "model": "E36",
+      "group": "rear",
+      "kind": "bolt",
+      "name": "Sattelführungsbolzen",
+      "aliases": "Sattelführungsbolzen",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-guidecaps",
+      "model": "E36",
+      "group": "rear",
+      "kind": "cap",
+      "name": "Verschlusskappen der Führung",
+      "aliases": "Verschlusskappen der Führung",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-guidebushings",
+      "model": "E36",
+      "group": "rear",
+      "kind": "ring",
+      "name": "Führungshülsen",
+      "aliases": "Führungshülsen",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-piston",
+      "model": "E36",
+      "group": "rear",
+      "kind": "housing",
+      "name": "Bremssattelkolben",
+      "aliases": "Bremssattelkolben",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-piston-seal",
+      "model": "E36",
+      "group": "rear",
+      "kind": "ring",
+      "name": "Kolbendichtring",
+      "aliases": "Kolbendichtring",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-dust-seal",
+      "model": "E36",
+      "group": "rear",
+      "kind": "ring",
+      "name": "Staubmanschette am Kolben",
+      "aliases": "Staubmanschette am Kolben",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-circlip",
+      "model": "E36",
+      "group": "rear",
+      "kind": "ring",
+      "name": "Sicherungsring am Kolben",
+      "aliases": "Sicherungsring am Kolben",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-retaining-spring",
+      "model": "E36",
+      "group": "rear",
+      "kind": "housing",
+      "name": "Haltefeder am Bremssattel",
+      "aliases": "Haltefeder am Bremssattel",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-carrier-bolt",
+      "model": "E36",
+      "group": "rear",
+      "kind": "bolt",
+      "name": "Bremsträger-Befestigungsschraube",
+      "aliases": "Bremsträger-Befestigungsschraube",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-bleeder",
+      "model": "E36",
+      "group": "rear",
+      "kind": "switch",
+      "name": "Entlüfterventil mit Staubkappe",
+      "aliases": "Entlüfterventil mit Staubkappe",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-parking-shoes",
+      "model": "E36",
+      "group": "rear",
+      "kind": "pad",
+      "name": "Bremsbacken der Feststellbremse",
+      "aliases": "Bremsbacken der Feststellbremse",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-parking-adjuster",
+      "model": "E36",
+      "group": "rear",
+      "kind": "bolt",
+      "name": "Nachsteller der Feststellbremse",
+      "aliases": "Nachsteller der Feststellbremse",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-parking-actuator",
+      "model": "E36",
+      "group": "rear",
+      "kind": "housing",
+      "name": "Spreizmechanismus der Feststellbremse",
+      "aliases": "Spreizmechanismus der Feststellbremse",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-upper-return",
+      "model": "E36",
+      "group": "rear",
+      "kind": "housing",
+      "name": "Obere Rückzugfeder",
+      "aliases": "Obere Rückzugfeder",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-lower-return",
+      "model": "E36",
+      "group": "rear",
+      "kind": "housing",
+      "name": "Untere Rückzugfeder",
+      "aliases": "Untere Rückzugfeder",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-shoe-pins",
+      "model": "E36",
+      "group": "rear",
+      "kind": "bolt",
+      "name": "Haltestifte der Bremsbacken",
+      "aliases": "Haltestifte der Bremsbacken",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-shoe-springs",
+      "model": "E36",
+      "group": "rear",
+      "kind": "housing",
+      "name": "Haltefedern der Bremsbacken",
+      "aliases": "Haltefedern der Bremsbacken",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-parking-cable",
+      "model": "E36",
+      "group": "rear",
+      "kind": "sensor",
+      "name": "Handbremsseil / Seilanschluss",
+      "aliases": "Handbremsseil / Seilanschluss",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "rear-cover",
+      "model": "E36",
+      "group": "rear",
+      "kind": "cap",
+      "name": "Abdeckung am Bremssattel",
+      "aliases": "Abdeckung am Bremssattel",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 296 / Buchseite 340-6. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "oil-housing-bolts",
+      "model": "E36",
+      "group": "oil",
+      "kind": "bolt",
+      "name": "Ölfiltergehäuse-Befestigungsschrauben",
+      "aliases": "Ölfiltergehäuse-Befestigungsschrauben",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 32 / Buchseite 020-10. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "oil-line-seals",
+      "model": "E36",
+      "group": "oil",
+      "kind": "ring",
+      "name": "Dichtringe am Ölleitungsanschluss",
+      "aliases": "Dichtringe am Ölleitungsanschluss",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 32 / Buchseite 020-10. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "cool-thermostat-seal",
+      "model": "E36",
+      "group": "cool",
+      "kind": "ring",
+      "name": "O-Ring am Thermostat",
+      "aliases": "O-Ring am Thermostat",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 203 / Buchseite 170-9. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    },
+    {
+      "id": "cool-thermostat-bolts",
+      "model": "E36",
+      "group": "cool",
+      "kind": "bolt",
+      "name": "Thermostatgehäuse-Befestigungsschrauben",
+      "aliases": "Thermostatgehäuse-Befestigungsschrauben",
+      "number": null,
+      "sourceId": null,
+      "note": "Bauteiltyp aus der bereitgestellten Bentley-Abbildung, PDF-Seite 203 / Buchseite 170-9. Keine OEM-Bestellnummer daraus abgeleitet. US-Gültigkeitsbereich und konkreten Bauzustand prüfen.",
+      "references": []
+    }
+  ],
+  "figures": [
+    {
+      "id": "front",
+      "title": "Vorderbremse · Handbuchabbildung",
+      "group": "front",
+      "model": "E36",
+      "manualId": "bentley-e36",
+      "pdfPage": 294,
+      "bookPage": "340-4",
+      "figure": "2",
+      "width": 1263,
+      "height": 731,
+      "pins": [
+        {
+          "partId": "front-disc",
+          "x": 18,
+          "y": 70
+        },
+        {
+          "partId": "front-caliper",
+          "x": 31,
+          "y": 28
+        },
+        {
+          "partId": "front-pad",
+          "x": 62,
+          "y": 46
+        },
+        {
+          "partId": "front-sensor",
+          "x": 73,
+          "y": 15
+        },
+        {
+          "partId": "front-bolt",
+          "x": 29,
+          "y": 69
+        },
+        {
+          "partId": "front-guidebolts",
+          "x": 22,
+          "y": 30
+        },
+        {
+          "partId": "front-guidecaps",
+          "x": 10,
+          "y": 26
+        },
+        {
+          "partId": "front-guidebushings",
+          "x": 15,
+          "y": 28
+        },
+        {
+          "partId": "front-piston",
+          "x": 46,
+          "y": 37
+        },
+        {
+          "partId": "front-piston-seal",
+          "x": 40,
+          "y": 35
+        },
+        {
+          "partId": "front-dust-seal",
+          "x": 52,
+          "y": 41
+        },
+        {
+          "partId": "front-circlip",
+          "x": 56,
+          "y": 44
+        },
+        {
+          "partId": "front-carrier",
+          "x": 81,
+          "y": 58
+        },
+        {
+          "partId": "front-retaining-spring",
+          "x": 93,
+          "y": 62
+        },
+        {
+          "partId": "front-carrier-bolt",
+          "x": 66,
+          "y": 71
+        },
+        {
+          "partId": "front-bleeder",
+          "x": 30,
+          "y": 10
+        }
+      ],
+      "risk": "US-Handbuch; Bauteiltypen erkennen, keine Teilenummern- oder Montagefreigabe."
+    },
+    {
+      "id": "rear",
+      "title": "Hinterbremse & Feststellbremse",
+      "group": "rear",
+      "model": "E36",
+      "manualId": "bentley-e36",
+      "pdfPage": 296,
+      "bookPage": "340-6",
+      "figure": "7",
+      "width": 1263,
+      "height": 773,
+      "pins": [
+        {
+          "partId": "rear-caliper",
+          "x": 28,
+          "y": 26
+        },
+        {
+          "partId": "rear-pad",
+          "x": 61,
+          "y": 34
+        },
+        {
+          "partId": "rear-sensor",
+          "x": 65,
+          "y": 5
+        },
+        {
+          "partId": "rear-disc",
+          "x": 62,
+          "y": 76
+        },
+        {
+          "partId": "rear-bolt",
+          "x": 70,
+          "y": 76
+        },
+        {
+          "partId": "rear-guidebolts",
+          "x": 21,
+          "y": 30
+        },
+        {
+          "partId": "rear-guidecaps",
+          "x": 9,
+          "y": 25
+        },
+        {
+          "partId": "rear-guidebushings",
+          "x": 14,
+          "y": 27
+        },
+        {
+          "partId": "rear-piston",
+          "x": 43,
+          "y": 33
+        },
+        {
+          "partId": "rear-piston-seal",
+          "x": 38,
+          "y": 30
+        },
+        {
+          "partId": "rear-dust-seal",
+          "x": 49,
+          "y": 35
+        },
+        {
+          "partId": "rear-circlip",
+          "x": 53,
+          "y": 35
+        },
+        {
+          "partId": "rear-carrier",
+          "x": 75,
+          "y": 38
+        },
+        {
+          "partId": "rear-retaining-spring",
+          "x": 89,
+          "y": 48
+        },
+        {
+          "partId": "rear-carrier-bolt",
+          "x": 65,
+          "y": 53
+        },
+        {
+          "partId": "rear-bleeder",
+          "x": 27,
+          "y": 10
+        },
+        {
+          "partId": "rear-parking-shoes",
+          "x": 41,
+          "y": 71
+        },
+        {
+          "partId": "rear-parking-adjuster",
+          "x": 46,
+          "y": 62
+        },
+        {
+          "partId": "rear-parking-actuator",
+          "x": 45,
+          "y": 75
+        },
+        {
+          "partId": "rear-upper-return",
+          "x": 52,
+          "y": 60
+        },
+        {
+          "partId": "rear-lower-return",
+          "x": 49,
+          "y": 73
+        },
+        {
+          "partId": "rear-shoe-pins",
+          "x": 21,
+          "y": 55
+        },
+        {
+          "partId": "rear-shoe-springs",
+          "x": 43,
+          "y": 58
+        },
+        {
+          "partId": "rear-parking-cable",
+          "x": 14,
+          "y": 56
+        },
+        {
+          "partId": "rear-cover",
+          "x": 51,
+          "y": 11
+        }
+      ],
+      "risk": "US-Abbildung. Hintere Scheibenausführung und Verschleißwerte nicht auf einen europäischen 328i übertragen."
+    },
+    {
+      "id": "oil",
+      "title": "Ölfiltergehäuse · Sechszylinder",
+      "group": "oil",
+      "model": "E36",
+      "manualId": "bentley-e36",
+      "pdfPage": 32,
+      "bookPage": "020-10",
+      "figure": "7",
+      "width": 611,
+      "height": 600,
+      "pins": [
+        {
+          "partId": "oil-cap",
+          "x": 87,
+          "y": 17
+        },
+        {
+          "partId": "oil-filter",
+          "x": 88,
+          "y": 67
+        },
+        {
+          "partId": "oil-ring",
+          "x": 88,
+          "y": 42
+        },
+        {
+          "partId": "oil-housing",
+          "x": 26,
+          "y": 57
+        },
+        {
+          "partId": "oil-housing-bolts",
+          "x": 58,
+          "y": 45
+        },
+        {
+          "partId": "oil-line-seals",
+          "x": 52,
+          "y": 30
+        }
+      ],
+      "risk": "US-Handbuch; Bauteiltypen erkennen, keine Teilenummern- oder Montagefreigabe."
+    },
+    {
+      "id": "thermostat",
+      "title": "Thermostat und Gehäuse",
+      "group": "cool",
+      "model": "E36",
+      "manualId": "bentley-e36",
+      "pdfPage": 203,
+      "bookPage": "170-9",
+      "figure": "14",
+      "width": 615,
+      "height": 478,
+      "pins": [
+        {
+          "partId": "cool-flange",
+          "x": 17,
+          "y": 60
+        },
+        {
+          "partId": "cool-gasket",
+          "x": 36,
+          "y": 50
+        },
+        {
+          "partId": "cool-thermostat",
+          "x": 65,
+          "y": 40
+        },
+        {
+          "partId": "cool-thermostat-seal",
+          "x": 50,
+          "y": 45
+        },
+        {
+          "partId": "cool-thermostat-bolts",
+          "x": 10,
+          "y": 75
+        }
+      ],
+      "risk": "US-Handbuch; Bauteiltypen erkennen, keine Teilenummern- oder Montagefreigabe."
+    },
+    {
+      "id": "pump",
+      "title": "Wasserpumpe am Steuergehäuse",
+      "group": "cool",
+      "model": "E36",
+      "manualId": "bentley-e36",
+      "pdfPage": 204,
+      "bookPage": "170-10",
+      "figure": "16",
+      "width": 613,
+      "height": 588,
+      "pins": [
+        {
+          "partId": "cool-pump",
+          "x": 25,
+          "y": 68
+        },
+        {
+          "partId": "cool-ring",
+          "x": 44,
+          "y": 58
+        }
+      ],
+      "risk": "US-Handbuch; Bauteiltypen erkennen, keine Teilenummern- oder Montagefreigabe."
+    }
+  ],
+  "chapters": [
+    {
+      "code": "010",
+      "title": "Grundlagen für Einsteiger",
+      "manualId": "bentley-e36",
+      "pdfPage": 9,
+      "bookPage": "010-1"
+    },
+    {
+      "code": "020",
+      "title": "Wartungsprogramm",
+      "manualId": "bentley-e36",
+      "pdfPage": 23,
+      "bookPage": "020-1"
+    },
+    {
+      "code": "100",
+      "title": "Motor – Grundlagen",
+      "manualId": "bentley-e36",
+      "pdfPage": 43,
+      "bookPage": "100-1"
+    },
+    {
+      "code": "110",
+      "title": "Motor aus- und einbauen",
+      "manualId": "bentley-e36",
+      "pdfPage": 59,
+      "bookPage": "110-1"
+    },
+    {
+      "code": "113",
+      "title": "Zylinderkopf aus- und einbauen",
+      "manualId": "bentley-e36",
+      "pdfPage": 67,
+      "bookPage": "113-1"
+    },
+    {
+      "code": "116",
+      "title": "Zylinderkopf / Ventiltrieb",
+      "manualId": "bentley-e36",
+      "pdfPage": 85,
+      "bookPage": "116-1"
+    },
+    {
+      "code": "117",
+      "title": "Steuerkette",
+      "manualId": "bentley-e36",
+      "pdfPage": 97,
+      "bookPage": "117-1"
+    },
+    {
+      "code": "119",
+      "title": "Schmiersystem",
+      "manualId": "bentley-e36",
+      "pdfPage": 115,
+      "bookPage": "119-1"
+    },
+    {
+      "code": "120",
+      "title": "Zündung",
+      "manualId": "bentley-e36",
+      "pdfPage": 125,
+      "bookPage": "120-1"
+    },
+    {
+      "code": "121",
+      "title": "Batterie / Starter / Generator",
+      "manualId": "bentley-e36",
+      "pdfPage": 137,
+      "bookPage": "121-1"
+    },
+    {
+      "code": "130",
+      "title": "Einspritzung",
+      "manualId": "bentley-e36",
+      "pdfPage": 147,
+      "bookPage": "130-1"
+    },
+    {
+      "code": "160",
+      "title": "Tank / Kraftstoffpumpe",
+      "manualId": "bentley-e36",
+      "pdfPage": 185,
+      "bookPage": "160-1"
+    },
+    {
+      "code": "170",
+      "title": "Kühlsystem",
+      "manualId": "bentley-e36",
+      "pdfPage": 195,
+      "bookPage": "170-1"
+    },
+    {
+      "code": "180",
+      "title": "Abgasanlage",
+      "manualId": "bentley-e36",
+      "pdfPage": 207,
+      "bookPage": "180-1"
+    },
+    {
+      "code": "200",
+      "title": "Getriebe – Grundlagen",
+      "manualId": "bentley-e36",
+      "pdfPage": 213,
+      "bookPage": "200-1"
+    },
+    {
+      "code": "210",
+      "title": "Kupplung",
+      "manualId": "bentley-e36",
+      "pdfPage": 215,
+      "bookPage": "210-1"
+    },
+    {
+      "code": "230",
+      "title": "Schaltgetriebe",
+      "manualId": "bentley-e36",
+      "pdfPage": 221,
+      "bookPage": "230-1"
+    },
+    {
+      "code": "240",
+      "title": "Automatikgetriebe",
+      "manualId": "bentley-e36",
+      "pdfPage": 229,
+      "bookPage": "240-1"
+    },
+    {
+      "code": "250",
+      "title": "Schaltung",
+      "manualId": "bentley-e36",
+      "pdfPage": 235,
+      "bookPage": "250-1"
+    },
+    {
+      "code": "260",
+      "title": "Kardanwelle",
+      "manualId": "bentley-e36",
+      "pdfPage": 241,
+      "bookPage": "260-1"
+    },
+    {
+      "code": "300",
+      "title": "Fahrwerk / Lenkung / Bremsen – Grundlagen",
+      "manualId": "bentley-e36",
+      "pdfPage": 249,
+      "bookPage": "300-1"
+    },
+    {
+      "code": "310",
+      "title": "Vorderachse",
+      "manualId": "bentley-e36",
+      "pdfPage": 257,
+      "bookPage": "310-1"
+    },
+    {
+      "code": "320",
+      "title": "Lenkung / Achsvermessung",
+      "manualId": "bentley-e36",
+      "pdfPage": 267,
+      "bookPage": "320-1"
+    },
+    {
+      "code": "330",
+      "title": "Hinterachse",
+      "manualId": "bentley-e36",
+      "pdfPage": 273,
+      "bookPage": "330-1"
+    },
+    {
+      "code": "331",
+      "title": "Differential",
+      "manualId": "bentley-e36",
+      "pdfPage": 287,
+      "bookPage": "331-1"
+    },
+    {
+      "code": "340",
+      "title": "Bremsen",
+      "manualId": "bentley-e36",
+      "pdfPage": 291,
+      "bookPage": "340-1"
+    },
+    {
+      "code": "400",
+      "title": "Karosserie – Grundlagen",
+      "manualId": "bentley-e36",
+      "pdfPage": 303,
+      "bookPage": "400-1"
+    },
+    {
+      "code": "410",
+      "title": "Kotflügel / Motorhaube",
+      "manualId": "bentley-e36",
+      "pdfPage": 309,
+      "bookPage": "410-1"
+    },
+    {
+      "code": "411",
+      "title": "Türen",
+      "manualId": "bentley-e36",
+      "pdfPage": 315,
+      "bookPage": "411-1"
+    },
+    {
+      "code": "412",
+      "title": "Kofferraumdeckel",
+      "manualId": "bentley-e36",
+      "pdfPage": 321,
+      "bookPage": "412-1"
+    },
+    {
+      "code": "510",
+      "title": "Außenausstattung / Stoßfänger",
+      "manualId": "bentley-e36",
+      "pdfPage": 323,
+      "bookPage": "510-1"
+    },
+    {
+      "code": "512",
+      "title": "Türscheiben",
+      "manualId": "bentley-e36",
+      "pdfPage": 331,
+      "bookPage": "512-1"
+    },
+    {
+      "code": "513",
+      "title": "Innenverkleidung",
+      "manualId": "bentley-e36",
+      "pdfPage": 345,
+      "bookPage": "513-1"
+    },
+    {
+      "code": "515",
+      "title": "Zentralverriegelung / Diebstahlschutz",
+      "manualId": "bentley-e36",
+      "pdfPage": 349,
+      "bookPage": "515-1"
+    },
+    {
+      "code": "520",
+      "title": "Sitze",
+      "manualId": "bentley-e36",
+      "pdfPage": 361,
+      "bookPage": "520-1"
+    },
+    {
+      "code": "540",
+      "title": "Schiebedach",
+      "manualId": "bentley-e36",
+      "pdfPage": 367,
+      "bookPage": "540-1"
+    },
+    {
+      "code": "541",
+      "title": "Verdeck",
+      "manualId": "bentley-e36",
+      "pdfPage": 371,
+      "bookPage": "541-1"
+    },
+    {
+      "code": "600",
+      "title": "Elektrik – Grundlagen",
+      "manualId": "bentley-e36",
+      "pdfPage": 381,
+      "bookPage": "600-1"
+    },
+    {
+      "code": "610",
+      "title": "Elektrische Bauteile lokalisieren",
+      "manualId": "bentley-e36",
+      "pdfPage": 387,
+      "bookPage": "610-1"
+    },
+    {
+      "code": "611",
+      "title": "Wischer / Waschanlage",
+      "manualId": "bentley-e36",
+      "pdfPage": 419,
+      "bookPage": "611-1"
+    },
+    {
+      "code": "612",
+      "title": "Schalter / Zubehör",
+      "manualId": "bentley-e36",
+      "pdfPage": 429,
+      "bookPage": "612-1"
+    },
+    {
+      "code": "620",
+      "title": "Instrumente",
+      "manualId": "bentley-e36",
+      "pdfPage": 437,
+      "bookPage": "620-1"
+    },
+    {
+      "code": "630",
+      "title": "Beleuchtung",
+      "manualId": "bentley-e36",
+      "pdfPage": 441,
+      "bookPage": "630-1"
+    },
+    {
+      "code": "640",
+      "title": "Heizung / Klimaanlage",
+      "manualId": "bentley-e36",
+      "pdfPage": 447,
+      "bookPage": "640-1"
+    },
+    {
+      "code": "650",
+      "title": "Radio",
+      "manualId": "bentley-e36",
+      "pdfPage": 465,
+      "bookPage": "650-1"
+    },
+    {
+      "code": "720",
+      "title": "Sicherheitsgurte",
+      "manualId": "bentley-e36",
+      "pdfPage": 471,
+      "bookPage": "720-1"
+    },
+    {
+      "code": "721",
+      "title": "Airbag / SRS",
+      "manualId": "bentley-e36",
+      "pdfPage": 477,
+      "bookPage": "721-1"
+    }
+  ]
+}
