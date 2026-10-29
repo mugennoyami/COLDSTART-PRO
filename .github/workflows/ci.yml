@@ -1,0 +1,36 @@
+name: Build und Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: HTML bauen und testen
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Quellcode auschecken
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Node.js einrichten
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - name: Auslieferbare HTML-Datei bauen
+        run: node build.mjs
+      - name: Automatisierte Tests ausführen
+        run: node --test tests/*.test.mjs
+      - name: Versionierte HTML-Datei auf Aktualität prüfen
+        run: git diff --exit-code -- dist/index.html

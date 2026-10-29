@@ -1,6 +1,12 @@
-# COLDSTART Garage Atlas · 0.3.0
+# COLDSTART-PRO · Garage Atlas · 0.3.0
 
 Lokales, bearbeitbares Software-MVP für einen visuellen Teile- und Serviceatlas rund um BMW E36 und E46. Stand: 29.10.2026.
+
+## Git-Entwicklungsstand
+
+Das private Projekt liegt in `mugennoyami/COLDSTART-PRO`. Es soll wegen der ungeklärten öffentlichen Bildrechte privat bleiben. Quellcode, Tests, redaktionelle Daten und die fertig gebaute HTML-Datei werden gemeinsam versioniert. Das bestehende COLDSTART-Website-Projekt bleibt ein separates Repository. Vollständige PDF-/JPEG-Originale, persönliche Browserdaten und Zugangsdaten sind nicht enthalten.
+
+Node.js 24 genügt; es sind keine npm-Abhängigkeiten zu installieren. Hinweise zu Branches, Commits, Pushes und Pull Requests stehen in [CONTRIBUTING.md](CONTRIBUTING.md). Der GitHub-Workflow baut die App, führt die Tests aus und prüft `dist/index.html` gegen den Quellcode. Den Status eines konkreten Commits unter „Actions“ prüfen. Es gibt keine automatische Veröffentlichung. Rechte und Grenzen der privaten Arbeitsfassung stehen in [RIGHTS.md](RIGHTS.md).
 
 ## Sofort starten
 

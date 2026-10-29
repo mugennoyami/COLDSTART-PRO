@@ -1,0 +1,27 @@
+# Lokale Werkzeuge und temporäre Dateien
+node_modules/
+coverage/
+.DS_Store
+Thumbs.db
+*.log
+/.local/
+/.preview/
+/work/
+/tmp/
+
+# Zugangsdaten und persönliche Arbeitskopien
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+/private/
+/originals/
+/backups/
+*.pdf
+*.bundle
+
+# Nur das ausgelieferte, reproduzierbare HTML wird versioniert
+/dist/*
+!/dist/index.html
