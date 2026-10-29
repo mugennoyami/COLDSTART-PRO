@@ -2,6 +2,15 @@
 
 COLDSTART Garage Atlas 0.4.0 · 29.10.2026.
 
+## Startwege und private Cloud · 29.10.2026
+
+Die zusätzliche Bereitstellung verwendet denselben Anwendungscode; kein neuer Reparaturdatenstand. Sites-Projektidentität ist in `.openai/hosting.json` festgehalten. Zugang wurde vor Bereitstellung als Eigentümerkonto mit genau einem erlaubten Eigentümer und ohne Gruppen geprüft. Keine öffentliche Freigabe eingerichtet. Der konkrete Veröffentlichungserfolg wird vom Sites-Bereitstellungsergebnis bestätigt; eine vorbereitete URL allein belegt keinen laufenden Dienst.
+
+- Finale lokale Prüfung nach angepasstem Speicherhinweis: **61 Tests bestanden, 0 fehlgeschlagen**. Browserdialog zeigt ChatGPT-Anmeldung für die private Cloud und fehlende Gerätesynchronisierung korrekt; Sicherungsknopf heißt „Projekt-Sicherung exportieren“.
+- Windows-Startdatei öffnet ausschließlich `dist/index.html`, prüft deren Existenz und benötigt keine zusätzliche Laufzeit. Logik und Pfadquotierung geprüft; **kein echter Windows-Ausführungstest** im Linux-Container. CRLF für `.cmd`/`.url` explizit konfiguriert.
+- Keine Datenbank, kein Offline-Service-Worker, keine automatische Veröffentlichung bei GitHub-Push und kein neues kostenpflichtiges Abo. JSON-Sicherung und erneute lokale Zuordnung von Originaldateien bleiben für Gerätewechsel nötig.
+- Start- und Updateanleitung: [STARTEN.md](STARTEN.md). Die historischen Bedienprüfungen unten werden dadurch nicht als vollständiger erneuter Reparatur- oder Hardwaretest ausgegeben.
+
 ## Aktueller Prüfstand: Kaufquellen und AUTODOC
 
 Eigene Daten-, Browser- und Layoutprüfungen. Kein vollständiger fachlicher Videoaudit, keine KFZ-Fachfreigabe und keine gemessene Ersparnis an realen Fahrzeugen. Alle historischen Prüfstände unten gelten jeweils für ihre damalige Fassung. Recherche, Angebotspreise und Quellenregister: [QUELLEN_KAUF_UND_AUTODOC.md](QUELLEN_KAUF_UND_AUTODOC.md).

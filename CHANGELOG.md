@@ -22,3 +22,10 @@
 - Build-/Test-Workflow für GitHub Actions mit nur lesendem Repository-Zugriff, festgelegten Action-Commits und Node.js 24.
 - Regeln für Git-Dateien, Rechtehinweis und Anleitung für Branches, Commits und Pull Requests.
 - Der Import verändert keine Anwendungsfunktion und veröffentlicht keine Website.
+
+## Startwege und private Bereitstellung · 29.10.2026
+
+- Private Sites-Bereitstellung für das Eigentümerkonto vorbereitet; GitHub bleibt führende Codequelle.
+- Windows-Startdatei für die lokale HTML-Fassung und Internetverknüpfung zur festen Cloudadresse ergänzt.
+- Start-, Sicherungs-, Gerätewechsel- und Updateanleitung ergänzt; browserlokale Daten bleiben ausdrücklich ohne automatische Gerätesynchronisierung.
+- Kein nativer EXE-Installer, kein Offline-Service-Worker und keine neue Server-Datenbank.
