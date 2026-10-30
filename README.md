@@ -1,6 +1,17 @@
-# COLDSTART-PRO · Garage Atlas · 0.4.0
+# COLDSTART-PRO · Garage Atlas · 0.4.1
 
 Lokales, bearbeitbares Software-MVP für einen visuellen Teile- und Serviceatlas rund um BMW E36 und E46. Stand: 29.10.2026.
+
+## Neu in 0.4.1: Prüfkorrekturen · 30.10.2026
+
+- Datenimport und Sicherung prüfen Datentypen streng (Teilenummern nur als Text mit 11 Ziffern, keine reservierten IDs, keine leeren Einträge). Ein fehlerhaftes Paket wird vollständig und ohne Speicherung abgewiesen; ein bereits gespeicherter fehlerhafter Zusatzkatalog wird beim Start verworfen. In „Daten & eigene Inhalte“ lässt sich der Zusatzkatalog zurücksetzen.
+- Eine Sicherung einzuspielen fragt vorher nach, zeigt aktuellen Stand und Sicherung nebeneinander und kann den aktuellen Stand zuerst als Datei sichern. Sicherungen enthalten nur ergänzte Teile statt des ganzen Startbestands; ältere Sicherungen bleiben importierbar.
+- Speicherfehler werden nicht mehr durch Erfolgsmeldungen überdeckt.
+- Eigene Zeichnungen liegen in IndexedDB statt im 5-MB-Speicher des Browsers; ältere Zeichnungen werden beim ersten Start verschoben. Nach dem Speichern wird die eigene Zeichnung sofort angezeigt.
+- Das ausgelieferte HTML enthält eine Content-Security-Policy: nur das eigene Skript (SHA-256-Hash), keine Netzwerkverbindungen, externe Frames nur von youtube-nocookie.com.
+- Lesbarkeit: Schrift mindestens 10 px, Kontrast der Nebentexte angehoben, Tabellenkopf der Aktionsspalte beschriftet.
+- Videoverknüpfungen entfernen und laden den richtigen Eintrag; die Projektliste führt E36 und E46 getrennt auf; der Seitenkopf-Button heißt „Projektliste als CSV“.
+- Build bricht bei übrig gebliebenen Modulanweisungen ab, mehrzeilige Imports funktionieren. `node scripts/check-links.mjs` prüft die externen Verweise (Netzwerk nötig).
 
 ## Neu in 0.4: AUTODOC und Kaufquellen
 
@@ -101,13 +112,13 @@ Die Handbuchauswertung steht in `docs/HANDBUCH_AUSWERTUNG.md`. Der ursprünglich
 
 Es gibt keinen Backendserver, keine Telemetrie und kein KI-Modell. Die Software lädt im Ausgangszustand keine externen Skripte, Schriftdateien oder Bilder. Ein Quellenklick öffnet die externe Website. Ein Klick auf „Video laden“ verbindet den Browser mit dem Videoanbieter. Diese Quellen liegen außerhalb der Kontrolle der App.
 
-Persönliche Ergänzungen werden unverschlüsselt im lokalen Browserspeicher gehalten; zugeordnete PDFs getrennt in IndexedDB. Falls dessen Nutzung scheitert, bleibt die Datei nur für die Sitzung verfügbar und wird entsprechend gekennzeichnet. Auf gemeinsam verwendeten Browserprofilen besteht kein Zugriffsschutz. Ein Browserwechsel, privater Modus, Speicherlimit oder Löschen von Websitedaten kann Ergänzungen entfernen. Eine HTML-Datei allein enthält keine später gespeicherten Ergänzungen; dafür ist die vollständige JSON-Sicherung erforderlich. Eine Sicherung kann Bauzustand, Notizen, Bilder und Texte enthalten und sollte nicht öffentlich geteilt werden. Die App benötigt keine vollständige VIN, Kennzeichen oder Kundenidentität.
+Persönliche Ergänzungen werden unverschlüsselt im lokalen Browserspeicher gehalten; zugeordnete PDFs und eigene Zeichnungen getrennt in IndexedDB. Falls dessen Nutzung scheitert, bleibt die Datei nur für die Sitzung verfügbar und wird entsprechend gekennzeichnet. Auf gemeinsam verwendeten Browserprofilen besteht kein Zugriffsschutz. Ein Browserwechsel, privater Modus, Speicherlimit oder Löschen von Websitedaten kann Ergänzungen entfernen. Eine HTML-Datei allein enthält keine später gespeicherten Ergänzungen; dafür ist die vollständige JSON-Sicherung erforderlich. Eine Sicherung kann Bauzustand, Notizen, Bilder und Texte enthalten und sollte nicht öffentlich geteilt werden. Die App benötigt keine vollständige VIN, Kennzeichen oder Kundenidentität.
 
-Bei vollem oder blockiertem Speicher bleibt der aktuelle Stand im Arbeitsspeicher und eine sichtbare Warnung verlangt einen Export. Pro Bild sind 2 MB zulässig; mehrere Bilder können das Browserlimit erreichen. Backups werden bis 30 MB akzeptiert. Es gibt keine Synchronisierung zwischen Geräten und keine Mehrbenutzerverwaltung.
+Bei vollem oder blockiertem Speicher bleibt der aktuelle Stand im Arbeitsspeicher und eine sichtbare Warnung verlangt einen Export. Pro Bild sind 2 MB zulässig; Bilder liegen in IndexedDB, im Browserspeicher stehen nur Metadaten und Hotspots. Ohne IndexedDB (etwa in manchen privaten Modi) bleibt ein Bild im Browserspeicher, dessen Limit dann früh erreicht werden kann. Backups werden bis 30 MB akzeptiert. Es gibt keine Synchronisierung zwischen Geräten und keine Mehrbenutzerverwaltung.
 
 ## Entwickeln
 
-Keine Abhängigkeiten installieren. Es werden nur eingebaute Node-Funktionen verwendet.
+Keine Abhängigkeiten installieren. Es werden nur eingebaute Node-Funktionen verwendet. Externe Verweise prüft `node scripts/check-links.mjs` (Netzwerk nötig, nicht Teil der Tests; gesperrte Shops gelten als nicht prüfbar, nicht als tot).
 
 ```bash
 node build.mjs

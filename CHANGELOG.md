@@ -1,5 +1,21 @@
 # Änderungsverlauf
 
+## 0.4.1 · 30.10.2026
+
+Korrekturen aus einer Prüfung des Stands 0.4.0.
+
+- Import und Sicherung: strenge Typprüfung (u. a. Teilenummer als JSON-Zahl, numerische oder reservierte IDs, leere Einträge). Vorher konnte ein solches Paket gespeichert werden und die betroffene Baugruppe nach dem Neuladen leer lassen. Der Import ist jetzt transaktional, ein beschädigter gespeicherter Zusatzkatalog wird beim Start verworfen, „Zusatzkatalog zurücksetzen“ ergänzt.
+- Sicherung einspielen fragt nach, zeigt aktuellen Stand und Sicherung und kann den aktuellen Stand vorher sichern. Sicherungen enthalten nur ergänzte Teile; Startbestand wird beim Import nicht mehr als Kopie eingefroren.
+- Speichern meldet Fehler ehrlich (kein „gespeichert“ bei vollem Speicher).
+- Eigene Zeichnungen liegen in IndexedDB; Migration alter Zeichnungen beim Start; Rückfall auf den Browserspeicher ohne IndexedDB. Die gespeicherte Zeichnung wird sofort angezeigt, auch bei E36 nach dem Neuladen.
+- Content-Security-Policy mit Skript-Hash im gebauten HTML.
+- Videos: richtiger Eintrag beim Entfernen und Laden. Gespeicherte Daten werden beim Laden bereinigt. Totes Feld `checks` entfernt.
+- Projektliste nach Baureihe gruppiert; Button „Projektliste als CSV“; Arbeitskarte nennt die gewählte Baureihe.
+- Lesbarkeit: Mindestschrift 10 px, Kontrast der Nebentexte (u. a. Quellenhinweise, Abzeichen, Hinweise zu zurückgestellten Quellen) auf mindestens 4,5:1, beschriftete Tabellenkopfzelle.
+- Lernquellen zeigen Datumsangaben als TT.MM.JJJJ; Radabgleich akzeptiert Einheiten („40 mm“, „8,0 J“); das Dokumentenregister nutzt dieselbe CSV-Maskierung wie die Projektliste.
+- Build: mehrzeilige Imports, Abbruch bei übrig gebliebenen Modulanweisungen. `docs/test-results.tap` entfernt (war veraltet und nicht reproduzierbar). `scripts/check-links.mjs` für die externen Verweise.
+- 108 automatisierte Tests (61 bisherige, 47 neue).
+
 ## 0.4.0 · 29.10.2026
 
 - Kuratierte AUTODOC-Originalquellen und aktuelle Kaufangebote mit Ausgabe, Preisstand und Nutzungsgrenzen.

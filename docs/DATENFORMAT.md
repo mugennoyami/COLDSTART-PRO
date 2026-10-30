@@ -1,6 +1,6 @@
 # Datenformat und Inhaltsworkflow
 
-Stand 29.10.2026 · Anwendung 0.3.0; Import-/Sicherungsschema weiterhin Version 1.
+Stand 30.10.2026 · Anwendung 0.4.1; Import-/Sicherungsschema weiterhin Version 1.
 
 ## Importierbares Datenpaket
 
@@ -60,7 +60,9 @@ Noch nicht enthalten: lokale Videodateiablage, Videokonvertierung, Untertitelver
 
 ## Sicherungsformat
 
-Eine vollständige Sicherung enthält das Datenpaket plus `type: "coldstart-backup"`, Erstellzeit und `personal` mit Bauzustand, Liste, Videos, Serviceinhalten und Bildern/Hotspots. Import einer Sicherung aktualisiert den Katalog und ersetzt die persönlichen Felder durch deren gespeicherten Stand. Daher vorher den aktuellen Stand sichern. Eine Dateisicherung ist unverschlüsselt.
+Eine vollständige Sicherung enthält `type: "coldstart-backup"`, Erstellzeit, die ergänzten `parts` und `sources` (nur, was vom Startbestand abweicht) und `personal` mit Bauzustand, Liste, Videos, Serviceinhalten und Bildern/Hotspots. Ältere Sicherungen mit dem kompletten Startbestand bleiben importierbar; identische Teile werden beim Import nicht übernommen, damit spätere Korrekturen im Startbestand nicht überdeckt werden. Das Einspielen ersetzt die persönlichen Felder durch den Stand der Sicherung; die App zeigt vorher beide Stände und kann den aktuellen Stand zuerst als Datei sichern. Eine ungültige Sicherung wird vollständig abgewiesen, der Stand bleibt unverändert. Eine Dateisicherung ist unverschlüsselt.
+
+**Typregeln beim Import:** `id`, `sourceId`, `name`, `title`, `url` und Notizen müssen Text sein; `id` besteht aus 1 bis 80 Zeichen `A-Z a-z 0-9 _ -` und darf nicht `__proto__`, `constructor` oder `prototype` heißen. `number` ist Text mit genau 11 Ziffern (als JSON-Zahl würden führende Nullen verloren gehen) und braucht eine Quelle im Paket. Leere Einträge (`null`) und Listen anstelle von Objekten werden mit einer verständlichen Meldung abgewiesen.
 
 Die CSV-Projektliste ist ein Export, kein vollständiges Backup. Eine gedruckte Arbeitskarte enthält ebenfalls keine Bild- oder Anleitungssicherung. Für Weiterentwicklung und Migration das vollständige JSON aufbewahren.
 
@@ -74,7 +76,7 @@ Die Legacy-Ausgabe erhält bewusst `models: []`; für E46 liefern die Zuordnungs
 
 Die zwei Original-PDFs werden ausschließlich vom Nutzer ausgewählt. Nach Prüfung speichert IndexedDB sie unter `coldstart-atlas-manuals-v1/pdfs`; bei blockiertem oder vollem Speicher gilt Sitzungsspeicherung. Die vollständige lokale Dateiprüfung nutzt Web Crypto, ersatzweise eine getestete lokale SHA-256-Implementierung. Es gibt keinen Upload-Endpunkt und keine automatische Fernabfrage.
 
-**Migration und Backup:** Schema-Version 1 bleibt kompatibel. Projekt-Sicherungen enthalten weiterhin Katalog, persönliche Daten und eigene Bilder, aber keine Handbuch-PDFs. Die statisch kuratierten Themen/Bilder stecken in der HTML-/Quellcodefassung und werden mit dieser versioniert. Original-PDFs separat aufbewahren; für einen Browser- oder Gerätewechsel erneut zuordnen.
+**Migration und Backup:** Schema-Version 1 bleibt kompatibel. Projekt-Sicherungen enthalten ergänzte Teile und Quellen, persönliche Daten und eigene Bilder, aber keine Handbuch-PDFs. Die statisch kuratierten Themen/Bilder stecken in der HTML-/Quellcodefassung und werden mit dieser versioniert. Original-PDFs separat aufbewahren; für einen Browser- oder Gerätewechsel erneut zuordnen.
 
 ## Dokumentenregal ab Version 0.3
 
