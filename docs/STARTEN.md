@@ -1,6 +1,6 @@
 # COLDSTART PRO starten
 
-Stand: 29.10.2026 · Anwendung 0.4.0. Zwei Startwege für denselben ausgelieferten Programmstand.
+Stand: 30.10.2026 · Anwendung 0.4.1. Zwei Startwege für denselben ausgelieferten Programmstand.
 
 ## Privat im Browser – PC und Handy
 
@@ -28,7 +28,7 @@ Zeichnungen, Datenbestand und Suche funktionieren lokal auch ohne Internet. Orig
 **Cloud-Hosting bedeutet derzeit keine Synchronisierung deiner persönlichen App-Daten.** Die Site liefert die Anwendung; Projektlisten, Notizen, eigene Anleitungen und Verknüpfungen speichert die App im jeweiligen Browser. Lokal geöffnete HTML, Cloudadresse, unterschiedliche Browser und unterschiedliche Geräte haben getrennte Speicherbereiche.
 
 1. Auf dem bisherigen Gerät **Daten & eigene Inhalte → Projekt-Sicherung exportieren** nutzen.
-2. Die JSON-Sicherung selbst auf das Zielgerät übertragen und dort über die Importfunktion wiederherstellen. Vor dem Import auch den dortigen Stand sichern; die Wiederherstellung ist kein Zusammenführen parallel bearbeiteter Stände.
+2. Die JSON-Sicherung selbst auf das Zielgerät übertragen und dort über die Importfunktion wiederherstellen. Die App fragt vor dem Ersetzen nach und kann den dortigen Stand vorher als Datei sichern; die Wiederherstellung ist kein Zusammenführen parallel bearbeiteter Stände.
 3. PDF-/JPEG-Originale sind in der JSON-Sicherung nicht enthalten. Originale am Zielgerät erneut lokal zuordnen oder mit deinem bestehenden Google-Drive-Zugriff öffnen.
 4. Regelmäßig außerhalb des Browserprofils sichern. Gelöschte Browserdaten, private Tabs und Speicherbereinigung können lokale Ergänzungen entfernen.
 

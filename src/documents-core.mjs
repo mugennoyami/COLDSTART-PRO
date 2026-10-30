@@ -1,13 +1,13 @@
 import {SOURCE_DOCUMENTS} from './documents-data.mjs';
+import {csvCell} from './core.mjs';
 const fold=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/ß/g,'ss');
 export function filterDocuments({query='',category='all',model='all',kind='all'}={}){
  const terms=fold(query).split(/\s+/).filter(Boolean);
  return SOURCE_DOCUMENTS.filter(d=>(category==='all'||d.category===category)&&(model==='all'||(model==='unassigned'?!d.models.length&&!d.generic:d.generic||d.models.includes(model)))&&(kind==='all'||d.kind===kind)&&terms.every(t=>fold([d.title,d.summary,d.scopeNote,d.edition,d.kind,...(d.identifiers??[]),...d.flags].join(' ')).includes(t))).sort((a,b)=>(a.priority??3)-(b.priority??3)||a.title.localeCompare(b.title,'de'));
 }
 export function documentRegisterCSV(){
- const cell=s=>'"'+String(s??'').replace(/^[=+@-]/,"'$&").replace(/"/g,'""')+'"';
  const rows=[['Titel','Art','Stand','Thema','Modellbezug','Umfang','Gültigkeitsgrenzen','Prüfhinweise','Fundstellen (PDF)','Originalquelle','SHA-256'],...SOURCE_DOCUMENTS.map(d=>[d.title,d.kind,d.edition,d.category,d.generic?'produktbezogen':d.models.join(', ')||'keine automatische Zuordnung',d.pages+(d.mimeType==='image/jpeg'?' Bild':' PDF-Seiten'),d.coverage,d.flags.join(' | '),d.refs.map(r=>r.pdfPage+': '+r.label).join(' | '),d.sourceURL,d.sha256])];
- return '\uFEFF'+rows.map(row=>row.map(cell).join(';')).join('\r\n');
+ return '\uFEFF'+rows.map(row=>row.map(csvCell).join(';')).join('\r\n');
 }
 export const WHEEL_IDENTITIES=[
  {docId:'drive-14',label:'Rondell 0021 / R.O.D. 21 807',types:['21807','x2180740t'],type:'21 807 / X 21 807 40 T',width:8,diameter:17,et:40,pcd:'5x120',bore:72.6,page:9,productionFrom:'2002-10',revisions:[{id:'V04',label:'V04 · 11.05.2005',identityPage:9,vehiclePage:10,pairPage:14},{id:'V02',label:'V02 · 28.05.2003',identityPage:2,vehiclePage:3,pairPage:7}]},
@@ -17,7 +17,7 @@ export const WHEEL_IDENTITIES=[
  {docId:'drive-01',label:'BBS RC090 · Quellenkonflikt',types:['rc090'],type:'RC090',width:8,diameter:17,et:20,pcd:'5x120',bore:72.6,page:1,blocked:true}
 ];
 const wheelToken=s=>fold(s).replace(/[×✕]/g,'x').replace(/[^a-z0-9]/g,'');
-function measure(value){const s=String(value??'').trim().replace(',','.');return /^-?\d+(?:\.\d+)?$/.test(s)?Number(s):null;}
+export function measure(value){const s=String(value??'').trim().replace(/\s*(?:mm|zoll|inch|inches|["″”]|j)$/i,'').trim().replace(',','.');return /^-?\d+(?:\.\d+)?$/.test(s)?Number(s):null;}
 export function normalizeTire(value){const t=String(value??'').toUpperCase().replace(/\s+/g,'').replace('ZR','R');return /^(?:1\d{2}|2\d{2}|3\d{2})\/(?:\d{2})R(?:1\d|2\d)$/.test(t)?t:null;}
 // Exact transcription of the general V17 pairing list in both supplied 21 807 revisions.
 // A listed pair does not establish that either size is valid in a particular vehicle row.
