@@ -1,6 +1,20 @@
 # Prüfbericht und Nutzenbewertung
 
-COLDSTART Garage Atlas 0.4.1 · 30.10.2026.
+COLDSTART Garage Atlas 0.5.0 · 01.11.2026.
+
+## Prüfstand 0.5.0: Werkstatt-Assistent
+
+Eigene technische Prüfung im Linux-Container, keine KFZ-Fachfreigabe der Wissensbasis.
+
+| Prüfung | Ergebnis | Grenze |
+|---|---|---|
+| Automatisierte Tests | **133 bestanden, 0 fehlgeschlagen** (108 bisherige, 25 neue) | Codeerkennung, Codegruppen ohne Überschneidung, keine Drehmoment-/Mengenangaben in der Wissensbasis, Themenzuordnung (vorne/hinten getrennt, keine Fehltreffer durch Kurzwörter), Baureihe aus der Frage, jede Verweisvorlage löst auf, zurückgestellte Quellen nie verlinkt, Markierungsprüfung, Escaping, Anfrageaufbau ohne Schlüssel, Antwort- und Fehlerauswertung, Kostenschätzung, CSP |
+| Browser, eingebautes Wissen (Chromium 1440 px und 390 px) | Fehlercodes, Radlager, Bremsscheiben E36/E46, Überhitzung, Thermostat, Gutachten; Sprung zu Baugruppe und Bauteil (E36 öffnet das Handbuchbild mit markiertem Teil), Anleitung, Handbuch-Arbeitsübersicht, Kapitel, Arbeitsübersicht, App-Bereich; auf dem Handy schließt sich der Chat nach dem Sprung | Kein Safari, Firefox oder echtes Mobilgerät |
+| Browser, KI-Pfad mit nachgebildeter OpenAI-Antwort | Anfrage mit `Authorization`-Kopf, Modell, `reasoning_effort` und Verlauf; Markierungen werden zu Knöpfen, ungültige verworfen; Kostenschätzung; 401, 429 und 400 mit zweitem schlichtem Versuch; Schlüssel nur im eigenen Speicherbereich, nicht im Atlas-Speicher; Sitzungsschlüssel nur in `sessionStorage` | **Kein Test mit echtem Schlüssel und echter Antwort.** Die OpenAI-Vorabprüfung (CORS) wurde für die Cloudadresse und `file://` (Origin `null`) erfolgreich abgefragt; Fehlerantworten ohne CORS-Kopf erscheinen im Browser nur als allgemeiner Verbindungsfehler |
+| Content-Security-Policy | Verbindung zu `api.openai.com` erlaubt, zu anderen Zielen blockiert (Browserprüfung) | Nicht gegen die private Cloudbereitstellung geprüft |
+| axe 4.10 | 0 Verstöße im Assistenten (Knopf, Begrüßung, Antworten, Einstellungen, KI-Antwort) bei 1440 und 390 px; kein horizontaler Überlauf | Nur Chromium |
+
+Die Wissensbasis ist eine redaktionelle Einordnung typischer Ursachen. Herstellerspezifische Codes werden nicht gedeutet. KI-Antworten werden nicht fachlich geprüft und sind als solche gekennzeichnet.
 
 ## Prüfstand 0.4.1: Korrekturen nach Audit
 

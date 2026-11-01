@@ -10,6 +10,12 @@ Vor einem Wechsel auf öffentlich oder einer kommerziellen Nutzung sind Daten-, 
 
 Für fremde Kataloge, Reparaturdaten oder Videoanbieter wird durch dieses Projekt keine Lizenz erteilt. Die technischen und fachlichen Grenzen in `README.md` und `docs/REVIEW.md` gelten weiter.
 
+## Werkstatt-Assistent ab 0.5
+
+Die Wissensbasis in `src/assistant-data.mjs` besteht aus eigenen, kurzen redaktionellen Einordnungen typischer Ursachen und Prüfschritte. Sie übernimmt keine Texte, Tabellen, Drehmomente oder Sollwerte aus Handbüchern, Herstellerunterlagen oder kostenpflichtigen Datenbanken. Die Bedeutung genormter OBD-Codes ist allgemein bekannt; herstellerspezifische Codes werden bewusst nicht gedeutet. Die Inhalte sind keine fachlich freigegebenen Reparaturdaten.
+
+Die optionale KI-Funktion nutzt das Konto und den API-Schlüssel des Nutzers bei OpenAI; dafür gelten dessen Nutzungsbedingungen. Das Projekt erteilt keine Lizenz für KI-Antworten und prüft sie nicht fachlich. Vor einer öffentlichen oder kommerziellen Nutzung wären unter anderem Datenschutzhinweise, ein Server statt Nutzerschlüssel im Browser und die Haftungsfrage zu klären.
+
 ## Kuratierte Lernquellen ab 0.4
 
 AUTODOC wird über die öffentlich angebotenen Originalseiten und YouTube-Originalvideos erschlossen. Nur kurze eigene Einordnungen, bibliografische Metadaten und URLs sind im Repository. Neue fremde PDF-Texte, Bilder, Vorschaubilder oder Videodateien werden nicht weiterverteilt. Die Videos bleiben im offiziellen YouTube-Player; er wird erst auf Klick geladen und umgeht keine Anbieterbeschränkungen. Eine Rückverknüpfung zum Original bleibt sichtbar.

@@ -44,6 +44,8 @@ Die lokale Git-Identität für künftige Commits aus den eigenen Git-Einstellung
 
 ## Inhalt prüfen
 
+- Wissensbasis des Werkstatt-Assistenten (`src/assistant-data.mjs`): keine Drehmomente, Füllmengen oder Sollwerte, herstellerspezifische Codes nicht deuten. Verweisvorlagen (`{M}` = Baureihe) werden durch `tests/assistant.test.mjs` gegen Teile, Quellen und Kapitel geprüft. Schlüsselwörter normalisiert schreiben (klein, ä→ae, ß→ss).
+
 - Bei geänderten Oberflächen die betroffene Aufgabe im Browser auf Desktop und schmaler Breite prüfen.
 - Neue Teile-/Serviceangaben brauchen passende Quellen, Variantenabgrenzung und den zutreffenden Prüfstatus.
 - Widersprüche nicht als bestätigte Referenz oder Freigabe ausgeben. Keine Drehmomente, Teilematches oder Rechtsfreigaben aus Modellnamen ableiten.

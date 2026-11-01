@@ -1,6 +1,17 @@
-# COLDSTART-PRO · Garage Atlas · 0.4.1
+# COLDSTART-PRO · Garage Atlas · 0.5.0
 
-Lokales, bearbeitbares Software-MVP für einen visuellen Teile- und Serviceatlas rund um BMW E36 und E46. Stand: 29.10.2026.
+Lokales, bearbeitbares Software-MVP für einen visuellen Teile- und Serviceatlas rund um BMW E36 und E46. Stand: 01.11.2026.
+
+## Neu in 0.5: Werkstatt-Assistent · 01.11.2026
+
+Unten rechts sitzt ein Chat-Assistent. Er hilft bei der Navigation, erklärt Fehlercodes aus dem Steuergerät und gibt Tipps zu Alltagsproblemen und typischen Arbeiten.
+
+- **Fehlercodes:** Eingaben wie `P0171`, `p 0301` oder `P0171 und P0174` werden erkannt. 16 Einzelcodes und 18 Codegruppen sind mit Dringlichkeit, typischen Ursachen am E36/E46 und Prüfschritten hinterlegt. Für alle anderen Codes erklärt er die Codestruktur (Bereich, genormt oder herstellerspezifisch, Teilsystem) und bietet eine YouTube-Suche an, statt eine Bedeutung zu erfinden.
+- **Alltagsprobleme und Anleitungen:** 32 Themen, z. B. „Radlager defekt erkennen“, „Bremsscheiben vorne/hinten wechseln“, Überhitzung, Kühlmittel- und Ölverlust, Thermostat, Wasserpumpe, Bremsflüssigkeit, Zündkerzen, ABS-Leuchte, Fehlerspeicher auslesen sowie Hilfe zu den Bereichen des Atlas.
+- **Direkte Sprünge:** Jede Antwort endet mit Knöpfen zur passenden Baugruppe beziehungsweise Explosionszeichnung (E36 mit Handbuchbild), zum Bauteil, zur kuratierten AUTODOC-Anleitung oder zum geprüften Video, zur Handbuch-Arbeitsübersicht oder zum Bentley-Kapitel (E36) und zu einer YouTube-Suche. Baureihe aus der Frage („beim E46“) hat Vorrang vor der Auswahl im Atlas. Zurückgestellte Quellen (andere Motorisierung, Quellenkonflikt) werden nie empfohlen.
+- **Offline zuerst:** Ohne Einrichtung antwortet der Assistent nur aus dem eingebauten Wissen und sendet nichts ins Internet.
+- **Optional KI (OpenAI):** Mit eigenem OpenAI-API-Schlüssel (⚙ im Assistenten) beantwortet er auch freie Fragen. Voreingestellt ist `gpt-5-mini`, wählbar sind `gpt-5-nano`, `gpt-4o-mini` oder eine eigene Modell-ID. Die KI bekommt die gültigen Atlas-Ziele und darf nur über geprüfte Markierungen verlinken; unbekannte Ziele werden verworfen, YouTube-Verweise sind immer Suchen und nie erfundene Video-Adressen. Unter jeder KI-Antwort steht eine Kostenschätzung.
+- **Grenzen:** Keine Diagnose, keine Reparaturfreigabe, keine Drehmomente, Füllmengen oder Sollwerte. Die API wird getrennt vom ChatGPT-Abo nach Verbrauch abgerechnet. Der Aufruf direkt aus dem Browser wurde mit nachgebildeten Antworten geprüft, nicht mit einem echten Schlüssel; siehe [docs/REVIEW.md](docs/REVIEW.md).
 
 ## Neu in 0.4.1: Prüfkorrekturen · 30.10.2026
 
@@ -39,7 +50,7 @@ Node.js 24 genügt; es sind keine npm-Abhängigkeiten zu installieren. Hinweise 
 
 Cloud-Hosting synchronisiert persönliche Projektlisten, Notizen und zugeordnete Originale bisher nicht zwischen Geräten. Daten bleiben browserlokal; die JSON-Sicherung überträgt keine PDF-Dateien und führt parallele Stände nicht zusammen.
 
-Die Einzeldatei braucht weder Installation noch Konto, API-Schlüssel oder kostenpflichtiges Abo. Zeichnungen, Datenbestand, Suche und Projektliste funktionieren ohne Internet. Externe Originalquellen und Videos brauchen eine Internetverbindung. Einige Dateivorschauen führen JavaScript nicht aus; dann die HTML-Datei herunterladen und ausdrücklich mit Chrome, Edge, Firefox oder Safari öffnen. Die Bearbeitung ist auf Desktop am bequemsten. iOS-Dateivorschauen und die Persistenz unter `file://` wurden nicht auf einem echten iPhone geprüft.
+Die Einzeldatei braucht weder Installation noch Konto, API-Schlüssel oder kostenpflichtiges Abo. Nur die optionalen KI-Antworten des Werkstatt-Assistenten brauchen einen eigenen OpenAI-API-Schlüssel mit Guthaben. Zeichnungen, Datenbestand, Suche und Projektliste funktionieren ohne Internet. Externe Originalquellen und Videos brauchen eine Internetverbindung. Einige Dateivorschauen führen JavaScript nicht aus; dann die HTML-Datei herunterladen und ausdrücklich mit Chrome, Edge, Firefox oder Safari öffnen. Die Bearbeitung ist auf Desktop am bequemsten. iOS-Dateivorschauen und die Persistenz unter `file://` wurden nicht auf einem echten iPhone geprüft.
 
 ## Was funktioniert
 
@@ -110,7 +121,7 @@ Die Handbuchauswertung steht in `docs/HANDBUCH_AUSWERTUNG.md`. Der ursprünglich
 
 ## Daten und Privatsphäre
 
-Es gibt keinen Backendserver, keine Telemetrie und kein KI-Modell. Die Software lädt im Ausgangszustand keine externen Skripte, Schriftdateien oder Bilder. Ein Quellenklick öffnet die externe Website. Ein Klick auf „Video laden“ verbindet den Browser mit dem Videoanbieter. Diese Quellen liegen außerhalb der Kontrolle der App.
+Es gibt keinen Backendserver und keine Telemetrie. Ein KI-Modell wird nur genutzt, wenn du im Werkstatt-Assistenten einen eigenen OpenAI-API-Schlüssel hinterlegst und die KI einschaltest. Dann gehen beim Absenden einer Frage diese Frage, die letzten Chatnachrichten, Baureihe, Baugruppe und Bauteil der aktuellen Ansicht, Bauzeit und Motor aus „Bauzustand“ (falls erfasst) sowie die Liste der Atlas-Verweise direkt vom Browser an `api.openai.com`. Projektliste, Notizen, Dokumente, Bilder und Sicherungen werden nie gesendet. Der Schlüssel liegt unverschlüsselt im Browserspeicher (wahlweise nur für die Sitzung) und ist nie Teil der Projekt-Sicherung; der Chatverlauf verschwindet beim Neuladen. Die Content-Security-Policy erlaubt Netzwerkverbindungen ausschließlich zu `api.openai.com`. Die Software lädt im Ausgangszustand keine externen Skripte, Schriftdateien oder Bilder. Ein Quellenklick öffnet die externe Website. Ein Klick auf „Video laden“ verbindet den Browser mit dem Videoanbieter. Diese Quellen liegen außerhalb der Kontrolle der App.
 
 Persönliche Ergänzungen werden unverschlüsselt im lokalen Browserspeicher gehalten; zugeordnete PDFs und eigene Zeichnungen getrennt in IndexedDB. Falls dessen Nutzung scheitert, bleibt die Datei nur für die Sitzung verfügbar und wird entsprechend gekennzeichnet. Auf gemeinsam verwendeten Browserprofilen besteht kein Zugriffsschutz. Ein Browserwechsel, privater Modus, Speicherlimit oder Löschen von Websitedaten kann Ergänzungen entfernen. Eine HTML-Datei allein enthält keine später gespeicherten Ergänzungen; dafür ist die vollständige JSON-Sicherung erforderlich. Eine Sicherung kann Bauzustand, Notizen, Bilder und Texte enthalten und sollte nicht öffentlich geteilt werden. Die App benötigt keine vollständige VIN, Kennzeichen oder Kundenidentität.
 
@@ -142,6 +153,9 @@ assets/manuals/      Dieselben fünf Ausschnitte als bearbeitbare PNGs
 src/data.mjs         Startbestand mit Quellen
 src/draw.mjs         Eigene SVG-Schemata und Fahrzeugansicht
 src/app.mjs          Bedienlogik, Speicherung, Editoren, Sicherung
+src/assistant-data.mjs Wissensbasis des Assistenten: Fehlercodes, Themen, Modelle
+src/assistant-core.mjs Codeerkennung, Themensuche, Verweisprüfung, OpenAI-Anfrage
+src/assistant-ui.mjs   Chatfenster, Einstellungen, Navigation aus dem Chat
 data/startbestand.json  Importierbarer Ausgangsdatenbestand
 data/manual-index.json  Zwei ursprüngliche Handbücher und Seitenindex
 data/dokumente.json    18 zusätzliche Quellen und Arbeitsübersichten

@@ -12,7 +12,7 @@
  <button class="overview-nav" id="overview"><span>▱</span> Fahrzeugübersicht <span>↗</span></button>
  <div class="side-heading section-label">BAUGRUPPEN <span id="group-count"></span></div>
  <nav id="group-nav" aria-label="Baugruppen"></nav>
- <div class="sidebar-bottom"><button id="project-open" class="side-action"><span>▤</span> Meine Projektliste <b id="list-count">0</b></button><button class="side-action" id="documents-library-open" data-document-library><span>▥</span> Dokumente &amp; Gutachten <b>18</b></button><button id="manual-library-open" class="side-action" data-manual-library><span>▧</span> Meine Handbücher <b>2</b></button><button class="side-action" id="learning-library-open" data-learning-library><span>▷</span> Anleitungen &amp; Kaufquellen <b>26</b></button><button id="data-open" class="side-action"><span>⤓</span> Daten & eigene Inhalte</button><div class="side-foot">PRAXISVERSION 0.4 <span>29.10.2026</span></div></div>
+ <div class="sidebar-bottom"><button id="project-open" class="side-action"><span>▤</span> Meine Projektliste <b id="list-count">0</b></button><button class="side-action" id="documents-library-open" data-document-library><span>▥</span> Dokumente &amp; Gutachten <b>18</b></button><button id="manual-library-open" class="side-action" data-manual-library><span>▧</span> Meine Handbücher <b>2</b></button><button class="side-action" id="learning-library-open" data-learning-library><span>▷</span> Anleitungen &amp; Kaufquellen <b>26</b></button><button id="data-open" class="side-action"><span>⤓</span> Daten & eigene Inhalte</button><div class="side-foot">PRAXISVERSION 0.5 <span>01.11.2026</span></div></div>
 </aside>
 <main id="workspace" tabindex="-1">
  <div class="page-head"><div><div class="eyebrow">COLDSTART / TEILEATLAS <span class="pill">BETA</span></div><h1>Verstehen, was zusammengehört.</h1><p>Bauteil finden. Referenz prüfen. Nächsten Schritt planen.</p></div><button id="export-project" class="secondary small">Projektliste als CSV <span>↗</span></button></div>
@@ -28,10 +28,18 @@
  </section>
  <aside class="detail" id="detail" aria-label="Bauteildetails"></aside>
  </div>
- <footer class="app-footer"><span>COLDSTART GARAGE ATLAS <b>0.4</b></span><button id="coverage-open">Datenumfang & Quellen</button><span id="coverage-foot">83 Bauteilplätze · 8 Schemaansichten · kein vollständiger ETK</span></footer>
+ <footer class="app-footer"><span>COLDSTART GARAGE ATLAS <b>0.5</b></span><button id="coverage-open">Datenumfang & Quellen</button><span id="coverage-foot">83 Bauteilplätze · 8 Schemaansichten · kein vollständiger ETK</span></footer>
 </main>
 </div>
 <dialog id="modal" aria-labelledby="modal-title"><div class="modal-head"><div><div class="eyebrow">COLDSTART / ARBEITSBEREICH</div><h2 id="modal-title"></h2></div><button class="icon-btn" id="modal-close" aria-label="Dialog schließen">×</button></div><div id="modal-body"></div></dialog>
+<button type="button" id="assist-fab" class="assist-fab" aria-controls="assist-panel" aria-expanded="false"><span class="assist-fab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 9.5h7M8.5 12.5h4"/></svg></span><span>Assistent</span></button>
+<section id="assist-panel" class="assist-panel" role="dialog" aria-modal="false" aria-labelledby="assist-title" hidden>
+ <div class="assist-head"><div><div class="eyebrow">COLDSTART / ASSISTENT</div><h2 id="assist-title">Werkstatt-Assistent</h2></div><span id="assist-status" class="assist-status">Eingebautes Wissen</span><button type="button" class="icon-btn" id="assist-settings-toggle" aria-label="Einstellungen des Assistenten" aria-controls="assist-settings" aria-expanded="false">⚙</button><button type="button" class="icon-btn" id="assist-close" aria-label="Assistent schließen">×</button></div>
+ <div id="assist-settings" class="assist-settings" hidden></div>
+ <div id="assist-log" class="assist-log" role="log" aria-live="polite" aria-label="Unterhaltung mit dem Assistenten"></div>
+ <form id="assist-form" class="assist-form"><label class="sr-only" for="assist-input">Frage an den Assistenten</label><textarea id="assist-input" rows="1" maxlength="1500" placeholder="Fehlercode oder Frage …" autocomplete="off"></textarea><button type="submit" class="primary" id="assist-send" aria-label="Frage senden">↑</button></form>
+ <p class="assist-foot">Keine Diagnose oder Reparaturfreigabe. Bremsen und Fahrwerk sind sicherheitskritisch.</p>
+</section>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <input type="file" id="documents-file-input" accept="application/pdf,image/jpeg,.pdf,.jpg,.jpeg" multiple hidden><input type="file" id="manual-pdf-input" accept="application/pdf,image/jpeg,.pdf,.jpg,.jpeg" hidden><input type="file" id="import-file" accept="application/json,.json" hidden>
 <input type="file" id="diagram-file" accept="image/png,image/jpeg,image/webp" hidden>

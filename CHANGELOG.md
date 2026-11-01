@@ -1,5 +1,18 @@
 # Änderungsverlauf
 
+## 0.5.0 · 01.11.2026
+
+Werkstatt-Assistent (Chat) mit eingebautem Wissen und optionaler KI über die OpenAI-API.
+
+- Chatfenster unten rechts, auf dem Handy als Vollbild. Tastatur: Enter sendet, Umschalt+Enter neue Zeile, Esc schließt.
+- Eingebautes Wissen ohne Internet: 16 Fehlercodes und 18 Codegruppen mit Dringlichkeit, Ursachen und Prüfschritten; Strukturerklärung für alle übrigen OBD-Codes; Hinweis auf BMW-Hex-Fehlerorte; 32 Themen zu Diagnose, Arbeiten und Bedienung des Atlas.
+- Antworten mit Sprungknöpfen zu Baugruppe/Zeichnung, Bauteil, kuratierter Anleitung oder geprüftem Video, Handbuch-Arbeitsübersicht, Bentley-Kapitel, Arbeitsübersicht aus „Dokumente & Gutachten“, App-Bereichen und YouTube-Suche. Alle Ziele werden gegen die Daten geprüft; zurückgestellte Quellen sind ausgeschlossen.
+- Optional KI über die OpenAI Chat Completions API mit eigenem Schlüssel; Modelle `gpt-5-mini` (Standard), `gpt-5-nano`, `gpt-4o-mini` oder eigene ID. Verweise der KI laufen über dieselbe Prüfung. Bei abgelehnten Optionen ein zweiter, schlichter Versuch; verständliche Fehlermeldungen (Schlüssel, Guthaben, Modell, Verbindung); Kostenschätzung je Antwort.
+- Schlüssel und Einstellungen in eigenem Speicherbereich (wahlweise nur Sitzung), nie in der Projekt-Sicherung. Topbar zeigt „KI-Chat aktiv“, solange Fragen an OpenAI gehen.
+- Content-Security-Policy: `connect-src` von `'none'` auf `https://api.openai.com` geändert; alle anderen Ziele bleiben blockiert.
+- Hilfe und „Daten & eigene Inhalte“ erklären den Assistenten. Linkprüfung erfasst die neuen festen Links.
+- 133 automatisierte Tests (108 bisherige, 25 neue).
+
 ## 0.4.1 · 30.10.2026
 
 Korrekturen aus einer Prüfung des Stands 0.4.0.
