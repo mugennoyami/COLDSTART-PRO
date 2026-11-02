@@ -1,0 +1,25 @@
+{
+  "capturedAt": "2026-10-30",
+  "profiles": {
+    "E36": {
+      "categories": 30,
+      "cards": 702,
+      "uniqueDrawings": 702,
+      "completeDetails": 702,
+      "unavailableDetails": 0,
+      "unavailableImages": 0,
+      "positions": 4938,
+      "variants": 7854
+    },
+    "E46": {
+      "categories": 33,
+      "cards": 935,
+      "uniqueDrawings": 935,
+      "completeDetails": 935,
+      "unavailableDetails": 0,
+      "unavailableImages": 1,
+      "positions": 5915,
+      "variants": 10235
+    }
+  }
+}

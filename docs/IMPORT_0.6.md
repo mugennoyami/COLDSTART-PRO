@@ -19,7 +19,11 @@ Stand: 02.11.2026. Rekonstruiert von Claude aus der veröffentlichten Seite `htt
 
 Geändert: `src/app.mjs`, `src/data.mjs` (Version 0.6.0, Leebmann-Quelle), `src/draw.mjs` (Fahrzeugbild), `src/index.html`, `src/style.css`.
 
-## Fehlende Laufzeitdateien
+## Laufzeitdateien (gesichert 02.11.2026)
+
+Am 02.11.2026 von Simon mit dem Export-Skript gesichert und hier unter `dist/catalog/` und `dist/assets/` abgelegt: 4.300 Dateien, 143 MB, 0 fehlend (Bericht: `docs/export-bericht-0.6.txt`). Lokal geprüft: Startseite, Galerie, Originalzeichnung mit Positionen und Zoom ohne fehlerhafte Abrufe.
+
+### Ursprünglich fehlende Dateien
 
 Die Seite lädt beim Bedienen Dateien nach, die nicht im HTML stecken und nur auf dem Server der ChatGPT-Site liegen:
 
