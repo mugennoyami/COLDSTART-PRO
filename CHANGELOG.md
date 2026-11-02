@@ -1,5 +1,35 @@
 # Änderungsverlauf
 
+## 0.7.0 · 02.11.2026
+
+Zusammenführung von 0.6 (ChatGPT), den Korrekturen aus 0.4.1 und dem Werkstatt-Assistenten aus 0.5.
+
+- 0.6 aus der veröffentlichten Seite rekonstruiert (Build bytegenau identisch) und mit allen 4.300 Laufzeitdateien gesichert; siehe `docs/IMPORT_0.6.md`.
+- Korrekturen aus 0.4.1 in 0.6 übernommen; Sicherung, Rückfrage und Rücksicherung um Katalog-Projektliste, Fahrzeugvarianten und Variantenprofile erweitert.
+- Content-Security-Policy für den Katalog erweitert: Bilder und Katalogdaten der eigenen Seite (`'self'`).
+- Werkstatt-Assistent: neuer Verweis `[[katalog:MODELL:Suchbegriff]]` öffnet die BMW-Originalzeichnungen mit Suche; 48 Suchbegriffe an Fehlercodes und Themen; eigene Ansichten heißen im Chat „Eigene Ansicht“; Sprung in eine eigene Ansicht schaltet den Katalog korrekt aus, auch beim Wechsel der Baureihe.
+- `.gitignore` versioniert `dist/catalog` und `dist/assets`.
+- 140 automatisierte Tests.
+
+## 0.6.0 · 30.10.2026 (ChatGPT, nachträglich importiert)
+
+Von ChatGPT außerhalb des Repositorys entwickelt und direkt veröffentlicht, auf Basis von 0.4.0. Originalkatalog (Leebmann24, Stand 30.10.2026) mit Zoom und Positionen, 810 Fahrzeugvarianten, Werkstatt-FAQ, realistische Fahrzeugbilder, Katalog-Projektliste. Änderungsverlauf und Tests von 0.6 lagen nicht vor.
+
+## 0.5.0 · 01.11.2026
+
+Werkstatt-Assistent (Chat) mit eingebautem Wissen, kostenloser Open-Source-KI im Browser und optionaler OpenAI-API.
+
+- Chatfenster unten rechts, auf dem Handy als Vollbild. Tastatur: Enter sendet, Umschalt+Enter neue Zeile, Esc schließt.
+- Eingebautes Wissen ohne Internet: 16 Fehlercodes und 18 Codegruppen mit Dringlichkeit, Ursachen und Prüfschritten; Strukturerklärung für alle übrigen OBD-Codes; Hinweis auf BMW-Hex-Fehlerorte; 32 Themen zu Diagnose, Arbeiten und Bedienung des Atlas.
+- Antworten mit Sprungknöpfen zu Baugruppe/Zeichnung, Bauteil, kuratierter Anleitung oder geprüftem Video, Handbuch-Arbeitsübersicht, Bentley-Kapitel, Arbeitsübersicht aus „Dokumente & Gutachten“, App-Bereichen und YouTube-Suche. Alle Ziele werden gegen die Daten geprüft; zurückgestellte Quellen sind ausgeschlossen.
+- Kostenlose KI im Browser mit WebLLM 0.2.86 (github.com/mlc-ai/web-llm, Apache-2.0): Qwen2.5 1,5B (Standard), Qwen2.5 0,5B (Handy), Llama 3.2 3B (PC). Bibliothek wird bei Bedarf von jsDelivr geladen und nur nach erfolgreichem SHA-256-Abgleich ausgeführt; Modelldownload erst nach Rückfrage, Speicherung in IndexedDB, automatische 32-Bit-Fassung ohne `shader-f16`. Kurze, faktengestützte Anweisung für 4096 Token Kontext; Antworten erscheinen beim Mitschreiben; Stopp-Knopf. Ohne WebGPU antwortet der Assistent aus dem eingebauten Wissen.
+- Einstellungen „Wer antwortet?“: eingebautes Wissen, KI im Browser (kostenlos) oder OpenAI (kostenpflichtig). Ältere Einstellungen werden übernommen.
+- Optional KI über die OpenAI Chat Completions API mit eigenem Schlüssel; Modelle `gpt-5-mini` (Standard), `gpt-5-nano`, `gpt-4o-mini` oder eigene ID. Verweise der KI laufen über dieselbe Prüfung. Bei abgelehnten Optionen ein zweiter, schlichter Versuch; verständliche Fehlermeldungen (Schlüssel, Guthaben, Modell, Verbindung); Kostenschätzung je Antwort.
+- Schlüssel und Einstellungen in eigenem Speicherbereich (wahlweise nur Sitzung), nie in der Projekt-Sicherung. Topbar zeigt „KI-Chat aktiv“, solange Fragen an OpenAI gehen.
+- Content-Security-Policy: `connect-src` von `'none'` auf `api.openai.com`, `cdn.jsdelivr.net`, Hugging Face und `raw.githubusercontent.com`; `script-src` zusätzlich `blob:` und `'wasm-unsafe-eval'` für die Browser-KI. Alle anderen Ziele bleiben blockiert.
+- Hilfe und „Daten & eigene Inhalte“ erklären den Assistenten. Linkprüfung erfasst die neuen festen Links.
+- 138 automatisierte Tests (108 bisherige, 30 neue).
+
 ## 0.4.1 · 30.10.2026
 
 Korrekturen aus einer Prüfung des Stands 0.4.0.

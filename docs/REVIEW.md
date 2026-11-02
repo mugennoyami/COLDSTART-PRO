@@ -1,6 +1,36 @@
 # Prüfbericht und Nutzenbewertung
 
-COLDSTART Garage Atlas 0.4.1 · 30.10.2026.
+COLDSTART Garage Atlas 0.7.0 · 02.11.2026.
+
+## Prüfstand 0.7.0: Zusammenführung
+
+Eigene technische Prüfung, keine KFZ-Fachfreigabe.
+
+| Prüfung | Ergebnis | Grenze |
+| --- | --- | --- |
+| Rekonstruktion 0.6 | Build aus rekonstruierten Quellen bytegenau gleich der veröffentlichten Seite (ohne Plattform-Cloudflare-Skript) | Tests und Doku von 0.6 lagen nicht vor |
+| Laufzeitdateien | 4.300 Dateien, 143 MB, Exportbericht 0 fehlend, alle ZIP-Teile CRC-geprüft | – |
+| Automatisierte Tests | **140 bestanden, 0 fehlgeschlagen** (108 aus 0.4.1, 32 Assistent inkl. Katalogverweise; Suchbegriffe treffen echte Bildtafeln) | Neue 0.6-Module ohne eigene Tests |
+| Browser (Chromium, lokaler Webserver, 1440 und 390 px) | Katalog: Galerie, Bildtafel mit Positionen und Zoom, Projektliste aus dem Katalog, Sicherung mit Katalogeinträgen; Assistent: „Radlager beim E46“ öffnet E46-Katalog mit 4 Treffern und Bildtafel Radlagerung; Sprung in eigene Ansicht auch bei Baureihenwechsel; OpenAI-Pfad (nachgebildet), Fehlerfälle, CSP blockiert fremde Ziele; keine Konsolenfehler, kein horizontaler Überlauf | Kein Safari/Firefox, kein echtes Mobilgerät, keine echte Cloudbereitstellung |
+| axe 4.10 | 0 Verstöße im Assistenten (Desktop und Handy) | Katalogansichten aus 0.6 nicht mit axe geprüft |
+
+Die CSP wurde nicht gegen die Cloudbereitstellung geprüft. Die Plattform fügt ein Cloudflare-Skript ein, das die CSP blockiert; das betrifft nur Cloudflares Bot-Erkennung. Lädt die Seite nach dem Veröffentlichen nicht korrekt, `cspFor` in `build.mjs` prüfen.
+
+## Prüfstand 0.5.0: Werkstatt-Assistent
+
+Eigene technische Prüfung im Linux-Container, keine KFZ-Fachfreigabe der Wissensbasis.
+
+| Prüfung | Ergebnis | Grenze |
+|---|---|---|
+| Automatisierte Tests | **138 bestanden, 0 fehlgeschlagen** (108 bisherige, 30 neue) | Codeerkennung, Codegruppen ohne Überschneidung, keine Drehmoment-/Mengenangaben in der Wissensbasis, Themenzuordnung (vorne/hinten getrennt, keine Fehltreffer durch Kurzwörter), Baureihe aus der Frage, jede Verweisvorlage löst auf, zurückgestellte Quellen nie verlinkt, Markierungsprüfung, Escaping, Anfrageaufbau ohne Schlüssel, Antwort- und Fehlerauswertung, Kostenschätzung, CSP |
+| Browser, eingebautes Wissen (Chromium 1440 px und 390 px) | Fehlercodes, Radlager, Bremsscheiben E36/E46, Überhitzung, Thermostat, Gutachten; Sprung zu Baugruppe und Bauteil (E36 öffnet das Handbuchbild mit markiertem Teil), Anleitung, Handbuch-Arbeitsübersicht, Kapitel, Arbeitsübersicht, App-Bereich; auf dem Handy schließt sich der Chat nach dem Sprung | Kein Safari, Firefox oder echtes Mobilgerät |
+| Browser, KI-Pfad mit nachgebildeter OpenAI-Antwort | Anfrage mit `Authorization`-Kopf, Modell, `reasoning_effort` und Verlauf; Markierungen werden zu Knöpfen, ungültige verworfen; Kostenschätzung; 401, 429 und 400 mit zweitem schlichtem Versuch; Schlüssel nur im eigenen Speicherbereich, nicht im Atlas-Speicher; Sitzungsschlüssel nur in `sessionStorage` | **Kein Test mit echtem Schlüssel und echter Antwort.** Die OpenAI-Vorabprüfung (CORS) wurde für die Cloudadresse und `file://` (Origin `null`) erfolgreich abgefragt; Fehlerantworten ohne CORS-Kopf erscheinen im Browser nur als allgemeiner Verbindungsfehler |
+| Content-Security-Policy | Verbindung zu `api.openai.com` erlaubt, zu anderen Zielen blockiert (Browserprüfung) | Nicht gegen die private Cloudbereitstellung geprüft |
+| Kostenlose KI im Browser, echter Durchlauf (Chromium mit Software-WebGPU, Qwen2.5 0,5B in der 32-Bit-Fassung) | WebLLM 0.2.86 von jsDelivr geladen, SHA-256 bestätigt, als Blob-Modul gestartet; Rückfrage vor dem Download; Modell in 11 s von huggingface.co/us.aws.cdn.hf.co und raw.githubusercontent.com geladen und in IndexedDB gespeichert; Engine meldet „Fertig“; CSP ließ alle nötigen Ziele zu | **Textausgabe nicht bestätigt:** Auf der per Software nachgebildeten Grafikkarte kam in 9 Minuten keine Antwort. Auf echter Grafikhardware ungetestet. Ohne WebGPU (Standard-Chromium) korrekter Rückfall auf das eingebaute Wissen |
+| Wechsel der Antwortquelle | Einstellungen speichern Quelle und Modell, Handy wählt Qwen2.5 0,5B vor; ältere Einstellung „KI an“ wird zu „OpenAI“ | – |
+| axe 4.10 | 0 Verstöße im Assistenten (Knopf, Begrüßung, Antworten, Einstellungen mit drei Antwortquellen, KI-Antwort) bei 1280/1440 und 390 px; kein horizontaler Überlauf | Nur Chromium |
+
+Die Wissensbasis ist eine redaktionelle Einordnung typischer Ursachen. Herstellerspezifische Codes werden nicht gedeutet. KI-Antworten werden nicht fachlich geprüft und sind als solche gekennzeichnet.
 
 ## Prüfstand 0.4.1: Korrekturen nach Audit
 
