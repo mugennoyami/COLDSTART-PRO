@@ -45,6 +45,7 @@ Die lokale Git-Identität für künftige Commits aus den eigenen Git-Einstellung
 ## Inhalt prüfen
 
 - Wissensbasis des Werkstatt-Assistenten (`src/assistant-data.mjs`): keine Drehmomente, Füllmengen oder Sollwerte, herstellerspezifische Codes nicht deuten. Verweisvorlagen (`{M}` = Baureihe) werden durch `tests/assistant.test.mjs` gegen Teile, Quellen und Kapitel geprüft. Schlüsselwörter normalisiert schreiben (klein, ä→ae, ß→ss).
+- WebLLM-Update: in `src/assistant-data.mjs` Version, URL und SHA-256 von `lib/index.js` aus dem npm-Paket gemeinsam ändern (nur Versionen, die mindestens zwei Wochen alt sind) und prüfen, dass die Modell-IDs in `BROWSER_MODELS` in `prebuiltAppConfig` der neuen Version enthalten sind.
 
 - Bei geänderten Oberflächen die betroffene Aufgabe im Browser auf Desktop und schmaler Breite prüfen.
 - Neue Teile-/Serviceangaben brauchen passende Quellen, Variantenabgrenzung und den zutreffenden Prüfstatus.

@@ -6,7 +6,9 @@ const MODULES=['src/core.mjs','src/learning-data.mjs','src/learning-core.mjs','s
 // Entfernt Import-Zeilen (auch mehrzeilig) und das Schlüsselwort export vor Deklarationen. Alles andere bleibt stehen und wird von assertBundled gemeldet.
 export const strip=s=>s.replace(/^import\s*['"][^'"\n]+['"];?[ \t]*\r?\n/gm,'').replace(/^import\s[^;]*?\sfrom\s*['"][^'"\n]+['"];?[ \t]*\r?\n/gm,'').replace(/^export\s+(?=(?:async\s+)?(?:function|const|let|class)\b)/gm,'');
 export function assertBundled(script){const m=script.match(/^(?:import\s+[\w*{'"]|export\s+(?:(?:default|async|function|const|let|class)\b|[{*])).*$/m);if(m)throw new Error(`Build abgebrochen: Modulanweisung im Bündel übrig geblieben: ${m[0].slice(0,100)}`);}
-export const cspFor=hash=>["default-src 'none'",`script-src '${hash}'`,"style-src 'unsafe-inline'","img-src data: blob:","media-src https: blob:","frame-src https://www.youtube-nocookie.com blob:","object-src blob:","connect-src https://api.openai.com","base-uri 'none'","form-action 'none'"].join('; ');
+// connect-src: OpenAI (kostenpflichtige KI), jsDelivr (WebLLM-Bibliothek, per SHA-256 geprüft), Hugging Face und GitHub (Modelle der kostenlosen Browser-KI).
+// script-src blob: und 'wasm-unsafe-eval' braucht nur die Browser-KI: geprüfte Bibliothek als Blob-Modul, Modelle als WebAssembly.
+export const cspFor=hash=>["default-src 'none'",`script-src '${hash}' blob: 'wasm-unsafe-eval'`,"style-src 'unsafe-inline'","img-src data: blob:","media-src https: blob:","frame-src https://www.youtube-nocookie.com blob:","object-src blob:","connect-src https://api.openai.com https://cdn.jsdelivr.net https://huggingface.co https://*.huggingface.co https://*.hf.co https://raw.githubusercontent.com","base-uri 'none'","form-action 'none'"].join('; ');
 export function bundle(html,css,sources){
  const script='(()=>{\n"use strict";\n'+sources.map(strip).join('\n')+'\n})();';assertBundled(script);
  const hash='sha256-'+createHash('sha256').update(script).digest('base64');

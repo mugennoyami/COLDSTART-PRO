@@ -14,7 +14,9 @@ Für fremde Kataloge, Reparaturdaten oder Videoanbieter wird durch dieses Projek
 
 Die Wissensbasis in `src/assistant-data.mjs` besteht aus eigenen, kurzen redaktionellen Einordnungen typischer Ursachen und Prüfschritte. Sie übernimmt keine Texte, Tabellen, Drehmomente oder Sollwerte aus Handbüchern, Herstellerunterlagen oder kostenpflichtigen Datenbanken. Die Bedeutung genormter OBD-Codes ist allgemein bekannt; herstellerspezifische Codes werden bewusst nicht gedeutet. Die Inhalte sind keine fachlich freigegebenen Reparaturdaten.
 
-Die optionale KI-Funktion nutzt das Konto und den API-Schlüssel des Nutzers bei OpenAI; dafür gelten dessen Nutzungsbedingungen. Das Projekt erteilt keine Lizenz für KI-Antworten und prüft sie nicht fachlich. Vor einer öffentlichen oder kommerziellen Nutzung wären unter anderem Datenschutzhinweise, ein Server statt Nutzerschlüssel im Browser und die Haftungsfrage zu klären.
+Die kostenlose Browser-KI lädt zur Laufzeit WebLLM (Apache-2.0) und frei verfügbare Modellgewichte direkt von den Anbietern; nichts davon liegt im Repository. Lizenzen der angebotenen Modelle: Qwen2.5 0,5B und 1,5B Apache-2.0, Llama 3.2 3B Llama 3.2 Community License (inklusive Nutzungsrichtlinie von Meta). Qwen2.5 3B wurde wegen seiner nicht-kommerziellen Lizenz bewusst nicht aufgenommen.
+
+Die optionale OpenAI-Funktion nutzt das Konto und den API-Schlüssel des Nutzers bei OpenAI; dafür gelten dessen Nutzungsbedingungen. Das Projekt erteilt keine Lizenz für KI-Antworten und prüft sie nicht fachlich. Vor einer öffentlichen oder kommerziellen Nutzung wären unter anderem Datenschutzhinweise, ein Server statt Nutzerschlüssel im Browser und die Haftungsfrage zu klären.
 
 ## Kuratierte Lernquellen ab 0.4
 

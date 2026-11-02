@@ -25,7 +25,19 @@ Zeichnungen, Datenbestand und Suche funktionieren lokal auch ohne Internet. Orig
 
 ## Werkstatt-Assistent und KI (optional)
 
-Der Assistent unten rechts funktioniert sofort mit eingebautem Wissen, auch offline. Für freie Fragen per KI:
+Der Assistent unten rechts funktioniert sofort mit eingebautem Wissen, auch offline. Für freie Fragen gibt es zwei Wege.
+
+### Kostenlos: KI im Browser
+
+1. Assistent öffnen, ⚙ wählen, „KI im Browser · kostenlos“ anklicken und ein Modell wählen: Qwen2.5 1,5B (Standard, etwa 0,9 GB), Qwen2.5 0,5B (Handy, etwa 0,3 GB) oder Llama 3.2 3B (PC, etwa 1,8 GB). „Speichern“.
+2. Bei der ersten Frage fragt der Assistent, ob er das Modell laden soll („Jetzt laden“). Alternativ in den Einstellungen „Modell jetzt laden“. Auf dem Handy im WLAN laden.
+3. Danach liegt das Modell im Browser und arbeitet ohne Internet. Fragen verlassen das Gerät nicht. „Modell vom Gerät löschen“ gibt den Speicher wieder frei.
+
+Voraussetzung ist WebGPU: aktuelles Chrome oder Edge am PC, Safari ab Version 26 auf Mac, iPhone und iPad. Ohne WebGPU oder bei zu wenig Grafikspeicher antwortet der Assistent mit eingebautem Wissen und nennt den Grund. Cloudadresse, lokale HTML-Datei und jedes Gerät haben einen eigenen Browserspeicher und laden das Modell jeweils einmal. Kleine Modelle sind schwächer als OpenAI; ihre Antworten stützen sich auf das eingebaute Wissen.
+
+### Kostenpflichtig: OpenAI
+
+Die OpenAI-API hat kein Gratiskontingent.
 
 1. Auf [platform.openai.com](https://platform.openai.com/api-keys) mit einem OpenAI-Konto anmelden. Die API wird **getrennt vom ChatGPT-Abo** nach Verbrauch abgerechnet; dafür ist Guthaben im API-Konto nötig.
 2. Empfohlen: ein eigenes Projekt „COLDSTART“ mit monatlichem Budgetlimit anlegen und darin einen API-Schlüssel erstellen.

@@ -1,5 +1,5 @@
 import {escapeHTML} from './core.mjs';
-import {FAULT_CODES,FAULT_RANGES,ASSIST_TOPICS,ASSIST_VIEWS,CODE_LETTERS,P_SUBSYSTEMS,CODE_LEVELS,AI_MODELS} from './assistant-data.mjs';
+import {FAULT_CODES,FAULT_RANGES,ASSIST_TOPICS,ASSIST_VIEWS,CODE_LETTERS,P_SUBSYSTEMS,CODE_LEVELS,AI_MODELS,BROWSER_MODELS} from './assistant-data.mjs';
 
 // Reine Logik des Werkstatt-Assistenten: ohne DOM, ohne Netzwerk, in Node testbar.
 export const ASSIST_MODELS=['E36','E46'];
@@ -157,3 +157,26 @@ export function aiErrorMessage(status,json){const err=json?.error,detail=typeof 
 export const AI_NETWORK_ERROR='Keine Verbindung zu OpenAI. Mögliche Gründe: Schlüssel ungültig oder widerrufen, kein Guthaben, unbekannte Modell-ID, keine Internetverbindung oder die Plattform blockiert die Verbindung. Der Browser verrät bei solchen Fehlern keine Details.';
 export function aiEstimateCost(model,usage){const m=aiModelInfo(model);if(!m||!usage)return null;return(usage.input*m.input+usage.output*m.output)/1e6;}
 export function aiFormatCost(usd){if(usd===null||!Number.isFinite(usd))return '';const cent=usd*100;return `≈ ${cent.toLocaleString('de-DE',{maximumFractionDigits:cent<0.1?3:2})} US-Cent`;}
+
+// ---- Kostenlose KI im Browser (WebLLM): kleine Modelle mit 4096 Token Kontext brauchen eine kurze, faktengestützte Anweisung.
+export const browserModelInfo=id=>BROWSER_MODELS.find(m=>m.id===id)||null;
+export function browserVariant(id,hasF16){const m=browserModelInfo(id);return m?(hasF16?m.f16:m.f32):null;}
+export function aiFormatMB(mb){return mb>=1000?`${(Math.round(mb/100)/10).toLocaleString('de-DE')} GB`:`${Math.round(mb)} MB`;}
+export function assistLocalFacts(local,max=1600){if(!local?.found)return '';const seen=new Map();const lines=local.blocks.map(b=>{
+ if(b.type==='code'){const i=b.info;if(i.causes&&seen.has(i.causes))return `${i.code}: ${i.title}; gleiche Ursachen und Prüfschritte wie ${seen.get(i.causes)}.`;if(i.causes)seen.set(i.causes,i.code);if(i.match==='structure')return `${i.code}: kein Eintrag im Nachschlagewerk. Bereich ${i.structure.area}${i.structure.subsystem?', Teilsystem '+i.structure.subsystem:''}. ${assistCodeKindText(i.structure)}`;return `${i.code}: ${i.title} (${CODE_LEVELS[i.level]}). Ursachen: ${i.causes.join('; ')}. Prüfen: ${i.checks.join('; ')}.${i.safety?' Sicherheit: '+i.safety:''}`;}
+ if(b.type==='topic'){const t=b.topic;return `${t.title}: ${t.lead} ${(t.sections||[]).map(([h,items])=>`${h}: ${items.join('; ')}.`).join(' ')}${t.safety?' Sicherheit: '+t.safety:''}`;}
+ return `${b.code}: BMW-interner Fehlerort; Bedeutung hängt vom Steuergerät ab.`;}).join('\n');return lines.length>max?lines.slice(0,max-1).replace(/\s+\S*$/,'')+' …':lines;}
+export function aiCompactPrompt({model='E36',groupId=null,partId=null,view=null,profile=null,catalog,local=null}={}){const cat=catalog,groups=[...cat.groups.values()],cur=cat.groups.get(groupId),part=cat.parts.get(`${model}:${partId}`);
+ const parts=cur?[...cat.parts.values()].filter(p=>p.model===model&&p.group===cur.id).slice(0,14).map(p=>`${p.id} (${p.name})`).join(', '):'';
+ const facts=assistLocalFacts(local);
+ return [
+ 'Du bist der Werkstatt-Assistent im COLDSTART Garage Atlas für BMW E36 (328i, M52) und E46 (325i, M54). Antworte auf Deutsch, per du, kurz (höchstens 120 Wörter). Nutze Listen mit "- ".',
+ 'Regeln: Nenne keine Drehmomente, Füllmengen, Sollwerte oder Teilenummern. Bremsen, Lenkung und Fahrwerk sind sicherheitskritisch. Wenn du etwas nicht sicher weißt, sag das. Stütze dich zuerst auf die Fakten unten. Schreibe keine URLs.',
+ 'Am Ende darfst du bis zu 3 Verweise in eigene Zeilen setzen: [[gruppe:'+model+':GRUPPE]] öffnet eine Baugruppe, [[teil:'+model+':TEIL-ID]] öffnet ein Bauteil, [[youtube:Suchbegriff]] öffnet eine YouTube-Suche.',
+ 'Baugruppen: '+groups.map(g=>`${g.id} = ${g.name}`).join(', ')+'.',
+ parts?`Bauteile der Baugruppe ${cur.name} (${model}): ${parts}.`:'',
+ 'Aktueller Stand: Baureihe '+model+(view!=='car'&&cur?`, Baugruppe ${cur.name}${part?`, Bauteil ${part.name}`:''}`:'')+'.'+(profile&&(profile.date||profile.engine)?` Bauzustand: ${[profile.date&&'Bauzeit '+aiClip(profile.date,40),profile.engine&&'Motor '+aiClip(profile.engine,60)].filter(Boolean).join(', ')}.`:''),
+ facts?'Fakten aus dem Nachschlagewerk (dem Nutzer bereits angezeigt, nicht wiederholen, sondern kurz einordnen und ergänzen):\n'+facts:'Zu dieser Frage hat das Nachschlagewerk keinen Eintrag. Antworte vorsichtig und allgemein und biete eine YouTube-Suche an.'
+ ].filter(Boolean).join('\n');}
+export function aiCompactMessages({system,history=[],question}){return[{role:'system',content:system},...history.slice(-4).map(h=>({role:h.role==='assistant'?'assistant':'user',content:aiClip(h.content,500)})),{role:'user',content:aiClip(question,600)}];}
+export const assistStripMarkersLive=t=>String(t??'').replace(/\[\[[^\]\n]*\]\]/g,'').replace(/\[\[[^\]\n]*$/,'');

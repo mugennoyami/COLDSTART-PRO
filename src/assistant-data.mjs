@@ -13,6 +13,18 @@ export const AI_DEFAULT_MODEL='gpt-5-mini';
 export const AI_ENDPOINT='https://api.openai.com/v1/chat/completions';
 export const AI_PRICE_DATE='01.11.2026';
 
+// Kostenlose KI im Browser: WebLLM (github.com/mlc-ai/web-llm, Apache-2.0), npm-Version 0.2.86 vom 11.10.2026.
+// Die Bibliothek wird erst bei Bedarf von jsDelivr geladen und nur ausgeführt, wenn ihr SHA-256 dem npm-Paket entspricht.
+// Modelle (Gewichte von huggingface.co/mlc-ai, Modellbibliotheken von raw.githubusercontent.com/mlc-ai) bleiben danach im Browser gespeichert.
+export const WEBLLM_LIB={version:'0.2.86',url:'https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.86/lib/index.js',sha256:'ae2642e73a4a9896c21efb3a067c4666446f8b49cbe2012f4b576f5d83d5f206'};
+export const BROWSER_MODELS=[
+ {id:'qwen-1.5b',label:'Qwen2.5 1,5B · ausgewogen (Standard)',f16:'Qwen2.5-1.5B-Instruct-q4f16_1-MLC',f32:'Qwen2.5-1.5B-Instruct-q4f32_1-MLC',downloadMB:880,vramMB:1630,license:'Apache-2.0'},
+ {id:'qwen-0.5b',label:'Qwen2.5 0,5B · klein und schnell, für Handys',f16:'Qwen2.5-0.5B-Instruct-q4f16_1-MLC',f32:'Qwen2.5-0.5B-Instruct-q4f32_1-MLC',downloadMB:290,vramMB:945,license:'Apache-2.0'},
+ {id:'llama-3b',label:'Llama 3.2 3B · bessere Antworten, für PC',f16:'Llama-3.2-3B-Instruct-q4f16_1-MLC',f32:'Llama-3.2-3B-Instruct-q4f32_1-MLC',downloadMB:1820,vramMB:2264,license:'Llama 3.2 Community License'}
+];
+export const BROWSER_DEFAULT_MODEL='qwen-1.5b';
+export const ASSIST_PROVIDERS={local:'Eingebautes Wissen',browser:'KI im Browser (kostenlos)',openai:'OpenAI (kostenpflichtig)'};
+
 export const CODE_LEVELS={3:'Dringend · Weiterfahrt vermeiden',2:'Zeitnah prüfen',1:'Beobachten · bei Gelegenheit beheben'};
 export const CODE_LETTERS={P:'Antrieb (Motor und Getriebe)',B:'Karosserie (z. B. Airbag, Zentralverriegelung, Klima)',C:'Fahrwerk (z. B. ABS, ASC/DSC, Lenkung)',U:'Netzwerk (Kommunikation zwischen Steuergeräten)'};
 export const P_SUBSYSTEMS={'0':'Kraftstoff-/Luftzumessung und Zusatzemissionen (u. a. Nockenwellenverstellung)','1':'Kraftstoff- und Luftzumessung','2':'Kraftstoff- und Luftzumessung (Einspritzkreis)','3':'Zündsystem oder Zündaussetzer','4':'Zusätzliche Emissionsminderung (Sekundärluft, Katalysator, Tankentlüftung)','5':'Geschwindigkeit, Leerlaufregelung und Zusatzeingänge','6':'Steuergerät und Ausgangssignale','7':'Getriebe','8':'Getriebe','9':'Getriebe','A':'Hybridantrieb','B':'Hybridantrieb','C':'Hybridantrieb'};
