@@ -1,6 +1,25 @@
 # Prüfbericht und Nutzenbewertung
 
-COLDSTART Garage Atlas 0.4.0 · 29.10.2026.
+COLDSTART Garage Atlas 0.4.1 · 30.10.2026.
+
+## Prüfstand 0.4.1: Korrekturen nach Audit
+
+Grundlage ist eine Prüfung des Stands 0.4.0 (Tests, reproduzierbarer Build, Abgleich der Dokuzahlen mit den Daten, Browserdurchläufe, axe, Linkprüfung). Eigene technische Prüfung, keine KFZ-Fachfreigabe.
+
+| Befund 0.4.0 | Korrektur 0.4.1 | Nachweis |
+|---|---|---|
+| Import mit Teilenummer als JSON-Zahl wurde gespeichert; Baugruppe nach Neuladen leer, Meldung „abgewiesen“ | Strenge Typprüfung, transaktionaler Import, Start verwirft beschädigten Zusatzkatalog, Reset-Knopf | Importtests (15 Negativfälle), Browser: Import abgewiesen, nichts gespeichert; alter vergifteter Speicher heilt beim Start |
+| Sicherung ersetzte Daten ohne Rückfrage | Dialog mit Gegenüberstellung, Option „Aktuellen Stand sichern und einspielen“ | Browser: Abbrechen ändert nichts; Download vor dem Einspielen |
+| Erfolgsmeldung überdeckte Speicherfehler | `save()` meldet Erfolg, nur dann Erfolgstext | Browser mit vollem Speicher: „Speichern nicht möglich“ bei Profil und Projektliste |
+| Falscher Eintrag bei „Verknüpfung entfernen“ | Original-Index, Bereinigung beim Laden | Browser mit manipuliertem Speicher |
+| Zwei 1,9-MB-Bilder füllten 5,1 Mio. Zeichen Speicher | Bilder in IndexedDB | Browser: fünf Bilder, Browserspeicher 921 Zeichen, nach Neuladen und Wiederherstellung vorhanden; Rückfall ohne IndexedDB geprüft |
+| Veraltete `test-results.tap`, Build ließ mehrzeilige Imports stehen | Datei entfernt, Build-Guard, Tests | Tests: Mehrzeilen-Import, Abbruch bei `export {…}` |
+| Kontrast bis 1,5:1, Schrift ab 6 px | Mindestschrift 10 px, Kontrast ≥ 4,5:1 | axe: 0 Verstöße in 24 Detailansichten und 9 Dialogen (ein Befund beim Einblenden der Toast-Meldung entsteht nur während der Animation); kein horizontaler Überlauf bei 360/390/768/1024 px |
+| Keine CSP | CSP mit Skript-Hash | Browser: YouTube-Player lädt nach Klick, keine Konsolenfehler; Test: Hash passt zum Skript |
+
+- Automatisierte Prüfungen: **108 bestanden, 0 fehlgeschlagen** (61 bisherige, 47 neue).
+- Browser-Regression: 33 Einzelprüfungen bestanden (Import, Rückfrage, Speicher voll, IndexedDB-Migration und -Rückfall, CSP, Projektliste). Sie liefen mit Playwright in Chromium und sind kein Bestandteil des Repositorys.
+- Nicht geprüft: Safari/Firefox, echte Mobilgeräte, die private Cloudbereitstellung mit der neuen CSP (blockiert diese Seite fremde Skripte der Plattform, muss `script-src` dort angepasst werden). Die externen Verweise sind weiter nur teilweise automatisch prüfbar (Shops sperren Skripte).
 
 ## Startwege und private Cloud · 29.10.2026
 

@@ -1,5 +1,5 @@
 import {MANUAL_PARTS} from './manual-data.mjs';
-export const META={version:'0.6.0',date:'30.10.2026',schemaVersion:1};
+export const META={version:'0.7.0',date:'02.11.2026',schemaVersion:1};
 export const MODELS={E36:{label:'BMW E36',profile:'328i Coupé · M52',code:'BG11',years:'Referenzprofil, kein VIN-Abgleich'},E46:{label:'BMW E46',profile:'325i Limousine · M54',code:'AV31',years:'Referenzprofil, kein VIN-Abgleich'}};
 export const GROUPS=[{id:'front',name:'Vorderradbremse',family:'Bremsanlage',code:'34 / VA',icon:'disc',desc:'Scheibe, Belag und Bremssattel',risk:'sicherheitskritisch'},{id:'rear',name:'Hinterradbremse',family:'Bremsanlage',code:'34 / HA',icon:'disc',desc:'Hintere Reib- und Anbauteile',risk:'sicherheitskritisch'},{id:'oil',name:'Ölfilter & Gehäuse',family:'Motor',code:'11 / ÖL',icon:'filter',desc:'Filtereinsatz, Deckel und Dichtungen',risk:'Fachprüfung erforderlich'},{id:'cool',name:'Wasserpumpe & Thermostat',family:'Motor',code:'11 / KÜ',icon:'pump',desc:'Pumpe, Gehäuse und Dichtungen',risk:'Fachprüfung erforderlich'}];
 export const SOURCES=[
