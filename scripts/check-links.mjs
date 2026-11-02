@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {SOURCES} from '../src/data.mjs';
 import {LEARNING_RESOURCES} from '../src/learning-data.mjs';
-const FIXED_LINKS=[...readFileSync(new URL('../src/documents-ui.mjs',import.meta.url),'utf8').matchAll(/href="(https:[^"]+)"/g)].map(m=>m[1]);
+const FIXED_LINKS=['../src/documents-ui.mjs','../src/assistant-ui.mjs'].flatMap(f=>[...readFileSync(new URL(f,import.meta.url),'utf8').matchAll(/href="(https:[^"]+)"/g)].map(m=>m[1]));
 export const collectUrls=()=>[...new Set([...SOURCES.map(s=>s.url),...LEARNING_RESOURCES.map(r=>r.url),...FIXED_LINKS])];
 // Shops und Portale sperren oft Skripte (403/429) oder antworten Skripten mit 503. Das gilt als „nicht prüfbar“ beziehungsweise „bitte ansehen“. Nachweislich tot sind nur 404 und 410.
 export const classify=status=>status>=200&&status<400?'ok':[401,403,429].includes(status)?'blocked':status===404||status===410?'dead':'check';

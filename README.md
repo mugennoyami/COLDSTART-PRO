@@ -1,6 +1,28 @@
-# COLDSTART-PRO · Garage Atlas · 0.4.1
+# COLDSTART-PRO · Garage Atlas · 0.7.0
 
-Lokales, bearbeitbares Software-MVP für einen visuellen Teile- und Serviceatlas rund um BMW E36 und E46. Stand: 29.10.2026.
+Teile- und Serviceatlas rund um BMW E36 und E46 mit BMW-Originalzeichnungen, Fahrzeugvarianten, Werkstatt-FAQ und Werkstatt-Assistent. Stand: 02.11.2026.
+
+## Neu in 0.7: alles zusammengeführt · 02.11.2026
+
+0.7 vereint drei getrennt entstandene Stände in einer Fassung:
+
+- **0.6 von ChatGPT** (bisher nur in der Cloudfassung, Quellcode nicht im Repository): Originalkatalog mit Leebmann24-Bildtafeln (E36 BG11: 30 Hauptgruppen, 702 Zeichnungen; E46 AV31: 33 Hauptgruppen, 935 Zeichnungen), anklickbare Positionen, Zoom und Verschieben, Suche über Zeichnungen und Teilepositionen, 810 Fahrzeugvarianten (Typschlüssel) mit 23 zusätzlichen Motorkatalogen, Werkstatt-FAQ & Schwachstellen (14 Themen, 21 Quellen), realistische Fahrzeugbilder, Katalog-Projektliste. Herkunft und Rekonstruktion: [docs/IMPORT_0.6.md](docs/IMPORT_0.6.md).
+- **Korrekturen aus 0.4.1**, die 0.6 nicht enthielt (0.6 baute auf 0.4.0 auf): strenge Import- und Sicherungsprüfung mit Rückfrage und Rücksicherung, ehrliche Speicherfehler, Zeichnungen in IndexedDB, Content-Security-Policy, Lesbarkeit, Build-Schutz. Sicherung und Rückfrage umfassen jetzt auch Katalog-Projektliste, Fahrzeugvarianten und Variantenprofile.
+- **Werkstatt-Assistent aus 0.5** mit eingebautem Wissen, kostenloser Browser-KI und optional OpenAI. Neu: Sprungknopf **„Originalzeichnungen“**, der den BMW-Katalog mit passender Suche öffnet (z. B. „Radlager“ führt zur Bildtafel Radlagerung). Fehlercodes und Themen sind mit 48 Katalog-Suchbegriffen verknüpft; die KI kann ebenfalls dorthin verlinken.
+
+Katalogdaten und Bilder liegen unter `dist/catalog` und `dist/assets` (4.300 Dateien, 143 MB) und werden mit veröffentlicht. Die vier bisherigen eigenen Ansichten bleiben unter „Eigene Teile & Handbuchbilder“ erreichbar. Rechte: Die Bildtafeln stammen aus dem BMW-Originalkatalog über Leebmann24; nur private Nutzung, siehe [RIGHTS.md](RIGHTS.md).
+
+## Neu in 0.5: Werkstatt-Assistent · 01.11.2026
+
+Unten rechts sitzt ein Chat-Assistent. Er hilft bei der Navigation, erklärt Fehlercodes aus dem Steuergerät und gibt Tipps zu Alltagsproblemen und typischen Arbeiten.
+
+- **Fehlercodes:** Eingaben wie `P0171`, `p 0301` oder `P0171 und P0174` werden erkannt. 16 Einzelcodes und 18 Codegruppen sind mit Dringlichkeit, typischen Ursachen am E36/E46 und Prüfschritten hinterlegt. Für alle anderen Codes erklärt er die Codestruktur (Bereich, genormt oder herstellerspezifisch, Teilsystem) und bietet eine YouTube-Suche an, statt eine Bedeutung zu erfinden.
+- **Alltagsprobleme und Anleitungen:** 32 Themen, z. B. „Radlager defekt erkennen“, „Bremsscheiben vorne/hinten wechseln“, Überhitzung, Kühlmittel- und Ölverlust, Thermostat, Wasserpumpe, Bremsflüssigkeit, Zündkerzen, ABS-Leuchte, Fehlerspeicher auslesen sowie Hilfe zu den Bereichen des Atlas.
+- **Direkte Sprünge:** Jede Antwort endet mit Knöpfen zur passenden Baugruppe beziehungsweise Explosionszeichnung (E36 mit Handbuchbild), zum Bauteil, zur kuratierten AUTODOC-Anleitung oder zum geprüften Video, zur Handbuch-Arbeitsübersicht oder zum Bentley-Kapitel (E36) und zu einer YouTube-Suche. Baureihe aus der Frage („beim E46“) hat Vorrang vor der Auswahl im Atlas. Zurückgestellte Quellen (andere Motorisierung, Quellenkonflikt) werden nie empfohlen.
+- **Offline zuerst:** Ohne Einrichtung antwortet der Assistent nur aus dem eingebauten Wissen und sendet nichts ins Internet.
+- **Kostenlose KI im Browser (Open Source):** Unter ⚙ „KI im Browser · kostenlos“ wählen. Ein Open-Source-Sprachmodell läuft dann mit [WebLLM](https://github.com/mlc-ai/web-llm) (Apache-2.0) direkt auf dem Gerät, ohne Konto, Schlüssel oder Server. Modelle: Qwen2.5 1,5B (Standard, etwa 0,9 GB Download, Apache-2.0), Qwen2.5 0,5B (Handy, etwa 0,3 GB, Apache-2.0) und Llama 3.2 3B (PC, etwa 1,8 GB, Llama 3.2 Community License). Der Download startet erst nach ausdrücklicher Bestätigung und bleibt im Browser gespeichert; danach laufen Fragen offline und verlassen das Gerät nicht. Die Bibliothek wird bei Bedarf von jsDelivr geladen und nur ausgeführt, wenn ihr SHA-256 dem geprüften npm-Paket 0.2.86 entspricht. Kleine Modelle irren sich häufiger; ihre Antworten stützen sich deshalb auf das eingebaute Wissen, das als Faktenblock mitgegeben wird. Braucht WebGPU (aktuelles Chrome/Edge am PC, Safari ab Version 26) und genug Grafikspeicher.
+- **Optional OpenAI (kostenpflichtig):** Die OpenAI-API hat kein Gratiskontingent; sie wird getrennt vom ChatGPT-Abo vorab bezahlt und nach Verbrauch abgerechnet. Mit eigenem OpenAI-API-Schlüssel (⚙ im Assistenten) beantwortet der Assistent auch freie Fragen. Voreingestellt ist `gpt-5-mini`, wählbar sind `gpt-5-nano`, `gpt-4o-mini` oder eine eigene Modell-ID. Die KI bekommt die gültigen Atlas-Ziele und darf nur über geprüfte Markierungen verlinken; unbekannte Ziele werden verworfen, YouTube-Verweise sind immer Suchen und nie erfundene Video-Adressen. Unter jeder KI-Antwort steht eine Kostenschätzung.
+- **Grenzen:** Keine Diagnose, keine Reparaturfreigabe, keine Drehmomente, Füllmengen oder Sollwerte. Die API wird getrennt vom ChatGPT-Abo nach Verbrauch abgerechnet. Der Aufruf direkt aus dem Browser wurde mit nachgebildeten Antworten geprüft, nicht mit einem echten Schlüssel. Bei der Browser-KI wurden Laden, Prüfsumme, Download und Speicherung echt geprüft, die Textausgabe noch nicht auf echter Grafikhardware; siehe [docs/REVIEW.md](docs/REVIEW.md).
 
 ## Neu in 0.4.1: Prüfkorrekturen · 30.10.2026
 
@@ -39,7 +61,7 @@ Node.js 24 genügt; es sind keine npm-Abhängigkeiten zu installieren. Hinweise 
 
 Cloud-Hosting synchronisiert persönliche Projektlisten, Notizen und zugeordnete Originale bisher nicht zwischen Geräten. Daten bleiben browserlokal; die JSON-Sicherung überträgt keine PDF-Dateien und führt parallele Stände nicht zusammen.
 
-Die Einzeldatei braucht weder Installation noch Konto, API-Schlüssel oder kostenpflichtiges Abo. Zeichnungen, Datenbestand, Suche und Projektliste funktionieren ohne Internet. Externe Originalquellen und Videos brauchen eine Internetverbindung. Einige Dateivorschauen führen JavaScript nicht aus; dann die HTML-Datei herunterladen und ausdrücklich mit Chrome, Edge, Firefox oder Safari öffnen. Die Bearbeitung ist auf Desktop am bequemsten. iOS-Dateivorschauen und die Persistenz unter `file://` wurden nicht auf einem echten iPhone geprüft.
+Die Einzeldatei braucht weder Installation noch Konto, API-Schlüssel oder kostenpflichtiges Abo. Die optionale KI des Werkstatt-Assistenten läuft entweder kostenlos im Browser (einmaliger Modell-Download, Internet nur dafür) oder über OpenAI mit eigenem, kostenpflichtigem API-Schlüssel. Zeichnungen, Datenbestand, Suche und Projektliste funktionieren ohne Internet. Externe Originalquellen und Videos brauchen eine Internetverbindung. Einige Dateivorschauen führen JavaScript nicht aus; dann die HTML-Datei herunterladen und ausdrücklich mit Chrome, Edge, Firefox oder Safari öffnen. Die Bearbeitung ist auf Desktop am bequemsten. iOS-Dateivorschauen und die Persistenz unter `file://` wurden nicht auf einem echten iPhone geprüft.
 
 ## Was funktioniert
 
@@ -110,7 +132,7 @@ Die Handbuchauswertung steht in `docs/HANDBUCH_AUSWERTUNG.md`. Der ursprünglich
 
 ## Daten und Privatsphäre
 
-Es gibt keinen Backendserver, keine Telemetrie und kein KI-Modell. Die Software lädt im Ausgangszustand keine externen Skripte, Schriftdateien oder Bilder. Ein Quellenklick öffnet die externe Website. Ein Klick auf „Video laden“ verbindet den Browser mit dem Videoanbieter. Diese Quellen liegen außerhalb der Kontrolle der App.
+Es gibt keinen Backendserver und keine Telemetrie. Wählst du im Werkstatt-Assistenten „KI im Browser“, lädt der Browser nach Rückfrage einmalig die WebLLM-Bibliothek (cdn.jsdelivr.net) und das Modell (huggingface.co, raw.githubusercontent.com) und speichert sie in IndexedDB; Fragen werden lokal verarbeitet und nicht gesendet. Wählst du „OpenAI“ und hinterlegst einen eigenen API-Schlüssel, gehen beim Absenden einer Frage diese Frage, die letzten Chatnachrichten, Baureihe, Baugruppe und Bauteil der aktuellen Ansicht, Bauzeit und Motor aus „Bauzustand“ (falls erfasst) sowie die Liste der Atlas-Verweise direkt vom Browser an `api.openai.com`. Projektliste, Notizen, Dokumente, Bilder und Sicherungen werden nie gesendet. Der Schlüssel liegt unverschlüsselt im Browserspeicher (wahlweise nur für die Sitzung) und ist nie Teil der Projekt-Sicherung; der Chatverlauf verschwindet beim Neuladen. Die Content-Security-Policy erlaubt Netzwerkverbindungen ausschließlich zu `api.openai.com`, `cdn.jsdelivr.net`, Hugging Face (`huggingface.co`, `*.hf.co`) und `raw.githubusercontent.com`; Skripte nur das eigene (per Hash) sowie das geprüfte WebLLM-Modul als Blob, WebAssembly nur für die Modelle. Die Software lädt im Ausgangszustand keine externen Skripte, Schriftdateien oder Bilder. Ein Quellenklick öffnet die externe Website. Ein Klick auf „Video laden“ verbindet den Browser mit dem Videoanbieter. Diese Quellen liegen außerhalb der Kontrolle der App.
 
 Persönliche Ergänzungen werden unverschlüsselt im lokalen Browserspeicher gehalten; zugeordnete PDFs und eigene Zeichnungen getrennt in IndexedDB. Falls dessen Nutzung scheitert, bleibt die Datei nur für die Sitzung verfügbar und wird entsprechend gekennzeichnet. Auf gemeinsam verwendeten Browserprofilen besteht kein Zugriffsschutz. Ein Browserwechsel, privater Modus, Speicherlimit oder Löschen von Websitedaten kann Ergänzungen entfernen. Eine HTML-Datei allein enthält keine später gespeicherten Ergänzungen; dafür ist die vollständige JSON-Sicherung erforderlich. Eine Sicherung kann Bauzustand, Notizen, Bilder und Texte enthalten und sollte nicht öffentlich geteilt werden. Die App benötigt keine vollständige VIN, Kennzeichen oder Kundenidentität.
 
@@ -142,6 +164,9 @@ assets/manuals/      Dieselben fünf Ausschnitte als bearbeitbare PNGs
 src/data.mjs         Startbestand mit Quellen
 src/draw.mjs         Eigene SVG-Schemata und Fahrzeugansicht
 src/app.mjs          Bedienlogik, Speicherung, Editoren, Sicherung
+src/assistant-data.mjs Wissensbasis des Assistenten: Fehlercodes, Themen, Modelle
+src/assistant-core.mjs Codeerkennung, Themensuche, Verweisprüfung, OpenAI-Anfrage
+src/assistant-ui.mjs   Chatfenster, Einstellungen, Navigation aus dem Chat
 data/startbestand.json  Importierbarer Ausgangsdatenbestand
 data/manual-index.json  Zwei ursprüngliche Handbücher und Seitenindex
 data/dokumente.json    18 zusätzliche Quellen und Arbeitsübersichten

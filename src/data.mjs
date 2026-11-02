@@ -1,5 +1,5 @@
 import {MANUAL_PARTS} from './manual-data.mjs';
-export const META={version:'0.4.1',date:'30.10.2026',schemaVersion:1};
+export const META={version:'0.7.0',date:'02.11.2026',schemaVersion:1};
 export const MODELS={E36:{label:'BMW E36',profile:'328i Coupé · M52',code:'BG11',years:'Referenzprofil, kein VIN-Abgleich'},E46:{label:'BMW E46',profile:'325i Limousine · M54',code:'AV31',years:'Referenzprofil, kein VIN-Abgleich'}};
 export const GROUPS=[{id:'front',name:'Vorderradbremse',family:'Bremsanlage',code:'34 / VA',icon:'disc',desc:'Scheibe, Belag und Bremssattel',risk:'sicherheitskritisch'},{id:'rear',name:'Hinterradbremse',family:'Bremsanlage',code:'34 / HA',icon:'disc',desc:'Hintere Reib- und Anbauteile',risk:'sicherheitskritisch'},{id:'oil',name:'Ölfilter & Gehäuse',family:'Motor',code:'11 / ÖL',icon:'filter',desc:'Filtereinsatz, Deckel und Dichtungen',risk:'Fachprüfung erforderlich'},{id:'cool',name:'Wasserpumpe & Thermostat',family:'Motor',code:'11 / KÜ',icon:'pump',desc:'Pumpe, Gehäuse und Dichtungen',risk:'Fachprüfung erforderlich'}];
 export const SOURCES=[
@@ -15,7 +15,7 @@ export const SOURCES=[
 {id:'e36-rear',title:'HUBAUER · E36 328i: Hinterradbremse',url:'https://www.hubauer-shop.de/de/autoteile/oldtimer/3-classic/bg11-e36-m52/328i-coupe-bremsen-bg11/bg11-342332-rear-wh/',note:'Mehrere Sattelvarianten sichtbar. In dieser Fassung bleibt die eindeutige Zuordnung offen.'},
 {id:'brembo',title:'Brembo · Hersteller-Anleitungen',url:'https://www.brembostore.com/pages/product-faq',note:'Englische Herstellerübersicht mit Original-Montageanleitungen. Allgemeine Produktunterlagen, keine E36/E46-spezifische Reparaturfreigabe.'},
 {id:'haynes',title:'HaynesPro · professionelle Datenintegration',url:'https://www.infopro-digital-automotive.com/haynespro/',note:'Funktionsreferenz. Keine Partnerschaft, Datenlizenz oder Anbindung vorhanden.'},
-{id:'leebmann',title:'Leebmann24 · Originalteile-Katalog',url:'https://www.leebmann24.com/de/de',note:'Abruf in der Recherche mit HTTP 403 blockiert. Keine Inhalte übernommen.'},
+{id:'leebmann',title:'Leebmann24 · Originalteile-Katalog',url:'https://www.leebmann24.com/de/de',note:'Kategorien, Originalzeichnungen und verfügbare Teilepositionen am 30.10.2026 über den sichtbaren Browserkatalog erfasst.'},
 {"id": "h-caliper", "title": "HUBAUER · Bremssattelgehäuse links", "url": "https://www.hubauer-shop.de/de/bremssattelgehaeuse-links-34116758113.html", "note": "Original-Händlerangebot bestätigt Bezeichnung und Nummer. Katalog- und Ausstattungsbedingungen sind vor Verwendung fahrzeuggenau zu prüfen."},
 {"id": "h-pad", "title": "HUBAUER · Bremsbelagsatz", "url": "https://www.hubauer-shop.de/de/reparatursatz-bremsbelaege-asbestfrei-34116761244.html", "note": "Original-Händlerangebot bestätigt Bezeichnung und Nummer. Katalog- und Ausstattungsbedingungen sind vor Verwendung fahrzeuggenau zu prüfen."},
 {"id": "h-sensor", "title": "HUBAUER · Bremsbelagfühler", "url": "https://www.hubauer-shop.de/de/bremsbelagfuehler-34351164371.html", "note": "Original-Händlerangebot bestätigt Bezeichnung und Nummer. Katalog- und Ausstattungsbedingungen sind vor Verwendung fahrzeuggenau zu prüfen."},
@@ -23,7 +23,7 @@ export const SOURCES=[
 {"id": "h-bolt", "title": "HUBAUER · Innensechskantschraube", "url": "https://www.hubauer-shop.de/de/innensechskantschraube-34211161806.html", "note": "Original-Händlerangebot bestätigt Bezeichnung und Nummer. Katalog- und Ausstattungsbedingungen sind vor Verwendung fahrzeuggenau zu prüfen."},
 {"id": "h-rear", "title": "HUBAUER · Bremsscheibe hinten", "url": "https://www.hubauer-shop.de/de/bremsscheibe-belueftet-34216864056.html", "note": "Original-Händlerangebot bestätigt Bezeichnung und Nummer. Katalog- und Ausstattungsbedingungen sind vor Verwendung fahrzeuggenau zu prüfen."},
 {"id": "h-rshield", "title": "HUBAUER · Schutzblech hinten links", "url": "https://www.hubauer-shop.de/de/schutzblech-links-34211158991.html", "note": "Original-Händlerangebot bestätigt Bezeichnung und Nummer. Katalog- und Ausstattungsbedingungen sind vor Verwendung fahrzeuggenau zu prüfen."}
-].map(s=>({...s,accessed:'29.10.2026'}));
+].map(s=>({...s,accessed:s.id==='leebmann'?'30.10.2026':'29.10.2026'}));
 const templates={
 front:[['disc','Bremsscheibe, vorne','Bremsscheibe Bremse Rotor'],['caliper','Bremssattel, vorne links','Bremssattel Bremszange'],['pad','Bremsbelagsatz, vorne','Bremsklötze Beläge'],['sensor','Verschleißsensor, vorne','Fühler Warnkontakt'],['shield','Schutzblech, vorne links','Ankerblech Staubschutz'],['bolt','Bremsscheiben-Halteschraube','Innensechskantschraube Schraube']],
 rear:[['disc','Bremsscheibe, hinten','Bremsscheibe Hinterachse'],['caliper','Bremssattel, hinten links','Bremszange'],['pad','Bremsbelagsatz, hinten','Bremsklötze Beläge'],['sensor','Verschleißsensor, hinten','Fühler Warnkontakt'],['shield','Schutzblech, hinten links','Ankerblech'],['bolt','Bremsscheiben-Halteschraube','Schraube']],
