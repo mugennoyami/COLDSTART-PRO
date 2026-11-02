@@ -29,6 +29,8 @@ Die Seite lädt beim Bedienen Dateien nach, die nicht im HTML stecken und nur au
 - für 23 Varianten mit lokalem Motorkatalog: `catalog/profiles/<Baureihe>/<Typ>.json`, `catalog/variants/<Baureihe>/<Typ>/<Zeichnung>.json`, `catalog/variants/search-<Baureihe>-<Typ>.json`
 - `assets/catalog/<Bild>.webp` (mindestens 1.385 Zeichnungsbilder), `assets/catalog/unavailable.svg`, `assets/vehicles/e36.webp`, `assets/vehicles/e46.webp`
 
+Sichern: `scripts/export-0.6-dateien.js` auf der angemeldeten Cloudseite in der Chrome-Konsole ausführen. Es liest die Dateilisten aus dem Programmcode der Seite, lädt alle Dateien derselben Seite und speichert sie als ZIP-Teile unter 23 MB mit `export-bericht.txt`. Die Teile werden im Branch `transfer/v0.6-dateien` hochgeladen (GitHub: Add file → Upload files).
+
 Ohne diese Dateien zeigt der Katalog Listen und Fahrzeugauswahl, aber keine Zeichnungen und Positionen. **Die Cloudfassung darf nicht aus einem Stand ohne diese Dateien neu bereitgestellt werden**, sonst gehen sie dort verloren.
 
 ## Rechte
