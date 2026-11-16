@@ -38,7 +38,7 @@ git commit -m "Kurze Beschreibung der Änderung"
 git push -u origin HEAD
 ```
 
-Auf GitHub einen Pull Request nach `main` erstellen. Der Workflow „Build und Tests“ prüft Build, Tests und die Aktualität des mitgelieferten HTML. Er veröffentlicht keine Website und pusht keine Änderungen zurück. Branchschutz wird nicht durch diese Dateien eingerichtet. GitHub-Actions-Läufe benötigen die im Konto verfügbaren Actions-Minuten; das Projekt richtet keine kostenpflichtigen Dienste ein.
+Auf GitHub einen Pull Request nach `main` erstellen. Der Workflow „Build und Tests“ prüft Build, Tests und die Aktualität des mitgelieferten HTML. Er veröffentlicht keine Website und pusht keine Änderungen zurück. Nach dem Merge nach `main` baut und testet der Workflow „GitHub Pages“ (`.github/workflows/pages.yml`) erneut und veröffentlicht den Ordner `dist/` unter https://mugennoyami.github.io/COLDSTART-PRO/. Dafür muss unter Settings → Pages die Quelle „GitHub Actions“ eingestellt sein. Ein manueller Lauf ist unter „Actions → GitHub Pages → Run workflow“ möglich. Branchschutz wird nicht durch diese Dateien eingerichtet. GitHub-Actions-Läufe benötigen die im Konto verfügbaren Actions-Minuten; das Projekt richtet keine kostenpflichtigen Dienste ein.
 
 Die lokale Git-Identität für künftige Commits aus den eigenen Git-Einstellungen verwenden. Der GitHub-Import baut auf dem vorhandenen Initial-Commit des Repositorys auf. Die zuvor vorbereiteten lokalen Bundle-Commits sind ein historischer Export und haben einen eigenen Verlauf; für weitere Arbeiten die GitHub-Arbeitskopie verwenden.
 

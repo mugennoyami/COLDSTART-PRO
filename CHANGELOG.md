@@ -1,5 +1,9 @@
 # Änderungsverlauf
 
+## Unveröffentlicht · 16.11.2026
+
+- Veröffentlichung über GitHub Pages: Der neue Workflow `.github/workflows/pages.yml` baut und testet bei jedem Push auf `main` und stellt `dist/` unter https://mugennoyami.github.io/COLDSTART-PRO/ bereit. Pages-Quelle muss auf „GitHub Actions“ stehen. Start- und Beitragsanleitung entsprechend ergänzt.
+
 ## 0.7.0 · 02.11.2026
 
 Zusammenführung von 0.6 (ChatGPT), den Korrekturen aus 0.4.1 und dem Werkstatt-Assistenten aus 0.5.

@@ -1,6 +1,17 @@
 # COLDSTART PRO starten
 
-Stand: 01.11.2026 · Anwendung 0.5.0. Zwei Startwege für denselben ausgelieferten Programmstand.
+Stand: 16.11.2026 · Anwendung 0.7.0. Drei Startwege für denselben ausgelieferten Programmstand.
+
+## Online über GitHub Pages – PC und Handy
+
+**Adresse: https://mugennoyami.github.io/COLDSTART-PRO/**
+
+Der Workflow „GitHub Pages“ (`.github/workflows/pages.yml`) baut die App bei jedem Push auf `main`, führt die Tests aus und veröffentlicht den Ordner `dist/` mit Katalogdaten und Bildern. Ohne Anmeldung erreichbar; die Seite ist **öffentlich**, wie das Repository selbst. Kein Konto, Server oder Abo nötig.
+
+- **Einmalige Einstellung:** Im Repository unter Settings → Pages → Build and deployment → Source „GitHub Actions“ wählen. Mit „Deploy from a branch“ zeigt die Adresse stattdessen die README; die App liegt dann nur unter `…/COLDSTART-PRO/dist/`.
+- **Aktualisieren:** Änderungen nach `main` mergen. Den Lauf unter „Actions → GitHub Pages“ verfolgen; nach etwa ein bis zwei Minuten ist der neue Stand online. Ein manueller Lauf ist über „Run workflow“ möglich.
+- **iPhone:** Adresse in Safari öffnen und wie unten beschrieben zum Home-Bildschirm hinzufügen.
+- Browserdaten (Projektlisten, Notizen, KI-Modell, API-Schlüssel) liegen pro Adresse getrennt. GitHub Pages, Sites-Adresse und lokale HTML-Datei teilen keinen Speicher; Wechsel über die JSON-Sicherung.
 
 ## Privat im Browser – PC und Handy
 
@@ -14,7 +25,7 @@ Die Site wird ausschließlich für das Eigentümerkonto bereitgestellt. Beim ers
 
 ## Lokal auf Windows – sofort und ohne Installation
 
-Ab 0.6 lädt der Originalkatalog Bildtafeln und Teilelisten als eigene Dateien nach. Beim Öffnen der HTML-Datei direkt von der Festplatte (`file://`) blockieren Browser diese Abrufe; Fahrzeugauswahl, eigene Ansichten, Dokumente und Assistent funktionieren, die Originalzeichnungen nicht. Für den vollen Katalog die Cloudfassung nutzen.
+Ab 0.6 lädt der Originalkatalog Bildtafeln und Teilelisten als eigene Dateien nach. Beim Öffnen der HTML-Datei direkt von der Festplatte (`file://`) blockieren Browser diese Abrufe; Fahrzeugauswahl, eigene Ansichten, Dokumente und Assistent funktionieren, die Originalzeichnungen nicht. Für den vollen Katalog GitHub Pages oder die Cloudfassung nutzen.
 
 
 1. In deinem privaten GitHub-Repository [COLDSTART-PRO](https://github.com/mugennoyami/COLDSTART-PRO) anmelden.
@@ -62,10 +73,10 @@ Die Bereitstellung lädt deine nachträglich zugeordneten PDFs und persönlichen
 
 ## Updates
 
-GitHub bleibt das führende Code-Repository. Der bisherige GitHub-Workflow prüft neue Commits, veröffentlicht sie aber nicht automatisch auf Sites. Die Cloud benötigt einen expliziten Abgleich und eine neue private Bereitstellung. Lokal die aktualisierte ZIP-Fassung herunterladen und entpacken; vorher eigene Änderungen exportieren, Originaldateien separat behalten und beim Wechsel erneut zuordnen, falls der Browser einen anderen Speicherbereich verwendet.
+GitHub bleibt das führende Code-Repository. GitHub Pages wird bei jedem Push auf `main` automatisch aktualisiert. Der Workflow „Build und Tests“ prüft neue Commits, veröffentlicht sie aber nicht automatisch auf Sites. Die Cloud benötigt einen expliziten Abgleich und eine neue private Bereitstellung. Lokal die aktualisierte ZIP-Fassung herunterladen und entpacken; vorher eigene Änderungen exportieren, Originaldateien separat behalten und beim Wechsel erneut zuordnen, falls der Browser einen anderen Speicherbereich verwendet.
 
 Die feste Cloudadresse bleibt bei späteren Bereitstellungen derselben Site bestehen. Browser gegebenenfalls neu laden. Keine automatische Online-Nachprüfung der externen Kaufpreise oder Videoquellen durch das Hosting.
 
 ## Grenzen
 
-Das Tool bleibt ein begrenzter E36-/E46-Atlas und keine vollständige Reparaturdatenbank. Sicherheits- und Gültigkeitshinweise gelten bei beiden Startwegen. Die private Bereitstellung erteilt keine kommerzielle Nutzungslizenz für fremde Buchabbildungen. Keine öffentliche Freigabe vorgenommen.
+Das Tool bleibt ein begrenzter E36-/E46-Atlas und keine vollständige Reparaturdatenbank. Sicherheits- und Gültigkeitshinweise gelten bei beiden Startwegen. Die private Bereitstellung erteilt keine kommerzielle Nutzungslizenz für fremde Buchabbildungen. Die Sites-Fassung ist nicht öffentlich freigegeben; die GitHub-Pages-Fassung ist öffentlich erreichbar.
